@@ -1,25 +1,55 @@
 export const toolbox = {
-  'kind': 'flyoutToolbox',
+  'kind': 'categoryToolbox',
   'contents': [
     {
-      'kind': 'block',
-      'type': 'object'
-    },
+      'kind': 'category',
+      'name': 'hero',
+      'contents': [
+        {
+          'kind': 'block',
+          'type': 'hero'
+        }
+      ]
+    }, 
     {
-      'kind': 'block',
-      'type': 'member'
-    },
+      'kind': 'category',
+      'name': 'skills',
+      'contents': [
+        {
+          'kind': 'block',
+          'type': 'skill_custom'
+        }
+      ]
+    }, 
     {
-      'kind': 'block',
-      'type': 'math_number'
-    },
+      'kind': 'category',
+      'name': 'triggers',
+      'contents': [
+        {
+          'kind': 'block',
+          'type': 'trigger_loop'
+        }
+      ]
+    }, 
     {
-      'kind': 'block',
-      'type': 'text'
-    },
+      'kind': 'category',
+      'name': 'conditions',
+      'contents': [
+        {
+          'kind': 'block',
+          'type': 'condition_itemwrapper'
+        }
+      ]
+    }, 
     {
-      'kind': 'block',
-      'type': 'logic_boolean'
-    },
+      'kind': 'category',
+      'name': 'effects',
+      'contents': [
+        {
+          'kind': 'block',
+          'type': 'effect_aoe'
+        }
+      ]
+    }
   ]
 }
