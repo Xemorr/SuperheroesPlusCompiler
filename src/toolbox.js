@@ -4,6 +4,7 @@ export const toolbox = {
     {
       'kind': 'category',
       'name': 'hero',
+      'colour': 360,
       'contents': [
         {
           'kind': 'block',
@@ -14,6 +15,7 @@ export const toolbox = {
     {
       'kind': 'category',
       'name': 'skills',
+      'colour': 230,
       'contents': [
         {
           'kind': 'block',
@@ -24,6 +26,7 @@ export const toolbox = {
     {
       'kind': 'category',
       'name': 'triggers',
+      'colour': 120,
       'contents': [
         {
           'kind': 'block',
@@ -34,6 +37,7 @@ export const toolbox = {
     {
       'kind': 'category',
       'name': 'conditions',
+      'colour': 35,
       'contents': [
         {
           'kind': 'block',
@@ -44,6 +48,7 @@ export const toolbox = {
     {
       'kind': 'category',
       'name': 'effects',
+      'colour': 295,
       'contents': [
         {
           'kind': 'block',

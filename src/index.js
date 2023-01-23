@@ -8,6 +8,7 @@ import * as Blockly from 'blockly';
 import {blocks} from './blocks/plusultra';
 import {save, load} from './serialization';
 import {toolbox} from './toolbox';
+import {theme} from './theme';
 import { superheroesGenerator } from './generators/superheroes';
 import './index.css';
 
@@ -19,9 +20,8 @@ Blockly.common.defineBlocks(blocks);
 
 // Set up UI elements and inject Blockly
 const codeDiv = document.getElementById('generatedCode').firstChild;
-const outputDiv = document.getElementById('output');
 const blocklyDiv = document.getElementById('blocklyDiv');
-const ws = Blockly.inject(blocklyDiv, {toolbox});
+const ws = Blockly.inject(blocklyDiv, {toolbox, theme});
 
 // This function resets the code and output divs, shows the
 // generated code from the workspace, and evals the code.
