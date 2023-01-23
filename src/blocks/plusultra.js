@@ -7,7 +7,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
   "args0": [
     {
       "type": "field_input",
-      "name": "HERO_NAME",
+      "name": "SECTION_NAME",
       "text": "Exampleman"
     },
   ],
@@ -38,15 +38,28 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
   "colour": 230
 },
 {
-  "type": "skill_custom",
-  "message0": "CUSTOM skill %1 trigger: %2 effects: %3",
+  "type": "skill",
+  "message0": "Skill %1 skill: %2 %3 trigger: %4 effects: %5",
   "args0": [
     {
       "type": "input_dummy"
     },
     {
+      "type": "field_dropdown",
+      "name": "skill",
+      "options": [
+        [
+          "CUSTOM",
+          "CUSTOM"
+        ]
+      ]
+    },
+    {
+      "type": "input_dummy"
+    },
+    {
       "type": "input_value",
-      "name": "NAME",
+      "name": "trigger",
       "check": "trigger"
     },
     {
@@ -62,23 +75,36 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
   "helpUrl": ""
 },
 {
-  "type": "effect_aoe",
-  "message0": "AOE effect %1 mode: %2 %3 radius:  %4 %5 conditions: %6 effects: %7",
+  "type": "effect",
+  "message0": "Effect %1 type: %2 %3 mode: %4 %5 radius: %6 %7 conditions: %8 effects: %9",
   "args0": [
     {
       "type": "input_dummy"
     },
     {
       "type": "field_dropdown",
-      "name": "NAME",
+      "name": "type",
+      "options": [
+        [
+          "AOE",
+          "AOE"
+        ]
+      ]
+    },
+    {
+      "type": "input_dummy"
+    },
+    {
+      "type": "field_dropdown",
+      "name": "mode",
       "options": [
         [
           "ALL",
-          "all"
+          "ALL"
         ],
         [
           "SELF",
-          "self"
+          "SELF"
         ]
       ]
     },
@@ -112,9 +138,22 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
   "helpUrl": ""
 },
 {
-  "type": "trigger_loop",
-  "message0": "LOOP trigger %1 period: %2 %3 conditions: %4",
+  "type": "trigger",
+  "message0": "Trigger %1 type: %2 %3 period: %4 %5 conditions: %6",
   "args0": [
+    {
+      "type": "input_dummy"
+    },
+    {
+      "type": "field_dropdown",
+      "name": "type",
+      "options": [
+        [
+          "LOOP",
+          "LOOP"
+        ]
+      ]
+    },
     {
       "type": "input_dummy"
     },
@@ -140,9 +179,22 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
   "helpUrl": ""
 },
 {
-  "type": "condition_itemwrapper",
-  "message0": "ITEMWRAPPER condition %1 mode: %2 %3 slot: %4 %5 conditions: %6 else: %7",
+  "type": "condition",
+  "message0": "Condition %1 type: %2 %3 mode: %4 %5 slot: %6 %7 conditions: %8 else: %9",
   "args0": [
+    {
+      "type": "input_dummy"
+    },
+    {
+      "type": "field_dropdown",
+      "name": "type",
+      "options": [
+        [
+          "ITEMWRAPPER",
+          "ITEMWRAPPER"
+        ]
+      ]
+    },
     {
       "type": "input_dummy"
     },
@@ -152,15 +204,15 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
       "options": [
         [
           "ALL",
-          "hand"
+          "ALL"
         ],
         [
           "SELF",
-          "off_hand"
+          "SELF"
         ],
         [
           "OTHER",
-          "feet"
+          "OTHER"
         ]
       ]
     },
@@ -173,27 +225,27 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
       "options": [
         [
           "HAND",
-          "hand"
+          "HAND"
         ],
         [
           "OFF_HAND",
-          "off_hand"
+          "OFF_HAND"
         ],
         [
           "FEET",
-          "feet"
+          "FEET"
         ],
         [
           "LEGS",
-          "legs"
+          "LEGS"
         ],
         [
           "CHEST",
-          "chest"
+          "CHEST"
         ],
         [
           "HEAD",
-          "head"
+          "HEAD"
         ]
       ]
     },
@@ -202,12 +254,12 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     },
     {
       "type": "input_statement",
-      "name": "conditions:",
+      "name": "conditions",
       "check": "condition"
     },
     {
       "type": "input_statement",
-      "name": "else:",
+      "name": "else",
       "check": "effect"
     }
   ],

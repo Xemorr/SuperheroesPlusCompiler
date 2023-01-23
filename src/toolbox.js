@@ -17,7 +17,7 @@ export const toolbox = {
       'contents': [
         {
           'kind': 'block',
-          'type': 'skill_custom'
+          'type': 'skill'
         }
       ]
     }, 
@@ -27,7 +27,7 @@ export const toolbox = {
       'contents': [
         {
           'kind': 'block',
-          'type': 'trigger_loop'
+          'type': 'trigger'
         }
       ]
     }, 
@@ -37,7 +37,7 @@ export const toolbox = {
       'contents': [
         {
           'kind': 'block',
-          'type': 'condition_itemwrapper'
+          'type': 'condition'
         }
       ]
     }, 
@@ -47,7 +47,7 @@ export const toolbox = {
       'contents': [
         {
           'kind': 'block',
-          'type': 'effect_aoe'
+          'type': 'effect'
         }
       ]
     }
