@@ -35,7 +35,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         "check": "skill"
     }
   ],
-  "colour": 230
+  "colour": 0
 },
 {
   "type": "skill",
@@ -133,7 +133,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
   ],
   "previousStatement": "effect",
   "nextStatement": "effect",
-  "colour": 230,
+  "colour": 295,
   "tooltip": "",
   "helpUrl": ""
 },
@@ -174,7 +174,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }
   ],
   "output": "trigger",
-  "colour": 230,
+  "colour": 120,
   "tooltip": "",
   "helpUrl": ""
 },
@@ -265,7 +265,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
   ],
   "previousStatement": "condition",
   "nextStatement": "condition",
-  "colour": 230,
+  "colour": 35,
   "tooltip": "",
   "helpUrl": ""
 }]);

@@ -11,6 +11,9 @@ import {toolbox} from './toolbox';
 import { superheroesGenerator } from './generators/superheroes';
 import './index.css';
 
+Blockly.HSV_SATURATION = 0.7;
+Blockly.HSV_VALUE = 0.85;
+
 // Register the blocks and generator with Blockly
 Blockly.common.defineBlocks(blocks);
 
