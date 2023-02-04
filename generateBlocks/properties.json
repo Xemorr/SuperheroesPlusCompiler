@@ -113,14 +113,14 @@
 				"outputBlock": {
 					"description": "The block to convert to",
 					"required": false,
-					"type": "block",
+					"type": "material",
 					"default": "GOLD_BLOCK"
 				},
 				"inputBlocks": {
 					"description": "The list of blocks to convert from",
 					"required": false,
 					"type": "array",
-					"items": "block",
+					"items": "material",
 					"default": []
 				}
 			}
@@ -172,7 +172,7 @@
 					"propertiesMap": {
 						"key": {
 							"description": "The block drop to change",
-							"type": "block"
+							"type": "material"
 						},
 						"value": {
 							"description": "The items to drop",
@@ -248,6 +248,12 @@
 					"type": "boolean",
 					"default": true
 				},
+				// "canDropOnDeath": {
+				// 	"description": "If true, the item will be dropped on death",
+				// 	"required": false,
+				// 	"type": "boolean",
+				// 	"default": true
+				// },
 				"loseItemOnHeroLoss": {
 					"description": "If true, the item will be lost on if the user changes hero",
 					"required": false,
@@ -286,7 +292,7 @@
 				"item": {
 					"description": "The item that will be used as the gun",
 					"required": true,
-					"type": "item"
+					"type": "material"
 				},
 				"shootSound": {
 					"description": "The sound that will be played when the gun shoots",
@@ -345,7 +351,7 @@
 				"fuel": {
 					"description": "The fuel that will be used to cast the spell",
 					"required": false,
-					"type": "item",
+					"type": "material",
 					"default": "REDSTONE"
 				},
 				"cooldown": {
@@ -400,14 +406,14 @@
 						"resultantBlock": {
 							"description": "",
 							"required": false,
-							"type": "block",
+							"type": "material",
 							"default": "REDSTONE_BLOCK"
 						},
 						"transmutableBlocks": {
 							"description": "",
 							"required": false,
 							"type": "array",
-							"items": "block",
+							"items": "material",
 							"default": []
 						}
 					}
@@ -470,14 +476,14 @@
 					"description": "",
 					"required": false,
 					"type": "array",
-					"items": "block",
+					"items": "material",
 					"default": []
 				},
 				"blocksToReplace": {
 					"description": "",
 					"required": false,
 					"type": "array",
-					"items": "block",
+					"items": "material",
 					"default": []
 				},
 				"blockRayMode": {
@@ -507,110 +513,117 @@
 			}
 		},
 		"POTIONGIFTER": {
-		    "description": "A skill for giving another user a potion effect when the user right clicks them",
-            "cooldown": {
-                "description": "How long to wait before you can gift a potion effect again",
-                "required": false,
-                "type": "number",
-                "default": 10
-            },
-            "receiverMessage": {
-                "description": "The message sent to the receiver of the potion effect",
-                "required": false,
-                "type": "string",
-                "default": "<grey><i>You have received a potion effect."
-            },
-            "giverMessage": {
-                "description": "The message sent to the user who gave a potion effect",
-                "required": false,
-                "type": "string",
-                "default": "<grey><i>You gave them a potion effect."
-            },
-            "cooldownMessage": {
-                "description": "The message sent to the user if they attempt to use the skill and are still on cooldown",
-                "required": false,
-                "type": "string",
-                "default": "<grey><i>You have <currentcooldown> seconds left until it can be used again."
-            }
+			"description": "A skill for giving another user a potion effect when the user right clicks them",
+            "extends": "COOLDOWN",
+			"properties": {
+				"cooldown": {
+					"description": "How long to wait before you can gift a potion effect again",
+					"required": false,
+					"type": "number",
+					"default": 10
+				},
+				"receiverMessage": {
+					"description": "The message sent to the receiver of the potion effect",
+					"required": false,
+					"type": "string",
+					"default": "<grey><i>You have received a potion effect."
+				},
+				"giverMessage": {
+					"description": "The message sent to the user who gave a potion effect",
+					"required": false,
+					"type": "string",
+					"default": "<grey><i>You gave them a potion effect."
+				},
+				"cooldownMessage": {
+					"description": "The message sent to the user if they attempt to use the skill and are still on cooldown",
+					"required": false,
+					"type": "string",
+					"default": "<grey><i>You have <currentcooldown> seconds left until it can be used again."
+				}
+			}
 		},
 		"CONSUME": {
-		  "description": "",
-          "material": {
-            "description": "The item to be able to consume",
-            "required": false,
-            "type": "item",
-            "default": "DIRT"
-          },
-          "hunger": {
-            "description": "The amount of hunger gained upon consuming the item",
-            "required": false,
-            "type": "integer",
-            "default": 0
-          },
-          "potency": {
-            "description": "The potency or amplifier of the potion",
-            "required": false,
-            "type": "integer",
-            "default": 0
-          },
-          "type": {
-            "description": "The type of the potion",
-            "required": false,
-            "type": "potion",
-            "default": {}
-          },
-          "duration": {
-            "description": "The duration of the potion in seconds (1 is 20 ticks). 0 is for infinite duration (Integer maximum ticks)",
-            "required": false,
-            "type": "number",
-            "default": 4
-          }
+			"description": "",
+			"properties": {
+				"material": {
+					"description": "The item to be able to consume",
+					"required": false,
+					"type": "material",
+					"default": "DIRT"
+				},
+				"hunger": {
+					"description": "The amount of hunger gained upon consuming the item",
+					"required": false,
+					"type": "integer",
+					"default": 0
+				},
+				"potency": {
+					"description": "The potency or amplifier of the potion",
+					"required": false,
+					"type": "integer",
+					"default": 0
+				},
+				"type": {
+					"description": "The type of the potion",
+					"required": false,
+					"type": "potion",
+					"default": {}
+				},
+				"duration": {
+					"description": "The duration of the potion in seconds (1 is 20 ticks). 0 is for infinite duration (Integer maximum ticks)",
+					"required": false,
+					"type": "number",
+					"default": 4
+				}
+			}
 		},
 		"SUMMON": {
-		  "description": "A skill for summoning an entity on a cooldown wherever you are looking",
-          "entity": {
-            "description": "The entity the skill summons",
-            "required": false,
-            "type": "entity",
-            "default": "LIGHTNING"
-          },
-          "range": {
-            "description": "The range at which you can summon an entity",
-            "required": false,
-            "type": "integer",
-            "default": 10
-          },
-          "action": {
-            "description": "The action that must be taken in order to spawn the entity",
-            "required": false,
-			"type": "array",
-			"items": "action",
-			"default": ["LEFT_CLICK_AIR", "LEFT_CLICK_BLOCK"]
-          },
-          "mustSneak": {
-            "description": "Whether you must be sneaking in order to perform this skill",
-            "required": false,
-            "type": "boolean",
-            "default": true
-          },
-          "repel": {
-            "description": "Whether you are repelled backwards after performing this skill",
-            "required": false,
-            "type": "boolean",
-            "default": false
-          },
-          "cooldown": {
-            "description": "How long to wait before you can perform this skill again",
-            "required": false,
-            "type": "number",
-            "default": 10
-          },
-          "cooldownMessage": {
-            "description": "The message sent to the user if they attempt to use the skill and are still on cooldown",
-            "required": false,
-            "type": "string",
-            "default": "<yellow><bold>Zeus <white>Cooldown: <s> seconds"
-          }
+			"description": "A skill for summoning an entity on a cooldown wherever you are looking",
+			"properties": {
+				"entity": {
+					"description": "The entity the skill summons",
+					"required": false,
+					"type": "entity",
+					"default": "LIGHTNING"
+				},
+				"range": {
+					"description": "The range at which you can summon an entity",
+					"required": false,
+					"type": "integer",
+					"default": 10
+				},
+				"action": {
+					"description": "The action that must be taken in order to spawn the entity",
+					"required": false,
+					"type": "array",
+					"items": "action",
+					"default": ["LEFT_CLICK_AIR", "LEFT_CLICK_BLOCK"]
+				},
+				"mustSneak": {
+					"description": "Whether you must be sneaking in order to perform this skill",
+					"required": false,
+					"type": "boolean",
+					"default": true
+				},
+				"repel": {
+					"description": "Whether you are repelled backwards after performing this skill",
+					"required": false,
+					"type": "boolean",
+					"default": false
+				},
+				"cooldown": {
+					"description": "How long to wait before you can perform this skill again",
+					"required": false,
+					"type": "number",
+					"default": 10
+				},
+				"cooldownMessage": {
+					"description": "The message sent to the user if they attempt to use the skill and are still on cooldown",
+					"required": false,
+					"type": "string",
+					"default": "<yellow><bold>Zeus <white>Cooldown: <s> seconds"
+				}
+			}
 		},
 		// "DECOY": {
 		// 	"description": ""
@@ -649,7 +662,7 @@
 						".*": {
 							"description": "The material that the key is representing",
 							"required": true,
-							"type": "item"
+							"type": "material"
 						}
 					}
 				},
@@ -659,6 +672,8 @@
 					"required": false,
 					"type": "array",
 					"items": {
+						"description": "A row of recipe keys",
+						"required": true,
 						"type": "string",
 						"maxLength": 3
 					},
@@ -674,7 +689,7 @@
 					"propertiesMap": {
 						"key": {
 							"description": "The recipe key",
-							"type": "item"
+							"type": "material"
 						},
 						"value": {
 							"description": "The material that the key maps to",
@@ -1036,7 +1051,13 @@
 					"required": false,
 					"type": "integer",
 					"default": 24000
-				}
+				},
+				"time": {
+					"description": "A range for time",
+					"required": false,
+					"type": "range",
+					"default": "0 - 24000"
+				}   
 			}
 		},
 		"ONGROUND": {
@@ -1142,7 +1163,7 @@
 					"description": "The list of blocks",
 					"required": false,
 					"type": "array",
-					"items": "block",
+					"items": "material",
 					"default": []
 				}
 			}
@@ -1196,7 +1217,7 @@
 					"description": "The list of blocks",
 					"required": false,
 					"type": "array",
-					"items": "block",
+					"items": "material",
 					"default": []
 				}
 			}
@@ -1521,7 +1542,7 @@
 				"block": {
 					"description": "The block to change to",
 					"required": false,
-					"type": "block",
+					"type": "material",
 					"default": "COBWEB"
 				}
 			}
@@ -1539,7 +1560,7 @@
 				"block": {
 					"description": "The block to change to",
 					"required": false,
-					"type": "block",
+					"type": "material",
 					"default": "COBWEB"
 				}
 			}
@@ -2036,7 +2057,7 @@
 				"material": {
 					"description": "The block to replace to, will override the \"block\" property if it exist",
 					"required": false,
-					"type": "block",
+					"type": "material",
 					"default": null
 				},
 				"block": {
@@ -2331,7 +2352,7 @@
 					"description": "The list of types that can be broken",
 					"required": true,
 					"type": "array",
-					"items": "block"
+					"items": "material"
 				},
 				"delay": {
 					"description": "The delay between each break is seconds (1 is 20 ticks)",
@@ -2398,6 +2419,15 @@
 				"SET"
 			]
 		},
+		"attributeOperation": {
+			"description": "A number operator for attributes",
+			"type": "string",
+			"enum": [
+				"ADD_NUMBER",
+				"ADD_SCALAR",
+				"MULTIPLY_SCALAR_1"
+			]
+		},
 		"ItemAttributeData": {
 			"description": "The attribute data for an item",
 			"type": "object",
@@ -2423,6 +2453,12 @@
 							"required": false,
 							"type": "equipmentSlot",
 							"default": "HAND"
+						},
+						"operation": {
+							"description": "The operation to do on the attribute with `value`",
+							"required": false,
+							"type": "attributeOperation",
+							"default": "ADD_NUMBER"
 						}
 					}
 				}
@@ -2549,7 +2585,7 @@
 				"type": {
 					"description": "The type of item",
 					"required": false,
-					"type": "item",
+					"type": "material",
 					"default": "STONE"
 				},
 				"amount": {
@@ -2609,8 +2645,134 @@
 					"required": false,
 					"type": "EntityData",
 					"default": {}
+				},
+				"extra": {
+					"description": "The extra data for entities",
+					"required": false,
+					"type": "object",
+					"default": {},
+					"properties": {
+						"canEquip": {
+							"description": "For living entities. Whether the entity can pick up items",
+							"required": false,
+							"type": "boolean",
+							"default": false
+						},
+						"isZombifiable": {
+							"description": "For piglins, piglin brutes, and hoglins. Whether the entity can be zombified into their zombie couterparts",
+							"required": false,
+							"type": "boolean",
+							"default": true
+						},
+						"color": {
+							"description": "For colorable entities. The color for the entity",
+							"required": true, 
+							"type": "dyeColor"
+						},
+						"armorSection": {
+							"description": "For horses. The armor for the horse",
+							"required": false,
+							"type": "ItemStackData",
+							"default": {}
+						},
+						"hasSaddle": {
+							"description": "For horses___. Whether the entity has a saddle attached",
+							"required": false,
+							"type": "boolean",
+							"default": false
+						},
+						// "color": {  
+						// 	"description": "For horses. The color of the entity",
+						// 	"required": false,
+						// 	"type": "horseColor",
+						// 	"default": "CHESTNUT"
+						// },
+						"style": {
+							"description": "For horses. The style/markings that the horse has",
+							"required": false,
+							"type": "horseStyle",
+							"default": "NONE"
+						},
+						"tamingDifficulty": {
+							"description": "For horses___. The difficulty of taming the entity (ie the amount of domesticating (feeding, riding, ect.) necessary in order to tame it)",
+							"required": false,
+							"type": "integer",
+							"default": 1
+						},
+						"jumpStrength": {
+							"description": "For horses___. The strength of jump for the entity",
+							"required": false,
+							"type": "number",
+							"default": 0.7
+						},
+						"hasChest": {
+							"description": "For chestedHorses___. Whether the entity is carrying a chest",
+							"required": false,
+							"type": "boolean",
+							"default": false
+						},
+						"tamed": {
+							"description": "For horses___. Whether the horse is tamed",
+							"required": false,
+							"type": "boolean",
+							"default": false
+						},
+						"angry": {
+							"description": "For wolfs. Whether the wolf is angry",
+							"required": false,
+							"type": "boolean",
+							"default": false
+						},
+						"size": {
+							"description": "For slimes, magmacubes, and phantoms. The size of the entity",
+							"required": false,
+							"type": "integer",
+							"default": 0
+						},
+						"potion": {
+							"description": "For thrown potions. The item data for the thrown potion",
+							"required": false,
+							"type": "ItemStackData",
+							"default": {}
+						},
+						"fuse": {
+							"description": "For creepers. The time a creeper is allowed to be primed before exploding (in ticks)",
+							"required": false,
+							"type": "integer",
+							"default": 30
+						},
+						"ignited": {
+							"description": "For creepers. Whether the creeper is primed/ignited",
+							"required": false,
+							"type": "boolean",
+							"default": false
+						},
+						"explosionRadius": {
+							"description": "For creepers. The explosion radius when exploded",
+							"required": false,
+							"type": "integer",
+							"default": 3
+						},
+						"powered": {
+							"description": "For creepers. Whether the creeper is powered/charged/electrecuted",
+							"required": false,
+							"type": "integer",
+							"default": 3
+						},
+						"variant": {
+							"description": "For axolotls. The variant of the entity. Defaults to a random variant (probably, not sure)",
+							"required": false,
+							"type": "axolotlVariant",
+							"default": ""
+						},
+						"isBaby": {
+							"description": "For ageable entities. Whether the entity is a baby",
+							"required": false,
+							"type": "boolean",
+							"default": false
+						}
+					}
 				}
-				// oh god, TODO
 			}
 		},
 		"VectorData": {
@@ -2710,7 +2872,7 @@
 				"type": {
 					"description": "The type of block",
 					"required": false,
-					"type": "block",
+					"type": "material",
 					"default": "STONE"
 				},
 				"level": {
@@ -2724,6 +2886,37 @@
 					"required": false,
 					"type": "integer",
 					"default": -1
+				}
+			}
+		},
+		"BlockDataComparison": {
+			"description": "A comparison for block data",
+			"type": "object",
+			"properties": {
+				"types": {
+					"description": "The types that is compared to",
+					"required": false,
+					"type": "array",
+					"items": "material",
+					"default": ["STONE"]
+				},
+				"type": {
+					"description": "The type that is compared to. Can be used instead of `types`",
+					"required": false,
+					"type": "material",
+					"default": "STONE"
+				},
+				"level": {
+					"description": "The range of fluid levels",
+					"required": false,
+					"type": "range",
+					"default": "-Infinity - Infinity"
+				},
+				"age": {
+					"description": "The range of block age",
+					"required": false,
+					"type": "range",
+					"default": "-Infinity - Infinity"
 				}
 			}
 		},
@@ -2779,8 +2972,14 @@
 					"description": "The list of item types",
 					"required": false,
 					"type": "array",
-					"items": "item",
+					"items": "material",
 					"default": []
+				},
+				"type": {
+					"description": "An item type. Can be used instead of `types` for single items",
+					"required": false,
+					"type": "material",
+					"default": "STONE"
 				},
 				"amount": {
 					"description": "The range of item amount",
@@ -2801,18 +3000,10 @@
 			"type": "string",
 			"enum": ["DROPPED_ITEM", "EXPERIENCE_ORB", "AREA_EFFECT_CLOUD", "ELDER_GUARDIAN", "WITHER_SKELETON", "STRAY", "EGG", "LEASH_HITCH", "PAINTING", "ARROW", "SNOWBALL", "FIREBALL", "SMALL_FIREBALL", "ENDER_PEARL", "ENDER_SIGNAL", "SPLASH_POTION", "THROWN_EXP_BOTTLE", "ITEM_FRAME", "WITHER_SKULL", "PRIMED_TNT", "FALLING_BLOCK", "FIREWORK", "HUSK", "SPECTRAL_ARROW", "SHULKER_BULLET", "DRAGON_FIREBALL", "ZOMBIE_VILLAGER", "SKELETON_HORSE", "ZOMBIE_HORSE", "ARMOR_STAND", "DONKEY", "MULE", "EVOKER_FANGS", "EVOKER", "VEX", "VINDICATOR", "ILLUSIONER", "MINECART_COMMAND", "BOAT", "MINECART", "MINECART_CHEST", "MINECART_FURNACE", "MINECART_TNT", "MINECART_HOPPER", "MINECART_MOB_SPAWNER", "CREEPER", "SKELETON", "SPIDER", "GIANT", "ZOMBIE", "SLIME", "GHAST", "ZOMBIFIED_PIGLIN", "ENDERMAN", "CAVE_SPIDER", "SILVERFISH", "BLAZE", "MAGMA_CUBE", "ENDER_DRAGON", "WITHER", "BAT", "WITCH", "ENDERMITE", "GUARDIAN", "SHULKER", "PIG", "SHEEP", "COW", "CHICKEN", "SQUID", "WOLF", "MUSHROOM_COW", "SNOWMAN", "OCELOT", "IRON_GOLEM", "HORSE", "RABBIT", "POLAR_BEAR", "LLAMA", "LLAMA_SPIT", "PARROT", "VILLAGER", "ENDER_CRYSTAL", "TURTLE", "PHANTOM", "TRIDENT", "COD", "SALMON", "PUFFERFISH", "TROPICAL_FISH", "DROWNED", "DOLPHIN", "CAT", "PANDA", "PILLAGER", "RAVAGER", "TRADER_LLAMA", "WANDERING_TRADER", "FOX", "BEE", "HOGLIN", "PIGLIN", "STRIDER", "ZOGLIN", "PIGLIN_BRUTE", "AXOLOTL", "GLOW_ITEM_FRAME", "GLOW_SQUID", "GOAT", "MARKER", "ALLAY", "CHEST_BOAT", "FROG", "TADPOLE", "WARDEN", "FISHING_HOOK", "LIGHTNING", "PLAYER", "UNKNOWN"]
 		},
-		"block": {
-			"description": "A block",
-			"extends": "material"
-		},
 		"blockFace": {
 			"description": "A face of a block",
 			"type": "string",
 			"enum": ["DOWN", "EAST", "EAST_NORTH_EAST", "EAST_SOUTH_EAST", "NORTH", "NORTH_EAST", "NORTH_NORTH_EAST", "NORTH_NORTH_WEST", "NORTH_WEST", "SELF", "SOUTH", "SOUTH_EAST", "SOUTH_SOUTH_EAST", "SOUTH_SOUTH_WEST", "SOUTH_WEST", "UP", "WEST", "WEST_NORTH_WEST", "WEST_SOUTH_WEST"]
-		},
-		"item": {
-			"description": "An item",
-			"extends": "material"
 		},
 		"enchantment": {
 			"description": "An enchantment",
@@ -2822,6 +3013,63 @@
 			"description": "A potion effect",
 			"type": "string",
 			"enum": ["SPEED", "SLOW", "FAST_DIGGING", "SLOW_DIGGING", "INCREASE_DAMAGE", "HEAL", "HARM", "JUMP", "CONFUSION", "REGENERATION", "DAMAGE_RESISTANCE", "FIRE_RESISTANCE", "WATER_BREATHING", "INVISIBILITY", "BLINDNESS", "NIGHT_VISION", "HUNGER", "WEAKNESS", "POISON", "WITHER", "HEALTH_BOOST", "ABSORPTION", "SATURATION", "GLOWING", "LEVITATION", "LUCK", "UNLUCK", "SLOW_FALLING", "CONDUIT_POWER", "DOLPHINS_GRACE", "BAD_OMEN", "HERO_OF_THE_VILLAGE", "DARKNESS"]
+		},
+		"dyeColor": {
+			"description": "A dye color",
+			"type": "string",
+			"enum": [
+				"BLACK",
+				"BLUE",
+				"BROWN",
+				"CYAN",
+				"GRAY",
+				"GREEN",
+				"LIGHT_BLUE",
+				"LIGHT_GRAY",
+				"LIME",
+				"MAGENTA",
+				"ORANGE",
+				"PINK",
+				"PURPLE",
+				"RED",
+				"WHITE",
+				"YELLOW"
+			]
+		},
+		"axolotlVariant": {
+			"description": "A variant of axolotls",
+			"type": "string",
+			"enum": [
+				"BLUE",
+				"CYAN",
+				"GOLD",
+				"LUCY", // Leucistic (pink)
+				"WILD" // brown
+			]
+		},
+		"horseColor": {
+			"description": "A color of horses",
+			"type": "string",
+			"enum": [
+				"BLACK",
+				"BROWN",
+				"CHESTNUT",
+				"CREAMY",
+				"DARK_BROWN",
+				"GRAY",
+				"WHITE"
+			]
+		},
+		"horseStyle": {
+			"description": "A style/markings of horses",
+			"type": "string",
+			"enum": [
+				"BLACK_DOTS",
+				"NONE",
+				"WHITE",
+				"WHITE_DOTS",
+				"WHITEFIELD"
+			]
 		},
 		"damageCause": {
 			"description": "A damage cause",

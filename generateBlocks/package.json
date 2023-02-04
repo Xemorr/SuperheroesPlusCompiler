@@ -1,0 +1,17 @@
+{
+  "name": "blocks-generator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "out/index.js",
+  "scripts": {
+    "watch": "tsc -w",
+    "compile": "tsc",
+    "run": "node out/index.js"
+  },
+  "author": "Sepdron, Xemor",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "json5": "^2.2.3"
+  }
+}
