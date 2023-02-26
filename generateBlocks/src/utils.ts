@@ -7,6 +7,10 @@ export function objectPropertyMap<T>(object: {[key: string]: T}): Map<string, T>
 	return map
 }
 
+export function objectKeys<T extends {}>(obj: T) {
+	return Object.keys(obj) as (keyof T)[]
+}
+
 export function indent(s: string): string {
 	return "    "+s.replaceAll(/(?<=((\r\n)|(\r[^\n])|([^\r]\n)))/g, "    ")
 }
