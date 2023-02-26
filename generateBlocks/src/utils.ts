@@ -7,4 +7,8 @@ export function objectPropertyMap<T>(object: {[key: string]: T}): Map<string, T>
 	return map
 }
 
+export function indent(s: string): string {
+	return "    "+s.replaceAll(/(?<=((\r\n)|(\r[^\n])|([^\r]\n)))/g, "    ")
+}
+
 export type ExcludeFunc<T> = Exclude<T, Function>
