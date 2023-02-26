@@ -2,18 +2,18 @@
 export {
     Schema,
     Descriptable,  
-    PropertyMap, Modes, Type, TypeDefinition, 
+    PropertyMap, Modes, Element, Type, 
     PropertyTypes, PropertyStringTypes, PropertyType, 
     PropertiesMap, PropertiesMapKey, Property, 
     IfPath
 }
 
 interface Schema {
-    skills: Record<string, Type>
-    triggers: Record<string, Type>
-    conditions: Record<string, Type>
-    effects: Record<string, Type>
-    types: Record<string, TypeDefinition>
+    skills: Record<string, Element>
+    triggers: Record<string, Element>
+    conditions: Record<string, Element>
+    effects: Record<string, Element>
+    types: Record<string, Type>
 }
 
 interface Descriptable {
@@ -22,7 +22,7 @@ interface Descriptable {
 
 type PropertyMap = Record<string, Property>
 
-interface Type extends Descriptable {
+interface Element extends Descriptable {
     elementType: "skill" | "trigger" | "condition" | "effect"
     properties: PropertyMap
     available: boolean
@@ -61,7 +61,7 @@ interface IfPath {
     const?: any
 }
 
-interface TypeDefinition {
+interface Type {
     type: PropertyType
     properties?: PropertyMap
     patternProperties?: PropertyMap

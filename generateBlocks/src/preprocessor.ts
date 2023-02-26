@@ -1,53 +1,53 @@
-import { Schema, Property, Type } from "./PreprocessedSchema.js"
+import { Schema, Property, Element } from "./PreprocessedSchema.js"
 import { objectPropertyMap } from "./utils.js"
 
 export function preprocess(_unprocessed: any): Schema {
     delete _unprocessed.$schema
     const unprocessed = _unprocessed as Schema
-    objectPropertyMap<extendableMap>(unprocessed as any).forEach((types, key) => {
-        resolveExtends(types)
-        objectPropertyMap(types).forEach((type: Type) => {
+    objectPropertyMap<extendableMap>(unprocessed as any).forEach((elements, key) => {
+        resolveExtends(elements)
+        objectPropertyMap(elements).forEach((element: Element) => {
             const elementType = key.substring(0, key.length-1)
-            type.elementType = elementType as Type["elementType"]
-            fillOptionals(type)
-            moveSupportedModesToProperties(type)
-            if (!type.properties) return
-            objectPropertyMap(type.properties).forEach(property => addDefaultToDescription(property))
+            element.elementType = elementType as Element["elementType"]
+            fillOptionals(element)
+            moveSupportedModesToProperties(element)
+            if (!element.properties) return
+            objectPropertyMap(element.properties).forEach(property => addDefaultToDescription(property))
         })
     })
     return unprocessed
 }
 
-function fillOptionals(type: Type) {
-    if (type.properties === undefined) type.properties = {}
-    if (type.available === undefined) type.available = true
-    if (type.requireMode === undefined) type.requireMode = true
+function fillOptionals(element: Element) {
+    if (element.properties === undefined) element.properties = {}
+    if (element.available === undefined) element.available = true
+    if (element.requireMode === undefined) element.requireMode = true
 }
 
-type extendableType = Type & {extends?: string}
-type extendableMap = {[key: string] : extendableType}
+type extendableElement = Element & {extends?: string}
+type extendableMap = {[key: string] : extendableElement}
 
 function resolveExtends(extendableMap: extendableMap) : void {
-    objectPropertyMap(extendableMap).forEach((type, name) => {
-        var extendsVal = type.extends
-        if (type.available === undefined) type.available = true
+    objectPropertyMap(extendableMap).forEach((element, name) => {
+        var extendsVal = element.extends
+        if (element.available === undefined) element.available = true
         if (!extendsVal) return
-        extendableMap[name] = deepMerge(extendableMap[extendsVal], type)
+        extendableMap[name] = deepMerge(extendableMap[extendsVal], element)
     })
 }
 
-type TypeWithModes = Type & {supportedModes?: string[]}
-function moveSupportedModesToProperties(type: Type) {
-    if (!("supportedModes" in type)) return
-    const modedType = type as TypeWithModes
+type ElementWithModes = Element & {supportedModes?: string[]}
+function moveSupportedModesToProperties(element: Element) {
+    if (!("supportedModes" in element)) return
+    const modedElement = element as ElementWithModes
     const modeProperty = {
         description: "The mode",
-        required: modedType.requireMode,
+        required: modedElement.requireMode,
         type: "string",
-        enum: modedType.supportedModes,
+        enum: modedElement.supportedModes,
         default: "ALL"
     } as Property
-    type.properties = {mode: modeProperty, ...type.properties}
+    element.properties = {mode: modeProperty, ...element.properties}
 }
 
 function deepMerge<T extends Object>(object: T, ...objects: T[]): T {
