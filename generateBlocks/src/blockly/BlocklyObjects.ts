@@ -1,6 +1,8 @@
 import { indent } from "../utils";
 import { Argument } from "./Arguments";
 
+export { Block, Parameter }
+
 class Block {
     name: string
     parameters: Parameter[] = []

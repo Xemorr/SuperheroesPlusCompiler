@@ -12,7 +12,8 @@ export function preprocess(_unprocessed: any): Schema {
             fillOptionals(element)
             moveSupportedModesToProperties(element)
             if (!element.properties) return
-            objectPropertyMap(element.properties).forEach(property => addDefaultToDescription(property))
+            objectPropertyMap(element.properties)
+                .forEach(property => recursiveApply(property, addDefaultToDescription))
         })
     })
     return unprocessed
@@ -62,22 +63,26 @@ function deepMerge<T extends Object>(object: T, ...objects: T[]): T {
     return deepMerge(merged, ...objects)
 }
 
-function addDefaultToDescription(property: Property): void {
-    if (property.properties !== undefined) {
-        objectPropertyMap(property.properties).forEach((val: Property) => addDefaultToDescription(val))
-    }
-    if (property.patternProperties !== undefined) {
-        objectPropertyMap(property.patternProperties).forEach((val: Property) => addDefaultToDescription(val))
-    }
-    if (property.propertiesMap !== undefined) {
-        addDefaultToDescription(property.propertiesMap.value)
-    }
-
+function addDefaultToDescription(property: Property) {
     var defaultVal = property.default
     if (defaultVal === undefined) return
     var description = property.description
     if (property.description.match(/.*(default|Default).*/)) return
 
     property.description = `${description}. \nDefaults to ${JSON.stringify(defaultVal)}`
+}
 
+function recursiveApply(property: Property, consumer: (property: Property) => any) {
+    consumer(property)
+    if (property.properties !== undefined) {
+        objectPropertyMap(property.properties)
+            .forEach(val => recursiveApply(val, consumer))
+    }
+    if (property.patternProperties !== undefined) {
+        objectPropertyMap(property.patternProperties)
+            .forEach(val => recursiveApply(val, consumer))
+    }
+    if (property.propertiesMap !== undefined) {
+        recursiveApply(property.propertiesMap.value, consumer)
+    }
 }
