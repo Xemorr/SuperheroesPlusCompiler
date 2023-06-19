@@ -1,4 +1,4 @@
-import { Schema, Property, Element } from "./PreprocessedSchema.js"
+import { Schema, Property, Element } from "./preprocessed.js"
 import { objectPropertyMap } from "./utils.js"
 
 export function preprocess(_unprocessed: any): Schema {
