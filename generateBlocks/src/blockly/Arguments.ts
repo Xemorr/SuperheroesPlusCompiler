@@ -1,51 +1,86 @@
-import JSONStringify from "./JSONStringifier"
+import { JSONStringify, Variable } from "../utils.js"
 
 export {
     Argument, 
-    FieldDropdown
-}
+    InputValue,
+    FieldDropdown,
 
-type variable = string
+    FieldBoolean,
+    FieldEnum,
+    FieldInteger,
+    FieldNumber,
+    FieldInput
+}
 
 type ArgumentType = 
     "input_value" | 
-    "field_dropdown"
+    "field_dropdown" |
+    "field_number" |
+    "field_input"
 
 type Argument = {
     type: ArgumentType
     name?: string
-    toString: () => string
+    toJSON: () => string
 }
 
 class InputValue implements Argument {
     type: ArgumentType = "input_value"
-    name?: string
+    name: string
     types?: string[]
 
-    constructor(name?: string) {
+    constructor(name: string, types: string[]) {
         this.name = name
+        this.types = types
     }
 
     setType(types: string[]) {
         this.types = types
     }
 
-    toString(): string {
-        return JSONStringify({type: this.type, name: this.name, check: this.types})
+    toJSON(): string {
+        return JSONStringify(this, true)
     }
     
 }
 
+class FieldNumber implements Argument {
+    type: ArgumentType = "field_number"
+    name: string
+    value?: number
+
+    constructor(name: string, value: number | undefined) {
+        this.name = name
+        this.value = value
+    }
+
+    toJSON(): string {
+        return JSONStringify(this, true)
+    }
+    
+}
+
+class FieldInteger extends FieldNumber {
+    precision: number = 1
+
+    constructor(name: string, value: number | undefined) {
+        super(name, value);
+    }
+
+}
+
 type dropdownLabel = string
-type dropdownOption = [dropdownLabel, string]
+export type dropdownOption = [dropdownLabel, string]
 
 class FieldDropdown implements Argument {
     type: ArgumentType = "field_dropdown"
-    name?: string
-    options?: dropdownOption[] | variable
+    name: string
+    value: any
+    options?: dropdownOption[] | Variable
 
-    constructor(name?: string) {
-        this.name = name;
+    constructor(name: string, _default: string) {
+        this.name = name
+        this.value = _default
     }
 
     setOptions(options: [dropdownLabel, string][]) {
@@ -59,13 +94,44 @@ class FieldDropdown implements Argument {
         return false
     }
     setOptionsVar(varName: string) {
-        this.options = varName
+        this.options = new Variable(varName)
     }
 
-    toString(): string {
-        return JSONStringify({type: this.type, name: this.name, options: this.options}, {options: typeof this.options === "string"})
+    toJSON(): string {
+        return JSONStringify(this, true)
     }
 
 }
 
+class FieldEnum extends FieldDropdown {
+
+    constructor(name: string, _default: any, enumName: string) {
+        super(name, _default)
+        this.setOptionsVar("enums." + enumName)
+    }
+
+}
+
+class FieldBoolean extends FieldEnum {
+
+    constructor(name: string, _default: boolean) {
+        super(name, _default + "", "booleans")
+    }
+
+}
+
+class FieldInput implements Argument {
+    type: ArgumentType = "field_input"
+    name: string
+    text: string
+
+    constructor(name: string, _default: string) {
+        this.name = name
+        this.text = _default
+    }
+
+    toJSON(): string {
+        return JSONStringify(this, true)
+    }
+}
 

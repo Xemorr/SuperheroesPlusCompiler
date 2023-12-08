@@ -1,88 +1,66 @@
-import { Schema, Property, Element } from "./preprocessed.js"
-import { objectPropertyMap } from "./utils.js"
+import { Schema, Property, Item } from "./PreprocessedSchema.js"
+import { StringRecord, forEachEntry, forEachValue } from "./utils.js"
 
-export function preprocess(_unprocessed: any): Schema {
-    delete _unprocessed.$schema
-    const unprocessed = _unprocessed as Schema
-    objectPropertyMap<extendableMap>(unprocessed as any).forEach((elements, key) => {
-        resolveExtends(elements)
-        objectPropertyMap(elements).forEach((element: Element) => {
-            const elementType = key.substring(0, key.length-1)
-            element.elementType = elementType as Element["elementType"]
-            fillOptionals(element)
-            moveSupportedModesToProperties(element)
-            if (!element.properties) return
-            objectPropertyMap(element.properties)
-                .forEach(property => recursiveApply(property, addDefaultToDescription))
-        })
-    })
-    return unprocessed
+type extendableType = Item & {extends?: string}
+type extendableMap = StringRecord<extendableType>
+
+export function preprocess(unprocessed: any): Schema {
+	delete unprocessed.$schema
+	forEachValue(unprocessed, (items: extendableMap) => {
+		resolveExtends(items)
+		forEachValue(items, (item: Item) => {
+			item.requireMode ??= true
+			addExclusiveToDescription(item)
+			walkItemProperties(item, addDefaultToDescription)
+		})
+	})
+	return unprocessed
 }
-
-function fillOptionals(element: Element) {
-    if (element.properties === undefined) element.properties = {}
-    if (element.available === undefined) element.available = true
-    if (element.requireMode === undefined) element.requireMode = true
-}
-
-type extendableElement = Element & {extends?: string}
-type extendableMap = {[key: string] : extendableElement}
 
 function resolveExtends(extendableMap: extendableMap) : void {
-    objectPropertyMap(extendableMap).forEach((element, name) => {
-        var extendsVal = element.extends
-        if (element.available === undefined) element.available = true
-        if (!extendsVal) return
-        extendableMap[name] = deepMerge(extendableMap[extendsVal], element)
-    })
+	forEachEntry(extendableMap, (name, type) => {
+		type.available ??= true
+		if (!type.extends) return
+		extendableMap[name] = deepMerge(structuredClone(extendableMap[type.extends]), type)
+		delete extendableMap[name].extends
+	})
 }
 
-type ElementWithModes = Element & {supportedModes?: string[]}
-function moveSupportedModesToProperties(element: Element) {
-    if (!("supportedModes" in element)) return
-    const modedElement = element as ElementWithModes
-    const modeProperty = {
-        description: "The mode",
-        required: modedElement.requireMode,
-        type: "string",
-        enum: modedElement.supportedModes,
-        default: "ALL"
-    } as Property
-    element.properties = {mode: modeProperty, ...element.properties}
+function deepMerge<T extends Object>(merged: T, overrides: T): T {
+	for (const _key in overrides) {
+		const key = _key as keyof T & string
+		if (merged[key] === undefined || typeof overrides[key] !== "object") merged[key] = overrides[key]
+		else merged[key] = deepMerge<any>(merged[key], overrides[key])
+	}
+	return merged
 }
 
-function deepMerge<T extends Object>(object: T, ...objects: T[]): T {
-    if (objects.length == 0) return object
-    const merged = structuredClone(object)
-    const second = objects.shift()
-    for (const _key in second) {
-        const key = _key as keyof T & string
-        if (merged[key] === undefined || typeof second[key] !== "object") merged[key] = second[key]
-        else merged[key] = deepMerge<any>(merged[key], second[key])
-    }
-    return deepMerge(merged, ...objects)
+function addExclusiveToDescription(item: Item) {
+	if (!item.exclusiveTo) return
+	item.description += `\n\nOnly available if you have the ${item.exclusiveTo} plugin`
 }
 
-function addDefaultToDescription(property: Property) {
-    var defaultVal = property.default
-    if (defaultVal === undefined) return
-    var description = property.description
-    if (property.description.match(/.*(default|Default).*/)) return
-
-    property.description = `${description}. \nDefaults to ${JSON.stringify(defaultVal)}`
+function walkItemProperties(item: Item, func: (property: Property) => void) {
+	forEachValue(item.properties, property => walkProperty(property, func))
 }
 
-function recursiveApply(property: Property, consumer: (property: Property) => any) {
-    consumer(property)
-    if (property.properties !== undefined) {
-        objectPropertyMap(property.properties)
-            .forEach(val => recursiveApply(val, consumer))
-    }
-    if (property.patternProperties !== undefined) {
-        objectPropertyMap(property.patternProperties)
-            .forEach(val => recursiveApply(val, consumer))
-    }
-    if (property.propertiesMap !== undefined) {
-        recursiveApply(property.propertiesMap.value, consumer)
-    }
+function walkProperty(property: Property | undefined, func: (property: Property) => void) {
+	if (property == undefined) return
+
+	func(property)
+
+	forEachValue(property.properties, property => walkProperty(property, func))
+	forEachValue(property.patternProperties, property => walkProperty(property, func))
+	walkProperty(property.propertiesMap?.value, func)
+}
+
+function addDefaultToDescription(property: Property | undefined): void {
+	if (property == undefined) return
+	var defaultVal = property.default
+	if (defaultVal === undefined) return
+	var description = property.description
+	if (property.description.match(/.*(default|Default).*/)) return
+
+	property.description = `${description}. \nDefaults to ${JSON.stringify(defaultVal)}`
+
 }
