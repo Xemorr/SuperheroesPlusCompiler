@@ -69,7 +69,7 @@ class Compiler {
             return {
                 kind: "category",
                 name: cat,
-                colour: categoryData[cat],
+                colour: categoryData[cat].colour,
                 contents
             }
         }))

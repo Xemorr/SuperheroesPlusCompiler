@@ -4,10 +4,7 @@ export const toolbox = {
         {
             kind: "category", 
             name: "triggers", 
-            colour: {
-                colour: 10, 
-                chaining: false
-            }, 
+            colour: 120, 
             contents: [
                 {
                     kind: "block", 
@@ -162,10 +159,7 @@ export const toolbox = {
         {
             kind: "category", 
             name: "conditions", 
-            colour: {
-                colour: 10, 
-                chaining: true
-            }, 
+            colour: 35, 
             contents: [
                 {
                     kind: "block", 
@@ -312,10 +306,7 @@ export const toolbox = {
         {
             kind: "category", 
             name: "effects", 
-            colour: {
-                colour: 10, 
-                chaining: true
-            }, 
+            colour: 295, 
             contents: [
                 {
                     kind: "block", 
@@ -550,10 +541,7 @@ export const toolbox = {
         {
             kind: "category", 
             name: "skills", 
-            colour: {
-                colour: 10, 
-                chaining: true
-            }, 
+            colour: 230, 
             contents: [
                 {
                     kind: "block", 
@@ -628,10 +616,7 @@ export const toolbox = {
         {
             kind: "category", 
             name: "damagemodifiers", 
-            colour: {
-                colour: 10, 
-                chaining: false
-            }, 
+            colour: 10, 
             contents: [
                 {
                     kind: "block", 
@@ -654,10 +639,7 @@ export const toolbox = {
         {
             kind: "category", 
             name: "rewards", 
-            colour: {
-                colour: 10, 
-                chaining: false
-            }, 
+            colour: 10, 
             contents: [
                 {
                     kind: "block", 
@@ -668,10 +650,7 @@ export const toolbox = {
         {
             kind: "category", 
             name: "distributions", 
-            colour: {
-                colour: 10, 
-                chaining: true
-            }, 
+            colour: 10, 
             contents: [
                 {
                     kind: "block", 
@@ -686,10 +665,7 @@ export const toolbox = {
         {
             kind: "category", 
             name: "types", 
-            colour: {
-                colour: 10, 
-                chaining: false
-            }, 
+            colour: 10, 
             contents: [
                 {
                     kind: "block", 

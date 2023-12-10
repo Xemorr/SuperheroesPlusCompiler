@@ -11,23 +11,21 @@ type CategoryData = {
 
 export const categoryData: Record<keyof Schema, CategoryData> = {
     triggers: {
-        colour: 10,
+        colour: 120,
         chaining: false
     },
     conditions: {
-        colour: 10,
+        colour: 35,
         chaining: true
     },
     effects: {
-        colour: 10,
+        colour: 295,
         chaining: true
     },
-
     skills: {
-        colour: 10,
+        colour: 230,
         chaining: true
     },
-
     damagemodifiers: {
         colour: 10,
         chaining: false
@@ -36,12 +34,10 @@ export const categoryData: Record<keyof Schema, CategoryData> = {
         colour: 10,
         chaining: false
     },
-
     distributions: {
         colour: 10,
         chaining: true
     },
-
     types: {
         colour: 10,
         chaining: false

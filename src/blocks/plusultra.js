@@ -4,21 +4,21 @@ import enums from './enums.js'
 export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     {
         type: "triggers_DAMAGEDENTITY", 
-        colour: 10, 
+        colour: 120, 
         output: "triggers", 
         isAllImplemented: true, 
         message0: "DAMAGEDENTITY"
     }, 
     {
         type: "triggers_DAMAGEDBYENTITY", 
-        colour: 10, 
+        colour: 120, 
         output: "triggers", 
         isAllImplemented: true, 
         message0: "DAMAGEDBYENTITY"
     }, 
     {
         type: "triggers_DAMAGEDBYPROJECTILE", 
-        colour: 10, 
+        colour: 120, 
         output: "triggers", 
         isAllImplemented: true, 
         message0: "DAMAGEDBYPROJECTILE", 
@@ -34,7 +34,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "triggers_DAMAGEDENTITYWITHPROJECTILE", 
-        colour: 10, 
+        colour: 120, 
         output: "triggers", 
         isAllImplemented: true, 
         message0: "DAMAGEDENTITYWITHPROJECTILE", 
@@ -50,49 +50,49 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "triggers_LAUNCHPROJECTILE", 
-        colour: 10, 
+        colour: 120, 
         output: "triggers", 
         isAllImplemented: true, 
         message0: "LAUNCHPROJECTILE"
     }, 
     {
         type: "triggers_PROJECTILEHIT", 
-        colour: 10, 
+        colour: 120, 
         output: "triggers", 
         isAllImplemented: true, 
         message0: "PROJECTILEHIT"
     }, 
     {
         type: "triggers_DAMAGED", 
-        colour: 10, 
+        colour: 120, 
         output: "triggers", 
         isAllImplemented: false, 
         message0: "DAMAGED"
     }, 
     {
         type: "triggers_SNEAK", 
-        colour: 10, 
+        colour: 120, 
         output: "triggers", 
         isAllImplemented: true, 
         message0: "SNEAK"
     }, 
     {
         type: "triggers_TOGGLEGLIDE", 
-        colour: 10, 
+        colour: 120, 
         output: "triggers", 
         isAllImplemented: true, 
         message0: "TOGGLEGLIDE"
     }, 
     {
         type: "triggers_PLAYERJUMP", 
-        colour: 10, 
+        colour: 120, 
         output: "triggers", 
         isAllImplemented: true, 
         message0: "PLAYERJUMP"
     }, 
     {
         type: "triggers_LOOP", 
-        colour: 10, 
+        colour: 120, 
         output: "triggers", 
         isAllImplemented: true, 
         message0: "LOOP", 
@@ -107,84 +107,84 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "triggers_COMBAT", 
-        colour: 10, 
+        colour: 120, 
         output: "triggers", 
         isAllImplemented: true, 
         message0: "COMBAT"
     }, 
     {
         type: "triggers_DEATH", 
-        colour: 10, 
+        colour: 120, 
         output: "triggers", 
         isAllImplemented: true, 
         message0: "DEATH"
     }, 
     {
         type: "triggers_SPAWN", 
-        colour: 10, 
+        colour: 120, 
         output: "triggers", 
         isAllImplemented: true, 
         message0: "SPAWN"
     }, 
     {
         type: "triggers_TARGET", 
-        colour: 10, 
+        colour: 120, 
         output: "triggers", 
         isAllImplemented: true, 
         message0: "TARGET"
     }, 
     {
         type: "triggers_TARGETED", 
-        colour: 10, 
+        colour: 120, 
         output: "triggers", 
         isAllImplemented: true, 
         message0: "TARGETED"
     }, 
     {
         type: "triggers_VEHICLE", 
-        colour: 10, 
+        colour: 120, 
         output: "triggers", 
         isAllImplemented: true, 
         message0: "VEHICLE"
     }, 
     {
         type: "triggers_ENTERVEHICLE", 
-        colour: 10, 
+        colour: 120, 
         output: "triggers", 
         isAllImplemented: true, 
         message0: "ENTERVEHICLE"
     }, 
     {
         type: "triggers_BECOMEVEHICLE", 
-        colour: 10, 
+        colour: 120, 
         output: "triggers", 
         isAllImplemented: true, 
         message0: "BECOMEVEHICLE"
     }, 
     {
         type: "triggers_EXITVEHICLE", 
-        colour: 10, 
+        colour: 120, 
         output: "triggers", 
         isAllImplemented: true, 
         message0: "EXITVEHICLE"
     }, 
     {
         type: "triggers_PLAYERJOIN", 
-        colour: 10, 
+        colour: 120, 
         output: "triggers", 
         isAllImplemented: true, 
         message0: "PLAYERJOIN"
     }, 
     {
         type: "triggers_PLAYERQUIT", 
-        colour: 10, 
+        colour: 120, 
         output: "triggers", 
         isAllImplemented: true, 
         message0: "PLAYERQUIT"
     }, 
     {
         type: "triggers_PROJECTILECOMBAT", 
-        colour: 10, 
+        colour: 120, 
         output: "triggers", 
         isAllImplemented: true, 
         message0: "PROJECTILECOMBAT", 
@@ -200,105 +200,105 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "triggers_TAME", 
-        colour: 10, 
+        colour: 120, 
         output: "triggers", 
         isAllImplemented: true, 
         message0: "TAME"
     }, 
     {
         type: "triggers_INTERACT", 
-        colour: 10, 
+        colour: 120, 
         output: "triggers", 
         isAllImplemented: false, 
         message0: "INTERACT"
     }, 
     {
         type: "triggers_KILL", 
-        colour: 10, 
+        colour: 120, 
         output: "triggers", 
         isAllImplemented: true, 
         message0: "KILL"
     }, 
     {
         type: "triggers_POTIONEFFECT", 
-        colour: 10, 
+        colour: 120, 
         output: "triggers", 
         isAllImplemented: false, 
         message0: "POTIONEFFECT"
     }, 
     {
         type: "triggers_INTERACTENTITY", 
-        colour: 10, 
+        colour: 120, 
         output: "triggers", 
         isAllImplemented: true, 
         message0: "INTERACTENTITY"
     }, 
     {
         type: "triggers_RIPTIDE", 
-        colour: 10, 
+        colour: 120, 
         output: "triggers", 
         isAllImplemented: true, 
         message0: "RIPTIDE"
     }, 
     {
         type: "triggers_CHANGEMAINHAND", 
-        colour: 10, 
+        colour: 120, 
         output: "triggers", 
         isAllImplemented: true, 
         message0: "CHANGEMAINHAND"
     }, 
     {
         type: "triggers_EQUIPARMOR", 
-        colour: 10, 
+        colour: 120, 
         output: "triggers", 
         isAllImplemented: true, 
         message0: "EQUIPARMOR"
     }, 
     {
         type: "triggers_SPRINT", 
-        colour: 10, 
+        colour: 120, 
         output: "triggers", 
         isAllImplemented: true, 
         message0: "SPRINT"
     }, 
     {
         type: "triggers_BLOCKBREAK", 
-        colour: 10, 
+        colour: 120, 
         output: "triggers", 
         isAllImplemented: true, 
         message0: "BLOCKBREAK"
     }, 
     {
         type: "triggers_TOTEM", 
-        colour: 10, 
+        colour: 120, 
         output: "triggers", 
         isAllImplemented: true, 
         message0: "TOTEM"
     }, 
     {
         type: "triggers_CONSUME", 
-        colour: 10, 
+        colour: 120, 
         output: "triggers", 
         isAllImplemented: true, 
         message0: "CONSUME"
     }, 
     {
         type: "triggers_MOVE", 
-        colour: 10, 
+        colour: 120, 
         output: "triggers", 
         isAllImplemented: true, 
         message0: "MOVE"
     }, 
     {
         type: "triggers_SWAPHANDS", 
-        colour: 10, 
+        colour: 120, 
         output: "triggers", 
         isAllImplemented: true, 
         message0: "SWAPHANDS"
     }, 
     {
         type: "conditions_HEALTH", 
-        colour: 10, 
+        colour: 35, 
         previousStatement: "conditions", 
         nextStatement: "conditions", 
         isAllImplemented: false, 
@@ -322,7 +322,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "conditions_CHANCE", 
-        colour: 10, 
+        colour: 35, 
         previousStatement: "conditions", 
         nextStatement: "conditions", 
         isAllImplemented: true, 
@@ -338,7 +338,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "conditions_COOLDOWN", 
-        colour: 10, 
+        colour: 35, 
         previousStatement: "conditions", 
         nextStatement: "conditions", 
         isAllImplemented: true, 
@@ -354,7 +354,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "conditions_ENTITY", 
-        colour: 10, 
+        colour: 35, 
         previousStatement: "conditions", 
         nextStatement: "conditions", 
         isAllImplemented: false, 
@@ -371,7 +371,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "conditions_SIZE", 
-        colour: 10, 
+        colour: 35, 
         previousStatement: "conditions", 
         nextStatement: "conditions", 
         isAllImplemented: true, 
@@ -397,7 +397,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "conditions_NOT", 
-        colour: 10, 
+        colour: 35, 
         previousStatement: "conditions", 
         nextStatement: "conditions", 
         isAllImplemented: true, 
@@ -415,7 +415,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "conditions_SNEAK", 
-        colour: 10, 
+        colour: 35, 
         previousStatement: "conditions", 
         nextStatement: "conditions", 
         isAllImplemented: true, 
@@ -432,7 +432,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "conditions_TIME", 
-        colour: 10, 
+        colour: 35, 
         previousStatement: "conditions", 
         nextStatement: "conditions", 
         isAllImplemented: false, 
@@ -458,7 +458,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "conditions_ONGROUND", 
-        colour: 10, 
+        colour: 35, 
         previousStatement: "conditions", 
         nextStatement: "conditions", 
         isAllImplemented: true, 
@@ -475,7 +475,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "conditions_GLIDING", 
-        colour: 10, 
+        colour: 35, 
         previousStatement: "conditions", 
         nextStatement: "conditions", 
         isAllImplemented: true, 
@@ -501,7 +501,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "conditions_BIOME", 
-        colour: 10, 
+        colour: 35, 
         previousStatement: "conditions", 
         nextStatement: "conditions", 
         isAllImplemented: false, 
@@ -509,7 +509,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "conditions_METADATA", 
-        colour: 10, 
+        colour: 35, 
         previousStatement: "conditions", 
         nextStatement: "conditions", 
         isAllImplemented: true, 
@@ -541,7 +541,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "conditions_NPC", 
-        colour: 10, 
+        colour: 35, 
         previousStatement: "conditions", 
         nextStatement: "conditions", 
         isAllImplemented: true, 
@@ -558,7 +558,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "conditions_WEATHER", 
-        colour: 10, 
+        colour: 35, 
         previousStatement: "conditions", 
         nextStatement: "conditions", 
         isAllImplemented: true, 
@@ -566,7 +566,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "conditions_INBLOCK", 
-        colour: 10, 
+        colour: 35, 
         previousStatement: "conditions", 
         nextStatement: "conditions", 
         isAllImplemented: false, 
@@ -574,7 +574,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "conditions_WORLD", 
-        colour: 10, 
+        colour: 35, 
         previousStatement: "conditions", 
         nextStatement: "conditions", 
         isAllImplemented: false, 
@@ -582,7 +582,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "conditions_TAMED", 
-        colour: 10, 
+        colour: 35, 
         previousStatement: "conditions", 
         nextStatement: "conditions", 
         isAllImplemented: true, 
@@ -599,7 +599,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "conditions_FLYING", 
-        colour: 10, 
+        colour: 35, 
         previousStatement: "conditions", 
         nextStatement: "conditions", 
         isAllImplemented: true, 
@@ -607,7 +607,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "conditions_FLY", 
-        colour: 10, 
+        colour: 35, 
         previousStatement: "conditions", 
         nextStatement: "conditions", 
         isAllImplemented: true, 
@@ -615,7 +615,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "conditions_HEIGHT", 
-        colour: 10, 
+        colour: 35, 
         previousStatement: "conditions", 
         nextStatement: "conditions", 
         isAllImplemented: false, 
@@ -623,7 +623,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "conditions_BLOCK", 
-        colour: 10, 
+        colour: 35, 
         previousStatement: "conditions", 
         nextStatement: "conditions", 
         isAllImplemented: false, 
@@ -631,7 +631,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "conditions_ITEM", 
-        colour: 10, 
+        colour: 35, 
         previousStatement: "conditions", 
         nextStatement: "conditions", 
         isAllImplemented: false, 
@@ -649,7 +649,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "conditions_OR", 
-        colour: 10, 
+        colour: 35, 
         previousStatement: "conditions", 
         nextStatement: "conditions", 
         isAllImplemented: false, 
@@ -657,7 +657,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "conditions_VISIBILITY", 
-        colour: 10, 
+        colour: 35, 
         previousStatement: "conditions", 
         nextStatement: "conditions", 
         isAllImplemented: true, 
@@ -673,7 +673,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "conditions_TEMPERATURE", 
-        colour: 10, 
+        colour: 35, 
         previousStatement: "conditions", 
         nextStatement: "conditions", 
         isAllImplemented: false, 
@@ -681,7 +681,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "conditions_DISTANCE", 
-        colour: 10, 
+        colour: 35, 
         previousStatement: "conditions", 
         nextStatement: "conditions", 
         isAllImplemented: false, 
@@ -689,7 +689,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "conditions_SHIELDED", 
-        colour: 10, 
+        colour: 35, 
         previousStatement: "conditions", 
         nextStatement: "conditions", 
         isAllImplemented: true, 
@@ -697,7 +697,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "conditions_ITEMWRAPPER", 
-        colour: 10, 
+        colour: 35, 
         previousStatement: "conditions", 
         nextStatement: "conditions", 
         isAllImplemented: false, 
@@ -705,7 +705,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "conditions_SWIMMING", 
-        colour: 10, 
+        colour: 35, 
         previousStatement: "conditions", 
         nextStatement: "conditions", 
         isAllImplemented: true, 
@@ -713,7 +713,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "conditions_SPEED", 
-        colour: 10, 
+        colour: 35, 
         previousStatement: "conditions", 
         nextStatement: "conditions", 
         isAllImplemented: false, 
@@ -721,7 +721,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "conditions_SHOOTER", 
-        colour: 10, 
+        colour: 35, 
         previousStatement: "conditions", 
         nextStatement: "conditions", 
         isAllImplemented: true, 
@@ -729,7 +729,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "conditions_HERO", 
-        colour: 10, 
+        colour: 35, 
         previousStatement: "conditions", 
         nextStatement: "conditions", 
         isAllImplemented: false, 
@@ -737,7 +737,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "conditions_BOSS", 
-        colour: 10, 
+        colour: 35, 
         previousStatement: "conditions", 
         nextStatement: "conditions", 
         isAllImplemented: false, 
@@ -745,7 +745,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "conditions_SKILLITEM", 
-        colour: 10, 
+        colour: 35, 
         previousStatement: "conditions", 
         nextStatement: "conditions", 
         isAllImplemented: true, 
@@ -760,7 +760,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "conditions_ITEMLEVEL", 
-        colour: 10, 
+        colour: 35, 
         previousStatement: "conditions", 
         nextStatement: "conditions", 
         isAllImplemented: false, 
@@ -768,7 +768,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "effects_DAMAGE", 
-        colour: 10, 
+        colour: 295, 
         previousStatement: "effects", 
         nextStatement: "effects", 
         isAllImplemented: true, 
@@ -793,7 +793,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "effects_AOE", 
-        colour: 10, 
+        colour: 295, 
         previousStatement: "effects", 
         nextStatement: "effects", 
         isAllImplemented: false, 
@@ -809,7 +809,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "effects_VELOCITY", 
-        colour: 10, 
+        colour: 295, 
         previousStatement: "effects", 
         nextStatement: "effects", 
         isAllImplemented: true, 
@@ -848,7 +848,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "effects_CANCEL", 
-        colour: 10, 
+        colour: 295, 
         previousStatement: "effects", 
         nextStatement: "effects", 
         isAllImplemented: true, 
@@ -856,7 +856,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "effects_GLIDING", 
-        colour: 10, 
+        colour: 295, 
         previousStatement: "effects", 
         nextStatement: "effects", 
         isAllImplemented: true, 
@@ -873,7 +873,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "effects_WAIT", 
-        colour: 10, 
+        colour: 295, 
         previousStatement: "effects", 
         nextStatement: "effects", 
         isAllImplemented: false, 
@@ -889,7 +889,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "effects_POTION", 
-        colour: 10, 
+        colour: 295, 
         previousStatement: "effects", 
         nextStatement: "effects", 
         isAllImplemented: true, 
@@ -907,7 +907,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "effects_WEB", 
-        colour: 10, 
+        colour: 295, 
         previousStatement: "effects", 
         nextStatement: "effects", 
         isAllImplemented: true, 
@@ -932,7 +932,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "effects_BLOCKENTITY", 
-        colour: 10, 
+        colour: 295, 
         previousStatement: "effects", 
         nextStatement: "effects", 
         isAllImplemented: true, 
@@ -957,7 +957,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "effects_ARROW", 
-        colour: 10, 
+        colour: 295, 
         previousStatement: "effects", 
         nextStatement: "effects", 
         isAllImplemented: true, 
@@ -1000,7 +1000,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "effects_ATTRIBUTE", 
-        colour: 10, 
+        colour: 295, 
         previousStatement: "effects", 
         nextStatement: "effects", 
         isAllImplemented: true, 
@@ -1032,7 +1032,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "effects_LAUNCH", 
-        colour: 10, 
+        colour: 295, 
         previousStatement: "effects", 
         nextStatement: "effects", 
         isAllImplemented: true, 
@@ -1057,7 +1057,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "effects_MESSAGE", 
-        colour: 10, 
+        colour: 295, 
         previousStatement: "effects", 
         nextStatement: "effects", 
         isAllImplemented: true, 
@@ -1072,7 +1072,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "effects_PICKUP", 
-        colour: 10, 
+        colour: 295, 
         previousStatement: "effects", 
         nextStatement: "effects", 
         isAllImplemented: true, 
@@ -1080,7 +1080,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "effects_REPULSE", 
-        colour: 10, 
+        colour: 295, 
         previousStatement: "effects", 
         nextStatement: "effects", 
         isAllImplemented: true, 
@@ -1105,7 +1105,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "effects_RESIZE", 
-        colour: 10, 
+        colour: 295, 
         previousStatement: "effects", 
         nextStatement: "effects", 
         isAllImplemented: true, 
@@ -1138,7 +1138,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "effects_SMITE", 
-        colour: 10, 
+        colour: 295, 
         previousStatement: "effects", 
         nextStatement: "effects", 
         isAllImplemented: true, 
@@ -1155,7 +1155,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "effects_LIGHTNING", 
-        colour: 10, 
+        colour: 295, 
         previousStatement: "effects", 
         nextStatement: "effects", 
         isAllImplemented: true, 
@@ -1172,7 +1172,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "effects_FLING", 
-        colour: 10, 
+        colour: 295, 
         previousStatement: "effects", 
         nextStatement: "effects", 
         isAllImplemented: true, 
@@ -1211,7 +1211,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "effects_METADATA", 
-        colour: 10, 
+        colour: 295, 
         previousStatement: "effects", 
         nextStatement: "effects", 
         isAllImplemented: true, 
@@ -1242,7 +1242,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "effects_GIVEITEM", 
-        colour: 10, 
+        colour: 295, 
         previousStatement: "effects", 
         nextStatement: "effects", 
         isAllImplemented: true, 
@@ -1269,7 +1269,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "effects_SCRAMBLEINVENTORY", 
-        colour: 10, 
+        colour: 295, 
         previousStatement: "effects", 
         nextStatement: "effects", 
         isAllImplemented: true, 
@@ -1277,7 +1277,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "effects_RANDOMTELEPORT", 
-        colour: 10, 
+        colour: 295, 
         previousStatement: "effects", 
         nextStatement: "effects", 
         isAllImplemented: true, 
@@ -1301,7 +1301,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "effects_PROJECTILE", 
-        colour: 10, 
+        colour: 295, 
         previousStatement: "effects", 
         nextStatement: "effects", 
         isAllImplemented: true, 
@@ -1327,7 +1327,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "effects_SOUND", 
-        colour: 10, 
+        colour: 295, 
         previousStatement: "effects", 
         nextStatement: "effects", 
         isAllImplemented: true, 
@@ -1345,7 +1345,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "effects_COMMAND", 
-        colour: 10, 
+        colour: 295, 
         previousStatement: "effects", 
         nextStatement: "effects", 
         isAllImplemented: false, 
@@ -1361,7 +1361,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "effects_LUNGE", 
-        colour: 10, 
+        colour: 295, 
         previousStatement: "effects", 
         nextStatement: "effects", 
         isAllImplemented: true, 
@@ -1394,7 +1394,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "effects_NEAREST", 
-        colour: 10, 
+        colour: 295, 
         previousStatement: "effects", 
         nextStatement: "effects", 
         isAllImplemented: false, 
@@ -1410,7 +1410,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "effects_SHOOTER", 
-        colour: 10, 
+        colour: 295, 
         previousStatement: "effects", 
         nextStatement: "effects", 
         isAllImplemented: false, 
@@ -1427,7 +1427,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "effects_KNOCKBACK", 
-        colour: 10, 
+        colour: 295, 
         previousStatement: "effects", 
         nextStatement: "effects", 
         isAllImplemented: true, 
@@ -1452,7 +1452,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "effects_IGNITE", 
-        colour: 10, 
+        colour: 295, 
         previousStatement: "effects", 
         nextStatement: "effects", 
         isAllImplemented: true, 
@@ -1469,7 +1469,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "effects_FIRE", 
-        colour: 10, 
+        colour: 295, 
         previousStatement: "effects", 
         nextStatement: "effects", 
         isAllImplemented: true, 
@@ -1486,7 +1486,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "effects_TARGET", 
-        colour: 10, 
+        colour: 295, 
         previousStatement: "effects", 
         nextStatement: "effects", 
         isAllImplemented: true, 
@@ -1494,7 +1494,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "effects_SWAP", 
-        colour: 10, 
+        colour: 295, 
         previousStatement: "effects", 
         nextStatement: "effects", 
         isAllImplemented: true, 
@@ -1502,7 +1502,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "effects_LOCATIONCUBE", 
-        colour: 10, 
+        colour: 295, 
         previousStatement: "effects", 
         nextStatement: "effects", 
         isAllImplemented: false, 
@@ -1538,7 +1538,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "effects_PLACEBLOCK", 
-        colour: 10, 
+        colour: 295, 
         previousStatement: "effects", 
         nextStatement: "effects", 
         isAllImplemented: true, 
@@ -1582,7 +1582,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "effects_SPAWNENTITY", 
-        colour: 10, 
+        colour: 295, 
         previousStatement: "effects", 
         nextStatement: "effects", 
         isAllImplemented: true, 
@@ -1600,7 +1600,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "effects_REMOVEPOTION", 
-        colour: 10, 
+        colour: 295, 
         previousStatement: "effects", 
         nextStatement: "effects", 
         isAllImplemented: false, 
@@ -1608,7 +1608,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "effects_TELEPORT", 
-        colour: 10, 
+        colour: 295, 
         previousStatement: "effects", 
         nextStatement: "effects", 
         isAllImplemented: true, 
@@ -1616,7 +1616,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "effects_RAYTRACE", 
-        colour: 10, 
+        colour: 295, 
         previousStatement: "effects", 
         nextStatement: "effects", 
         isAllImplemented: false, 
@@ -1668,7 +1668,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "effects_TIMER", 
-        colour: 10, 
+        colour: 295, 
         previousStatement: "effects", 
         nextStatement: "effects", 
         isAllImplemented: false, 
@@ -1701,7 +1701,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "effects_REMOVEENTITY", 
-        colour: 10, 
+        colour: 295, 
         previousStatement: "effects", 
         nextStatement: "effects", 
         isAllImplemented: true, 
@@ -1709,7 +1709,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "effects_ITEMSTACK", 
-        colour: 10, 
+        colour: 295, 
         previousStatement: "effects", 
         nextStatement: "effects", 
         isAllImplemented: false, 
@@ -1717,7 +1717,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "effects_ITEMAMOUNT", 
-        colour: 10, 
+        colour: 295, 
         previousStatement: "effects", 
         nextStatement: "effects", 
         isAllImplemented: true, 
@@ -1741,7 +1741,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "effects_SWITCHEROO", 
-        colour: 10, 
+        colour: 295, 
         previousStatement: "effects", 
         nextStatement: "effects", 
         isAllImplemented: false, 
@@ -1749,7 +1749,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "effects_LOCATIONOFFSET", 
-        colour: 10, 
+        colour: 295, 
         previousStatement: "effects", 
         nextStatement: "effects", 
         isAllImplemented: false, 
@@ -1767,7 +1767,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "effects_BONEMEAL", 
-        colour: 10, 
+        colour: 295, 
         previousStatement: "effects", 
         nextStatement: "effects", 
         isAllImplemented: false, 
@@ -1775,7 +1775,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "effects_HUNGER", 
-        colour: 10, 
+        colour: 295, 
         previousStatement: "effects", 
         nextStatement: "effects", 
         isAllImplemented: true, 
@@ -1799,7 +1799,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "effects_LOSETARGET", 
-        colour: 10, 
+        colour: 295, 
         previousStatement: "effects", 
         nextStatement: "effects", 
         isAllImplemented: true, 
@@ -1807,7 +1807,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "effects_VEINMINER", 
-        colour: 10, 
+        colour: 295, 
         previousStatement: "effects", 
         nextStatement: "effects", 
         isAllImplemented: false, 
@@ -1841,7 +1841,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "effects_ACTIONBAR", 
-        colour: 10, 
+        colour: 295, 
         previousStatement: "effects", 
         nextStatement: "effects", 
         isAllImplemented: true, 
@@ -1856,7 +1856,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "effects_FREEZE", 
-        colour: 10, 
+        colour: 295, 
         previousStatement: "effects", 
         nextStatement: "effects", 
         isAllImplemented: true, 
@@ -1880,7 +1880,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "effects_HEALTH", 
-        colour: 10, 
+        colour: 295, 
         previousStatement: "effects", 
         nextStatement: "effects", 
         isAllImplemented: true, 
@@ -1904,7 +1904,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "effects_FLY", 
-        colour: 10, 
+        colour: 295, 
         previousStatement: "effects", 
         nextStatement: "effects", 
         isAllImplemented: true, 
@@ -1921,7 +1921,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "effects_FLYING", 
-        colour: 10, 
+        colour: 295, 
         previousStatement: "effects", 
         nextStatement: "effects", 
         isAllImplemented: true, 
@@ -1938,7 +1938,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "effects_MINION", 
-        colour: 10, 
+        colour: 295, 
         previousStatement: "effects", 
         nextStatement: "effects", 
         isAllImplemented: true, 
@@ -1971,7 +1971,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "effects_RIDER", 
-        colour: 10, 
+        colour: 295, 
         previousStatement: "effects", 
         nextStatement: "effects", 
         isAllImplemented: true, 
@@ -1986,7 +1986,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "skills_POTIONEFFECT", 
-        colour: 10, 
+        colour: 230, 
         previousStatement: "skills", 
         nextStatement: "skills", 
         isAllImplemented: true, 
@@ -2022,7 +2022,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "skills_OHKO", 
-        colour: 10, 
+        colour: 230, 
         previousStatement: "skills", 
         nextStatement: "skills", 
         isAllImplemented: false, 
@@ -2038,7 +2038,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "skills_REPULSION", 
-        colour: 10, 
+        colour: 230, 
         previousStatement: "skills", 
         nextStatement: "skills", 
         isAllImplemented: false, 
@@ -2062,7 +2062,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "skills_CONVERTITEM", 
-        colour: 10, 
+        colour: 230, 
         previousStatement: "skills", 
         nextStatement: "skills", 
         isAllImplemented: true, 
@@ -2098,7 +2098,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "skills_COOLDOWN", 
-        colour: 10, 
+        colour: 230, 
         previousStatement: "skills", 
         nextStatement: "skills", 
         isAllImplemented: true, 
@@ -2122,7 +2122,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "skills_CONVERTBLOCK", 
-        colour: 10, 
+        colour: 230, 
         previousStatement: "skills", 
         nextStatement: "skills", 
         isAllImplemented: false, 
@@ -2155,7 +2155,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "skills_REMOTEDETONATION", 
-        colour: 10, 
+        colour: 230, 
         previousStatement: "skills", 
         nextStatement: "skills", 
         isAllImplemented: false, 
@@ -2214,7 +2214,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "skills_BLOCKDROPS", 
-        colour: 10, 
+        colour: 230, 
         previousStatement: "skills", 
         nextStatement: "skills", 
         isAllImplemented: false, 
@@ -2231,7 +2231,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "skills_CREEPER", 
-        colour: 10, 
+        colour: 230, 
         previousStatement: "skills", 
         nextStatement: "skills", 
         isAllImplemented: true, 
@@ -2287,7 +2287,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "skills_GIVEITEM", 
-        colour: 10, 
+        colour: 230, 
         previousStatement: "skills", 
         nextStatement: "skills", 
         isAllImplemented: true, 
@@ -2341,7 +2341,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "skills_GUN", 
-        colour: 10, 
+        colour: 230, 
         previousStatement: "skills", 
         nextStatement: "skills", 
         isAllImplemented: true, 
@@ -2427,7 +2427,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "skills_SNEAK", 
-        colour: 10, 
+        colour: 230, 
         previousStatement: "skills", 
         nextStatement: "skills", 
         isAllImplemented: true, 
@@ -2453,7 +2453,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "skills_SHIELD", 
-        colour: 10, 
+        colour: 230, 
         previousStatement: "skills", 
         nextStatement: "skills", 
         isAllImplemented: true, 
@@ -2469,7 +2469,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "skills_SPELL", 
-        colour: 10, 
+        colour: 230, 
         previousStatement: "skills", 
         nextStatement: "skills", 
         isAllImplemented: false, 
@@ -2541,7 +2541,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "skills_THROWER", 
-        colour: 10, 
+        colour: 230, 
         previousStatement: "skills", 
         nextStatement: "skills", 
         isAllImplemented: false, 
@@ -2617,7 +2617,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "skills_BLOCKRAY", 
-        colour: 10, 
+        colour: 230, 
         previousStatement: "skills", 
         nextStatement: "skills", 
         isAllImplemented: false, 
@@ -2659,7 +2659,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     }, 
     {
         type: "skills_CRAFTING", 
-        colour: 10, 
+        colour: 230, 
         previousStatement: "skills", 
         nextStatement: "skills", 
         isAllImplemented: false, 
