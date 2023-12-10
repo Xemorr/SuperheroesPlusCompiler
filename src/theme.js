@@ -1,7 +1,7 @@
 
 export const theme = {
     'componentStyles': {
-        'toolboxBackgroundColour': '#dd5',
-        'flyoutBackgroundColour': '#dd6'
+        'toolboxBackgroundColour': '#EEE',
+        'flyoutBackgroundColour': '#DDD'
     }
 }
