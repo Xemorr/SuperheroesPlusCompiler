@@ -752,6 +752,17 @@ export const toolbox = {
                     type: "types_ItemComparisonData"
                 }
             ]
+        }, 
+        {
+            kind: "category", 
+            name: "hero", 
+            colour: 0, 
+            contents: [
+                {
+                    kind: "block", 
+                    type: "hero_hero"
+                }
+            ]
         }
     ]
 }

@@ -3338,5 +3338,41 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
                 ]
             }
         ]
+    }, 
+    {
+        type: "hero_hero", 
+        message0: "Hero Name:%1", 
+        args0: [
+            {
+                type: "field_input", 
+                name: "SECTION_NAME", 
+                text: "Exampleman"
+            }
+        ], 
+        message1: "Coloured Name:%1", 
+        args1: [
+            {
+                type: "field_input", 
+                name: "colouredName", 
+                text: "<red>Exampleman"
+            }
+        ], 
+        message2: "Description:%1", 
+        args2: [
+            {
+                type: "field_input", 
+                name: "description", 
+                text: "A description fit for an example"
+            }
+        ], 
+        message3: "skills: %1", 
+        args3: [
+            {
+                type: "input_statement", 
+                name: "skills", 
+                check: "skills"
+            }
+        ], 
+        colour: 0
     }
 ])

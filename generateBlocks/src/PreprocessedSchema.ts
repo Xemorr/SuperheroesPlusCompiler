@@ -16,6 +16,7 @@ export {
 }
 
 interface Schema {
+	hero: StringRecord<any>
 	triggers: StringRecord<Trigger>
 	conditions: StringRecord<Condition>
 	effects: StringRecord<Effect>

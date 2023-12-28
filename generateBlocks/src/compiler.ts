@@ -1,7 +1,8 @@
 import { Argument, dropdownOption, FieldBoolean, FieldEnum, FieldInput, FieldInteger, FieldNumber, InputValue } from "./blockly/Arguments.js";
-import { Block, BlockType, categoryData } from "./blockly/Block.js";
+import { Block, BlockType, categoryData, JSONBlock } from "./blockly/Block.js";
 import { Schema, Item, Type, PropertyMap } from "./PreprocessedSchema.js";
 import { forEachEntry, indent, JSONStringify, objectMap, StringRecord } from "./utils.js";
+import { hero } from "./manual-schema.js"
 
 type EnumMap = StringRecord<dropdownOption[]>
 
@@ -26,14 +27,14 @@ class Compiler {
 
     compile(schema: Schema): compilationOutput {
         const blocks = this.generateBlocks(schema)
-
+        blocks.hero = [new JSONBlock("hero", "hero", hero)]
         const blocksCode = `import * as Blockly from 'blockly';
         export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray(${JSONStringify(blocks)})`
-
+        var toolbox = this.generateToolbox(blocks)
         return {
             enumCode: this.stringifyEnum(),
             blocksCode: this.stringifyBlocks(blocks),
-            toolboxCode: "export const toolbox = " + JSONStringify(this.generateToolbox(blocks))
+            toolboxCode: "export const toolbox = " + JSONStringify(toolbox)
         }
     }
 
@@ -117,7 +118,8 @@ class Compiler {
 
     // for adding special items
     handleSpecialItems(schema: Schema): Block[] {
-    /* RangeData */ {
+
+        /* RangeData */ {
             // delete schema.types["range"]
             // add to blocks
         }

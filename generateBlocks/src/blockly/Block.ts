@@ -10,6 +10,10 @@ type CategoryData = {
 }
 
 export const categoryData: Record<keyof Schema, CategoryData> = {
+    hero: {
+        colour: 0,
+        chaining: false
+    },
     triggers: {
         colour: 120,
         chaining: false
@@ -100,4 +104,17 @@ export class Block {
         return JSONStringify({...this, ...this.args, ...excludes}, true)
     }
 
+}
+
+export class JSONBlock extends Block {
+    json_block: object
+
+    constructor(type: keyof Schema, name: string, json_block: object) {
+        super(type, name);
+        this.json_block = json_block
+    }
+
+    override toJSON(): string {
+        return JSONStringify(this.json_block, true)
+    }
 }
