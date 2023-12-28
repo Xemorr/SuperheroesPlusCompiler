@@ -17,11 +17,20 @@ superheroesGenerator['blockToCode'] = function(block) {
 // default yaml serialization
 function blockToYaml(block) {
     const blockFields = getBlockFields(block);
+    const [block_type, block_name] = block.type.split("_");
+    if (block_type === "skills") {
+        blockFields.unshift(["skill", block_name])
+    }
+    else if (block_type === "effects" || block_type === "conditions" || block_type == "triggers") {
+        blockFields.unshift(["type", block_name])
+    }
     let sectionName = getBlockSectionName(blockFields);
+    
     const valueEntries = blockFields.map(keyval => `${keyval[0]}: ${keyval[1]}`);
     const objectEntries = [
     ...getBlockValues(block).map(value => `${value[0]}: ${indent("\r\n" + superheroesGenerator.blockToCode(value[1]))}`),
-    ...blockStatementsToYaml(getBlockStatements(block))];
+    ...blockStatementsToYaml(getBlockStatements(block))
+    ];
     
     if (sectionName === undefined) return [...valueEntries, ...objectEntries].join("\r\n");
     return `${sectionName}: ` + indent("\r\n" + [...valueEntries, ...objectEntries].join("\r\n"));
