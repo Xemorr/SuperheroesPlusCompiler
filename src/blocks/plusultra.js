@@ -1985,6 +1985,38 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         ]
     }, 
     {
+        type: "skills_CUSTOM", 
+        colour: 230, 
+        previousStatement: "skills", 
+        nextStatement: "skills", 
+        isAllImplemented: true, 
+        message0: "CUSTOM", 
+        message1: "trigger: %1", 
+        args1: [
+            {
+                type: "input_value", 
+                name: "trigger", 
+                check: "triggers"
+            }
+        ], 
+        message2: "conditions: %1", 
+        args2: [
+            {
+                type: "input_statement", 
+                name: "conditions", 
+                check: "conditions"
+            }
+        ], 
+        message3: "effects: %1", 
+        args3: [
+            {
+                type: "input_statement", 
+                name: "effects", 
+                check: "effects"
+            }
+        ]
+    }, 
+    {
         type: "skills_POTIONEFFECT", 
         colour: 230, 
         previousStatement: "skills", 

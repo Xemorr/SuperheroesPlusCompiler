@@ -545,6 +545,10 @@ export const toolbox = {
             contents: [
                 {
                     kind: "block", 
+                    type: "skills_CUSTOM"
+                }, 
+                {
+                    kind: "block", 
                     type: "skills_POTIONEFFECT"
                 }, 
                 {
