@@ -1,4 +1,4 @@
-import { Argument, dropdownOption, FieldBoolean, FieldEnum, FieldInput, FieldInteger, FieldNumber, InputStatement, InputValue } from "./blockly/Arguments.js";
+import { Argument, dropdownOption, FieldBoolean, FieldDropdown, FieldEnum, FieldInput, FieldInteger, FieldNumber, InputStatement, InputValue } from "./blockly/Arguments.js";
 import { Block, categoryData, DefaultBlock, JSONBlock, ListItemBlock } from "./blockly/Block.js";
 import { Schema, Item, Type, PropertyMap, Property, PropertyType, PropertyTypes } from "./PreprocessedSchema.js";
 import { forEachEntry, JSONStringify, objectMap, StringRecord, toArray } from "./utils.js";
@@ -134,6 +134,14 @@ class Compiler {
     generateItemBlock(type: keyof Schema, name: string, item: Item): Block | undefined {
         if (!item.available) return
         const block = new DefaultBlock(type, name)
+        if ("supportedModes" in item) {
+            const supportedModes = item.supportedModes as string[]
+            var dropdown = new FieldDropdown("mode", "SELF");
+            // This is done because setOptions takes in an array of pairs where the left element is the language word
+            // and the right is the compiled phrase, we only support english so we duplicate the language-neutral word.
+            dropdown.setOptions(supportedModes.filter((str: string) => str !== "ALL").map((str: string) => [str, str])); 
+            block.addArg("mode", dropdown);
+        }
         this.compileProperties(block, item.properties)
         return block
     }
