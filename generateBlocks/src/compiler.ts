@@ -1,7 +1,7 @@
-import { Argument, dropdownOption, FieldBoolean, FieldEnum, FieldInput, FieldInteger, FieldNumber, InputValue } from "./blockly/Arguments.js";
-import { Block, BlockType, categoryData, JSONBlock } from "./blockly/Block.js";
-import { Schema, Item, Type, PropertyMap } from "./PreprocessedSchema.js";
-import { forEachEntry, indent, JSONStringify, objectMap, StringRecord } from "./utils.js";
+import { Argument, dropdownOption, FieldBoolean, FieldEnum, FieldInput, FieldInteger, FieldNumber, InputStatement, InputValue } from "./blockly/Arguments.js";
+import { Block, categoryData, DefaultBlock, JSONBlock, ListItemBlock } from "./blockly/Block.js";
+import { Schema, Item, Type, PropertyMap, Property, PropertyType, PropertyTypes } from "./PreprocessedSchema.js";
+import { forEachEntry, JSONStringify, objectMap, StringRecord, toArray } from "./utils.js";
 import { hero, custom } from "./manual-schema.js"
 
 type EnumMap = StringRecord<dropdownOption[]>
@@ -20,17 +20,21 @@ export function compile(schema: Schema): compilationOutput {
     return new Compiler().compile(schema)
 }
 
+const valueTypes = ["boolean", "integer", "number", "string"] as const
+type valueTypes = (typeof valueTypes)[number]
+
 class Compiler {
 
     enums: EnumMap = {}
     objectTypes: string[] = []
+    listItems: StringRecord<Block> = {}
 
     compile(schema: Schema): compilationOutput {
         const blocks = this.generateBlocks(schema)
         blocks.hero = [new JSONBlock("hero", "hero", hero)]
         blocks.skills.unshift(new JSONBlock("skills", "CUSTOM", custom))
-        const blocksCode = `import * as Blockly from 'blockly';
-        export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray(${JSONStringify(blocks)})`
+        blocks.listItem = Object.values(this.listItems);
+
         var toolbox = this.generateToolbox(blocks)
         return {
             enumCode: this.stringifyEnum(),
@@ -129,13 +133,13 @@ class Compiler {
 
     generateItemBlock(type: keyof Schema, name: string, item: Item): Block | undefined {
         if (!item.available) return
-        const block = new Block(type, name)
+        const block = new DefaultBlock(type, name)
         this.compileProperties(block, item.properties)
         return block
     }
 
     generateTypeBlock(name: string, type: Type): Block {
-        const block = new Block("types", name)
+        const block = new DefaultBlock("types", name)
         this.compileProperties(block, type.properties)
         return block
     }
@@ -143,40 +147,78 @@ class Compiler {
     compileProperties(block: Block, properties: PropertyMap | undefined) {
         if (!properties) return
 
-        forEachEntry(properties, (name, property) => {
-            if (Array.isArray(property.type)) {
-                block.isAllImplemented = false
-                return
-            }
-            const type = property.type
+        forEachEntry(properties, (name, property) => this.compileProperty(block, name, property))
+    }
 
-            if (type in this.enums) {
-                block.addArg(name, new FieldEnum(name, property.default, type))
-                return
-            }
-            if (this.objectTypes.includes(type)) {
-                block.addArg(name, new InputValue(name, [type]))
-                return
-            }
+    compileProperty(block: Block, name: string, property: Property): void {
+        if (Array.isArray(property.type)) {
+            block.isAllImplemented = false
+            return
+        }
+        const type = property.type
 
-            const valueTypes = ["boolean", "integer", "number", "string"] as const
-            if (!valueTypes.includes(type as any)) {
-                block.isAllImplemented = false
-                return
-            }
+        if (type in this.enums) {
+            block.addArg(name, new FieldEnum(name, property.default, type))
+            return
+        }
+        if (this.objectTypes.includes(type)) {
+            block.addArg(name, new InputValue(name, [type]))
+            return
+        }
 
-            const arg: Argument = (type => {
-                switch (type) {
-                    case "boolean": return new FieldBoolean(name, property.default)
-                    case "number": return new FieldNumber(name, property.default)
-                    case "integer": return new FieldInteger(name, property.default)
-                    case "string": return new FieldInput(name, property.default)
-                }
-            })(type as (typeof valueTypes)[number])
+        if (type === "array") {
+            this.compileArrayProperty(block, name, property)
+            return
+        }
 
+        if (valueTypes.includes(type as any)) {
+            const arg = this.createValueField(type as valueTypes, name, property.default)
             block.addArg(name, arg)
+            return
+        }
 
-        })
+        block.isAllImplemented = false
+    }
+
+    createValueField(type: valueTypes, name: string, _default: any) {
+        switch (type) {
+            case "boolean": return new FieldBoolean(name, _default)
+            case "number": return new FieldNumber(name, _default)
+            case "integer": return new FieldInteger(name, _default)
+            case "string": return new FieldInput(name, _default)
+        }
+    }
+
+    compileArrayProperty(block: Block, name: string, property: Property) {
+        let itemType = property.items;
+        if (itemType == undefined) {
+            console.error("I fucked up docs")
+            return
+        }
+        if (typeof itemType === "object" && !Array.isArray(itemType)) {
+            block.isAllImplemented = false
+            return
+        }
+        itemType = toArray(itemType)
+
+        const itemChecks = itemType.map(x => "listItem_" + x)
+
+        block.addArg(name, new InputStatement(name, itemChecks))
+
+        itemType.forEach(this.compileListItemBlock.bind(this))
+    }
+
+    compileListItemBlock(type: PropertyTypes) {
+        if (type in this.listItems) return
+
+        const block = new ListItemBlock(type)
+        const property: Property = {
+            description: `List item for ${type}`,
+            required: true,
+            type: type
+        }
+        this.compileProperty(block, type, property)
+        this.listItems[type] = block
     }
 
 }

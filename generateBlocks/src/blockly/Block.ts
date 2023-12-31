@@ -14,6 +14,10 @@ export const categoryData: Record<keyof Schema, CategoryData> = {
         colour: 0,
         chaining: false
     },
+    listItem: {
+        colour: 0,
+        chaining: true
+    },
     triggers: {
         colour: 120,
         chaining: false
@@ -52,9 +56,10 @@ type ArgumentList = {
     [K: `message${number}`]: string;
     [K: `args${number}`]: [Argument]
 }
+
 export class Block {
     type: BlockType
-    colour!: number
+    colour: number
 
     output?: string
     previousStatement?: string
@@ -63,24 +68,10 @@ export class Block {
     args: ArgumentList = {}
     argCounter: number = 0
     isAllImplemented: boolean = true
-
-    constructor(type: keyof Schema, name: string) {
-        this.type = (type + "_" + name) as BlockType
-
-        this.addCategoryData(type, categoryData[type])
-
-        this.addTextArg(name)
-    }
-
-    private addCategoryData(type: keyof Schema, cateroryData: CategoryData) {
-        this.colour = cateroryData.colour
-
-        if (cateroryData.chaining) {
-            this.previousStatement = type
-            this.nextStatement = type
-        } else {
-            this.output = type
-        }
+	
+	constructor(type: BlockType) {
+        this.type = type
+        this.colour = 0
     }
 
     addArg(name: string, arg: Argument) {
@@ -99,14 +90,52 @@ export class Block {
     toJSON() {
         const excludes = {
             argCounter: undefined,
-            args: undefined
+            args: undefined,
+            isAllImplemented: this.isAllImplemented as boolean | undefined
+        }
+        if (!this.isAllImplemented) {
+            this.args[`message${this.argCounter}`] = "Incomplete"
+        } else {
+            excludes.isAllImplemented = undefined
         }
         return JSONStringify({...this, ...this.args, ...excludes}, true)
     }
 
 }
 
-export class JSONBlock extends Block {
+export class DefaultBlock extends Block {
+	
+    constructor(type: keyof Schema, name: string) {
+        super(`${type}_${name}` as BlockType)
+
+        this.loadCategoryData(type, categoryData[type])
+
+        this.addTextArg(name)
+    }
+
+    private loadCategoryData(type: keyof Schema, cateroryData: CategoryData) {
+        this.colour = cateroryData.colour
+
+        if (cateroryData.chaining) {
+            this.previousStatement = type
+            this.nextStatement = type
+        } else {
+            this.output = type
+        }
+    }
+
+}
+
+export class ListItemBlock extends Block {
+	constructor(name: string) {
+		super(`listItem_${name}`)
+		this.colour = categoryData.listItem.colour
+		this.previousStatement = this.type
+		this.nextStatement = this.type
+	}
+}
+
+export class JSONBlock extends DefaultBlock {
     json_block: object
 
     constructor(type: keyof Schema, name: string, json_block: object) {

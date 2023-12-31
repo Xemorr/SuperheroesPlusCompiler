@@ -16,19 +16,22 @@ export {
 }
 
 interface Schema {
-	hero: StringRecord<any>
 	triggers: StringRecord<Trigger>
 	conditions: StringRecord<Condition>
 	effects: StringRecord<Effect>
-
+	
 	skills: StringRecord<Skill>
-
+	
 	damagemodifiers: StringRecord<DamageModifier>
 	rewards: StringRecord<Reward>
 	
 	distributions: StringRecord<Distribution>
-
+	
 	types: StringRecord<Type>
+
+	//extras
+	hero: StringRecord<any>
+	listItem: StringRecord<any>
 }
 
 interface Descriptable {
@@ -74,7 +77,7 @@ type PropertyType = PropertyTypes | PropertyTypes[]
 interface PropertiesMapKey extends Descriptable {
 	type: PropertyType
 }
-interface Property extends Descriptable {
+type Property = Descriptable & {
 	default?: any
 	required: boolean
 	type: PropertyType

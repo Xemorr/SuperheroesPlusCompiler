@@ -72,3 +72,8 @@ export function JSONStringify(object: unknown, calledFromToJson?: true): string 
 		.join(", \r\n")
 	return `{\r\n${stringified}\r\n}`
 }
+
+export function toArray<T>(x: T | T[]): T[] {
+	if (Array.isArray(x)) return x
+	else return [x]
+}

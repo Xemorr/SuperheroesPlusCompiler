@@ -3,8 +3,9 @@ import { JSONStringify, Variable } from "../utils.js"
 export {
     Argument, 
     InputValue,
-    FieldDropdown,
+    InputStatement,
 
+    FieldDropdown,
     FieldBoolean,
     FieldEnum,
     FieldInteger,
@@ -14,6 +15,7 @@ export {
 
 type ArgumentType = 
     "input_value" | 
+    "input_statement" |
     "field_dropdown" |
     "field_number" |
     "field_input"
@@ -42,6 +44,22 @@ class InputValue implements Argument {
         return JSONStringify(this, true)
     }
     
+}
+
+class InputStatement implements Argument {
+    type: ArgumentType = "input_statement"
+    name: string
+    check: string | string[]
+
+    constructor(name: string, check: string | string[]) {
+        this.name = name
+        this.check = check
+    }
+
+    toJSON(): string {
+        return JSONStringify(this, true)
+    }
+
 }
 
 class FieldNumber implements Argument {
