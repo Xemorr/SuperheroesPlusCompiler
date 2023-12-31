@@ -65,7 +65,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         args1: [
             {
                 type: "input_statement", 
-                name: "causes", 
+                name: "causes_array", 
                 check: [
                     "listItem_damageCause"
                 ]
@@ -200,7 +200,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         args1: [
             {
                 type: "input_statement", 
-                name: "actions", 
+                name: "actions_array", 
                 check: [
                     "listItem_action"
                 ]
@@ -222,7 +222,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         args1: [
             {
                 type: "input_statement", 
-                name: "effects", 
+                name: "effects_array", 
                 check: [
                     "listItem_potion"
                 ]
@@ -363,7 +363,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         args2: [
             {
                 type: "input_statement", 
-                name: "entities", 
+                name: "entities_array", 
                 check: [
                     "listItem_entity"
                 ]
@@ -506,7 +506,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         args1: [
             {
                 type: "input_statement", 
-                name: "biomes", 
+                name: "biomes_array", 
                 check: [
                     "listItem_biome"
                 ]
@@ -577,7 +577,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         args1: [
             {
                 type: "input_statement", 
-                name: "blocks", 
+                name: "blocks_array", 
                 check: [
                     "listItem_material"
                 ]
@@ -594,7 +594,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         args1: [
             {
                 type: "input_statement", 
-                name: "worlds", 
+                name: "worlds_array", 
                 check: [
                     "listItem_world"
                 ]
@@ -650,7 +650,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         args1: [
             {
                 type: "input_statement", 
-                name: "materials", 
+                name: "materials_array", 
                 check: [
                     "listItem_material"
                 ]
@@ -767,7 +767,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         args1: [
             {
                 type: "input_statement", 
-                name: "heroes", 
+                name: "heroes_array", 
                 check: [
                     "listItem_string"
                 ]
@@ -784,7 +784,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         args1: [
             {
                 type: "input_statement", 
-                name: "entities", 
+                name: "entities_array", 
                 check: [
                     "listItem_string"
                 ]
@@ -1388,7 +1388,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         args2: [
             {
                 type: "input_statement", 
-                name: "commands", 
+                name: "commands_array", 
                 check: [
                     "listItem_string"
                 ]
@@ -1639,7 +1639,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         args1: [
             {
                 type: "input_statement", 
-                name: "types", 
+                name: "types_array", 
                 check: [
                     "listItem_potion"
                 ]
@@ -1817,7 +1817,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         args1: [
             {
                 type: "input_statement", 
-                name: "faces", 
+                name: "faces_array", 
                 check: [
                     "listItem_blockFace"
                 ]
@@ -1864,7 +1864,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         args1: [
             {
                 type: "input_statement", 
-                name: "types", 
+                name: "types_array", 
                 check: [
                     "listItem_material"
                 ]
@@ -2112,7 +2112,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         args1: [
             {
                 type: "input_statement", 
-                name: "entityTypes", 
+                name: "entityTypes_array", 
                 check: [
                     "listItem_entity"
                 ]
@@ -2153,7 +2153,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         args3: [
             {
                 type: "input_statement", 
-                name: "entityBlacklist", 
+                name: "entityBlacklist_array", 
                 check: [
                     "listItem_entity"
                 ]
@@ -2253,7 +2253,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         args4: [
             {
                 type: "input_statement", 
-                name: "inputBlocks", 
+                name: "inputBlocks_array", 
                 check: [
                     "listItem_material"
                 ]
@@ -2294,7 +2294,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         args4: [
             {
                 type: "input_statement", 
-                name: "explodable", 
+                name: "explodable_array", 
                 check: [
                     "listItem_entity"
                 ]
@@ -2654,7 +2654,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         args9: [
             {
                 type: "input_statement", 
-                name: "loreFormat", 
+                name: "loreFormat_array", 
                 check: [
                     "listItem_string"
                 ]
@@ -2715,7 +2715,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         args6: [
             {
                 type: "input_statement", 
-                name: "actions", 
+                name: "actions_array", 
                 check: [
                     "listItem_action"
                 ]
@@ -2757,7 +2757,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         args1: [
             {
                 type: "input_statement", 
-                name: "blocksToPlace", 
+                name: "blocksToPlace_array", 
                 check: [
                     "listItem_material"
                 ]
@@ -2767,7 +2767,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         args2: [
             {
                 type: "input_statement", 
-                name: "blocksToReplace", 
+                name: "blocksToReplace_array", 
                 check: [
                     "listItem_material"
                 ]
@@ -2918,7 +2918,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         args1: [
             {
                 type: "input_statement", 
-                name: "commands", 
+                name: "commands_array", 
                 check: [
                     "listItem_string"
                 ]
@@ -2953,7 +2953,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         args2: [
             {
                 type: "input_statement", 
-                name: "loottables", 
+                name: "loottables_array", 
                 check: [
                     "listItem_lootTable"
                 ]
@@ -3014,7 +3014,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         args3: [
             {
                 type: "input_statement", 
-                name: "biomes", 
+                name: "biomes_array", 
                 check: [
                     "listItem_biome"
                 ]
@@ -3024,7 +3024,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         args4: [
             {
                 type: "input_statement", 
-                name: "worlds", 
+                name: "worlds_array", 
                 check: [
                     "listItem_world"
                 ]
@@ -3084,7 +3084,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         args2: [
             {
                 type: "input_statement", 
-                name: "flags", 
+                name: "flags_array", 
                 check: [
                     "listItem_bossBarFlag"
                 ]
@@ -3139,7 +3139,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         args2: [
             {
                 type: "input_statement", 
-                name: "lore", 
+                name: "lore_array", 
                 check: [
                     "listItem_string"
                 ]
@@ -3465,7 +3465,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         args1: [
             {
                 type: "input_statement", 
-                name: "types", 
+                name: "types_array", 
                 check: [
                     "listItem_material"
                 ]
@@ -3530,7 +3530,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         args1: [
             {
                 type: "input_statement", 
-                name: "types", 
+                name: "types_array", 
                 check: [
                     "listItem_material"
                 ]
@@ -3602,7 +3602,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         args0: [
             {
                 type: "field_dropdown", 
-                name: "biome", 
+                name: "VALUE", 
                 options: enums.biome
             }
         ]
@@ -3616,7 +3616,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         args0: [
             {
                 type: "field_dropdown", 
-                name: "world", 
+                name: "VALUE", 
                 options: enums.world
             }
         ]
@@ -3630,7 +3630,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         args0: [
             {
                 type: "field_dropdown", 
-                name: "bossBarFlag", 
+                name: "VALUE", 
                 options: enums.bossBarFlag
             }
         ]
@@ -3644,7 +3644,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         args0: [
             {
                 type: "field_input", 
-                name: "string"
+                name: "VALUE"
             }
         ]
     }, 
@@ -3657,7 +3657,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         args0: [
             {
                 type: "field_dropdown", 
-                name: "material", 
+                name: "VALUE", 
                 options: enums.material
             }
         ]
@@ -3671,7 +3671,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         args0: [
             {
                 type: "field_dropdown", 
-                name: "damageCause", 
+                name: "VALUE", 
                 options: enums.damageCause
             }
         ]
@@ -3685,7 +3685,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         args0: [
             {
                 type: "field_dropdown", 
-                name: "action", 
+                name: "VALUE", 
                 options: enums.action
             }
         ]
@@ -3699,7 +3699,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         args0: [
             {
                 type: "field_dropdown", 
-                name: "potion", 
+                name: "VALUE", 
                 options: enums.potion
             }
         ]
@@ -3713,7 +3713,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         args0: [
             {
                 type: "field_dropdown", 
-                name: "entity", 
+                name: "VALUE", 
                 options: enums.entity
             }
         ]
@@ -3727,7 +3727,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         args0: [
             {
                 type: "field_dropdown", 
-                name: "blockFace", 
+                name: "VALUE", 
                 options: enums.blockFace
             }
         ]
@@ -3741,7 +3741,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         args0: [
             {
                 type: "field_dropdown", 
-                name: "lootTable", 
+                name: "VALUE", 
                 options: enums.lootTable
             }
         ]

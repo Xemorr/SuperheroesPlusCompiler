@@ -10,9 +10,17 @@ superheroesGenerator['workspaceToCode'] = function(workspace) {
 
 superheroesGenerator['blockToCode'] = function(block) {
     if (block == null) return '';
-    if (superheroesGenerator[block.type] !== undefined) return superheroesGenerator[block.type](block);
+	const [block_type, _] = block.type.split("_");
+    if (superheroesGenerator[block_type] !== undefined) return superheroesGenerator[block_type](block);
+	if (superheroesGenerator[block_type] !== undefined) return superheroesGenerator[block.type](block);
     return blockToYaml(block);
 }
+superheroesGenerator['listItem'] = function(block) {
+	const field = block.getFieldValue("VALUE")
+	if (field == null) return blockToYaml(block)
+	return field
+}
+
 
 // default yaml serialization
 function blockToYaml(block) {
@@ -28,8 +36,8 @@ function blockToYaml(block) {
     
     const valueEntries = blockFields.map(keyval => `${keyval[0]}: ${keyval[1]}`);
     const objectEntries = [
-    ...getBlockValues(block).map(value => `${value[0]}: ${indent("\r\n" + superheroesGenerator.blockToCode(value[1]))}`),
-    ...blockStatementsToYaml(getBlockStatements(block))
+		...getBlockValues(block).map(value => `${value[0]}: ${indent("\r\n" + superheroesGenerator.blockToCode(value[1]))}`),
+		...blockStatementsToYaml(getBlockStatements(block))
     ];
     
     if (sectionName === undefined) return [...valueEntries, ...objectEntries].join("\r\n");
@@ -46,14 +54,26 @@ function getBlockSectionName(blockFields) {
 
 function blockStatementsToYaml(statements) {
     return statements.map(statement => {
-            const [statementName, statementList] = statement;
-            let statementListString = "";
-            let counter = 0;
-            statementList.forEach(block => {
-                statementListString += `\r\n${statementName}${counter++}: ${indent("\r\n" + superheroesGenerator.blockToCode(block))}`
-            });
-            return `${statementName}: ${indent(statementListString)}`;
-        });
+            let [statementName, statementList] = statement
+			const isList = statementName.endsWith("_array")
+			statementName = statementName.substring(0, statementName.length - (isList? "_array".length : 0))
+			
+			const statementListString = statementList
+				.map(block => superheroesGenerator.blockToCode(block))
+				.map(block => indent("\r\n" + block))
+				.map((block, index) => {
+					if (isList) {
+						block = block.trimStart()
+						return `\r\n- ${block}`
+					} else {
+						const key = statementName + index
+						return `\r\n${key}: ${block}`
+					}
+				})
+				.join("")
+			
+            return `${statementName}: ${indent(statementListString)}`
+        })
 }
 
 function getBlockFields(block) {

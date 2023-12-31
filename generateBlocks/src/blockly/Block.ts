@@ -133,6 +133,11 @@ export class ListItemBlock extends Block {
 		this.previousStatement = this.type
 		this.nextStatement = this.type
 	}
+	
+	addArg(name: string, arg: Argument) {
+		arg.name = "VALUE"
+        super.addArg(name, arg)
+    }
 }
 
 export class JSONBlock extends DefaultBlock {

@@ -203,7 +203,7 @@ class Compiler {
 
         const itemChecks = itemType.map(x => "listItem_" + x)
 
-        block.addArg(name, new InputStatement(name, itemChecks))
+        block.addArg(name, new InputStatement(name+"_array", itemChecks))
 
         itemType.forEach(this.compileListItemBlock.bind(this))
     }

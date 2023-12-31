@@ -22,7 +22,7 @@ type ArgumentType =
 
 type Argument = {
     type: ArgumentType
-    name?: string
+    name: string
     toJSON: () => string
 }
 
