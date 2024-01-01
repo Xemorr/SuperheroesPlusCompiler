@@ -759,63 +759,71 @@ export const toolbox = {
         }, 
         {
             kind: "category", 
-            name: "hero", 
+            name: "startpoint", 
             colour: 0, 
             contents: [
                 {
                     kind: "block", 
-                    type: "hero_hero"
+                    type: "startpoint_hero"
+                }, 
+                {
+                    kind: "block", 
+                    type: "startpoint_boss"
+                }, 
+                {
+                    kind: "block", 
+                    type: "startpoint_item"
                 }
             ]
         }, 
         {
             kind: "category", 
-            name: "listItem", 
+            name: "listtypes", 
             colour: 0, 
             contents: [
                 {
                     kind: "block", 
-                    type: "listItem_biome"
+                    type: "listtypes_biome"
                 }, 
                 {
                     kind: "block", 
-                    type: "listItem_world"
+                    type: "listtypes_world"
                 }, 
                 {
                     kind: "block", 
-                    type: "listItem_bossBarFlag"
+                    type: "listtypes_bossBarFlag"
                 }, 
                 {
                     kind: "block", 
-                    type: "listItem_string"
+                    type: "listtypes_string"
                 }, 
                 {
                     kind: "block", 
-                    type: "listItem_material"
+                    type: "listtypes_material"
                 }, 
                 {
                     kind: "block", 
-                    type: "listItem_damageCause"
+                    type: "listtypes_damageCause"
                 }, 
                 {
                     kind: "block", 
-                    type: "listItem_action"
+                    type: "listtypes_action"
                 }, 
                 {
                     kind: "block", 
-                    type: "listItem_potion"
+                    type: "listtypes_potion"
                 }, 
                 {
                     kind: "block", 
-                    type: "listItem_entity"
+                    type: "listtypes_entity"
                 }, 
                 {
                     kind: "block", 
-                    type: "listItem_blockFace"
+                    type: "listtypes_blockFace"
                 }, 
                 {
                     kind: "block", 
-                    type: "listItem_lootTable"
+                    type: "listtypes_lootTable"
                 }
             ]
         }

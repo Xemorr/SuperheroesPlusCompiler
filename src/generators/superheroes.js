@@ -15,7 +15,7 @@ superheroesGenerator['blockToCode'] = function(block) {
 	if (superheroesGenerator[block_type] !== undefined) return superheroesGenerator[block.type](block);
     return blockToYaml(block);
 }
-superheroesGenerator['listItem'] = function(block) {
+superheroesGenerator['listTypes'] = function(block) {
 	const field = block.getFieldValue("VALUE")
 	if (field == null) return blockToYaml(block)
 	return field
@@ -29,7 +29,7 @@ function blockToYaml(block) {
     if (block_type === "skills") {
         blockFields.unshift(["skill", block_name])
     }
-    else if (block_type === "effects" || block_type === "conditions" || block_type == "triggers") {
+    else if (block_type === "effects" || block_type === "conditions" || block_type === "triggers" || block_type === "damagemodifiers") {
         blockFields.unshift(["type", block_name])
     }
     let sectionName = getBlockSectionName(blockFields);

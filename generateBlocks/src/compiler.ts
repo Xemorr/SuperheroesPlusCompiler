@@ -1,8 +1,8 @@
 import { Argument, dropdownOption, FieldBoolean, FieldDropdown, FieldEnum, FieldInput, FieldInteger, FieldNumber, InputStatement, InputValue } from "./blockly/Arguments.js";
-import { Block, categoryData, DefaultBlock, JSONBlock, ListItemBlock } from "./blockly/Block.js";
+import { Block, categoryData, DefaultBlock, JSONBlock, ListTypeBlock } from "./blockly/Block.js";
 import { Schema, Item, Type, PropertyMap, Property, PropertyType, PropertyTypes } from "./PreprocessedSchema.js";
 import { forEachEntry, JSONStringify, objectMap, StringRecord, toArray } from "./utils.js";
-import { hero, custom } from "./manual-schema.js"
+import { hero, boss, item, custom } from "./manual-schema.js"
 
 type EnumMap = StringRecord<dropdownOption[]>
 
@@ -27,13 +27,13 @@ class Compiler {
 
     enums: EnumMap = {}
     objectTypes: string[] = []
-    listItems: StringRecord<Block> = {}
+    listTypes: StringRecord<Block> = {}
 
     compile(schema: Schema): compilationOutput {
         const blocks = this.generateBlocks(schema)
-        blocks.hero = [new JSONBlock("hero", "hero", hero)]
+        blocks.startpoint = [new JSONBlock("startpoint", "hero", hero), new JSONBlock("startpoint", "boss", boss), new JSONBlock("startpoint", "item", item)]
         blocks.skills.unshift(new JSONBlock("skills", "CUSTOM", custom))
-        blocks.listItem = Object.values(this.listItems);
+        blocks.listtypes = Object.values(this.listTypes);
 
         var toolbox = this.generateToolbox(blocks)
         return {
@@ -209,24 +209,24 @@ class Compiler {
         }
         itemType = toArray(itemType)
 
-        const itemChecks = itemType.map(x => "listItem_" + x)
+        const itemChecks = itemType.map(x => "listtypes_" + x)
 
         block.addArg(name, new InputStatement(name+"_array", itemChecks))
 
-        itemType.forEach(this.compileListItemBlock.bind(this))
+        itemType.forEach(this.compileListTypeBlock.bind(this))
     }
 
-    compileListItemBlock(type: PropertyTypes) {
-        if (type in this.listItems) return
+    compileListTypeBlock(type: PropertyTypes) {
+        if (type in this.listTypes) return
 
-        const block = new ListItemBlock(type)
+        const block = new ListTypeBlock(type)
         const property: Property = {
             description: `List item for ${type}`,
             required: true,
             type: type
         }
         this.compileProperty(block, type, property)
-        this.listItems[type] = block
+        this.listTypes[type] = block
     }
 
 }

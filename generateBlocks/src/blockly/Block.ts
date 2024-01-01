@@ -10,11 +10,11 @@ type CategoryData = {
 }
 
 export const categoryData: Record<keyof Schema, CategoryData> = {
-    hero: {
+    startpoint: {
         colour: 0,
         chaining: false
     },
-    listItem: {
+    listtypes: {
         colour: 0,
         chaining: true
     },
@@ -126,10 +126,10 @@ export class DefaultBlock extends Block {
 
 }
 
-export class ListItemBlock extends Block {
+export class ListTypeBlock extends Block {
 	constructor(name: string) {
-		super(`listItem_${name}`)
-		this.colour = categoryData.listItem.colour
+		super(`listtypes_${name}`)
+		this.colour = categoryData.listtypes.colour
 		this.previousStatement = this.type
 		this.nextStatement = this.type
 	}

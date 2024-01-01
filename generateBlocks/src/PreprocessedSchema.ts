@@ -30,8 +30,8 @@ interface Schema {
 	types: StringRecord<Type>
 
 	//extras
-	hero: StringRecord<any>
-	listItem: StringRecord<any>
+	startpoint: StringRecord<any>
+	listtypes: StringRecord<any>
 }
 
 interface Descriptable {
