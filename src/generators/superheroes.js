@@ -10,12 +10,12 @@ superheroesGenerator['workspaceToCode'] = function(workspace) {
 
 superheroesGenerator['blockToCode'] = function(block) {
     if (block == null) return '';
-	const [block_type, _] = block.type.split("_");
-    if (superheroesGenerator[block_type] !== undefined) return superheroesGenerator[block_type](block);
-	if (superheroesGenerator[block_type] !== undefined) return superheroesGenerator[block.type](block);
+	if (superheroesGenerator[block.type] !== undefined) return superheroesGenerator[block.type](block);
+	const [block_category, _] = block.type.split("_");
+    if (superheroesGenerator[block_category] !== undefined) return superheroesGenerator[block_category](block);
     return blockToYaml(block);
 }
-superheroesGenerator['listTypes'] = function(block) {
+superheroesGenerator['listtypes'] = function(block) {
 	const field = block.getFieldValue("VALUE")
 	if (field == null) return blockToYaml(block)
 	return field
@@ -25,11 +25,11 @@ superheroesGenerator['listTypes'] = function(block) {
 // default yaml serialization
 function blockToYaml(block) {
     const blockFields = getBlockFields(block);
-    const [block_type, block_name] = block.type.split("_");
-    if (block_type === "skills") {
+    const [block_category, block_name] = block.type.split("_");
+    if (block_category === "skills") {
         blockFields.unshift(["skill", block_name])
     }
-    else if (block_type === "effects" || block_type === "conditions" || block_type === "triggers" || block_type === "damagemodifiers") {
+    else if (block_category === "effects" || block_category === "conditions" || block_category === "triggers" || block_category === "damagemodifiers") {
         blockFields.unshift(["type", block_name])
     }
     let sectionName = getBlockSectionName(blockFields);
