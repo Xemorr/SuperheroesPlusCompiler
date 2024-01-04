@@ -823,6 +823,10 @@ export const toolbox = {
                 }, 
                 {
                     kind: "block", 
+                    type: "listtypes_ItemStackData"
+                }, 
+                {
+                    kind: "block", 
                     type: "listtypes_lootTable"
                 }
             ]

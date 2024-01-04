@@ -15,10 +15,16 @@ superheroesGenerator['blockToCode'] = function(block) {
     if (superheroesGenerator[block_category] !== undefined) return superheroesGenerator[block_category](block);
     return blockToYaml(block);
 }
-superheroesGenerator['listtypes'] = function(block) {
+superheroesGenerator['listtypes'] = function(block, generator) {
 	const field = block.getFieldValue("VALUE")
-	if (field == null) return blockToYaml(block)
-	return field
+	if (field != null) return field
+	const input = getInputBlock(block, "VALUE")
+	if (input != null) return superheroesGenerator.blockToCode(input)
+	return "~"
+}
+
+function getInputBlock(block, name) {
+	return block.getInput(name).connection.targetBlock()
 }
 
 

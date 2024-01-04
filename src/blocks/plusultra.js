@@ -1065,7 +1065,6 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         colour: 35, 
         previousStatement: "conditions", 
         nextStatement: "conditions", 
-        isAllImplemented: false, 
         message0: "OR", 
         message1: "mode: %1", 
         args1: [
@@ -1093,7 +1092,14 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
                 ]
             }
         ], 
-        message2: "Incomplete"
+        message2: "conditions: %1", 
+        args2: [
+            {
+                type: "input_statement", 
+                name: "conditions", 
+                check: "conditions"
+            }
+        ]
     }, 
     {
         type: "conditions_VISIBILITY", 
@@ -1224,7 +1230,15 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
                 ]
             }
         ], 
-        message2: "Incomplete"
+        message2: "conditions: %1", 
+        args2: [
+            {
+                type: "input_statement", 
+                name: "conditions", 
+                check: "conditions"
+            }
+        ], 
+        message3: "Incomplete"
     }, 
     {
         type: "conditions_SWIMMING", 
@@ -1475,7 +1489,6 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         colour: 295, 
         previousStatement: "effects", 
         nextStatement: "effects", 
-        isAllImplemented: false, 
         message0: "AOE", 
         message1: "mode: %1", 
         args1: [
@@ -1491,15 +1504,30 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
                 ]
             }
         ], 
-        message2: "radius: %1", 
+        message2: "conditions: %1", 
         args2: [
+            {
+                type: "input_statement", 
+                name: "conditions", 
+                check: "conditions"
+            }
+        ], 
+        message3: "effects: %1", 
+        args3: [
+            {
+                type: "input_statement", 
+                name: "effects", 
+                check: "effects"
+            }
+        ], 
+        message4: "radius: %1", 
+        args4: [
             {
                 type: "field_number", 
                 name: "radius", 
                 value: 5
             }
-        ], 
-        message3: "Incomplete"
+        ]
     }, 
     {
         type: "effects_VELOCITY", 
@@ -1617,7 +1645,6 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         colour: 295, 
         previousStatement: "effects", 
         nextStatement: "effects", 
-        isAllImplemented: false, 
         message0: "WAIT", 
         message1: "mode: %1", 
         args1: [
@@ -1645,15 +1672,30 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
                 ]
             }
         ], 
-        message2: "delay: %1", 
+        message2: "conditions: %1", 
         args2: [
+            {
+                type: "input_statement", 
+                name: "conditions", 
+                check: "conditions"
+            }
+        ], 
+        message3: "effects: %1", 
+        args3: [
+            {
+                type: "input_statement", 
+                name: "effects", 
+                check: "effects"
+            }
+        ], 
+        message4: "delay: %1", 
+        args4: [
             {
                 type: "field_number", 
                 name: "delay", 
                 value: 1
             }
-        ], 
-        message3: "Incomplete"
+        ]
     }, 
     {
         type: "effects_POTION", 
@@ -2520,7 +2562,6 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         colour: 295, 
         previousStatement: "effects", 
         nextStatement: "effects", 
-        isAllImplemented: false, 
         message0: "NEAREST", 
         message1: "mode: %1", 
         args1: [
@@ -2544,22 +2585,36 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
                 ]
             }
         ], 
-        message2: "radius: %1", 
+        message2: "conditions: %1", 
         args2: [
+            {
+                type: "input_statement", 
+                name: "conditions", 
+                check: "conditions"
+            }
+        ], 
+        message3: "effects: %1", 
+        args3: [
+            {
+                type: "input_statement", 
+                name: "effects", 
+                check: "effects"
+            }
+        ], 
+        message4: "radius: %1", 
+        args4: [
             {
                 type: "field_number", 
                 name: "radius", 
                 value: 5
             }
-        ], 
-        message3: "Incomplete"
+        ]
     }, 
     {
         type: "effects_SHOOTER", 
         colour: 295, 
         previousStatement: "effects", 
         nextStatement: "effects", 
-        isAllImplemented: false, 
         message0: "SHOOTER", 
         message1: "mode: %1", 
         args1: [
@@ -2575,16 +2630,31 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
                 ]
             }
         ], 
-        message2: "onlyProjectiles: %1", 
+        message2: "conditions: %1", 
         args2: [
+            {
+                type: "input_statement", 
+                name: "conditions", 
+                check: "conditions"
+            }
+        ], 
+        message3: "effects: %1", 
+        args3: [
+            {
+                type: "input_statement", 
+                name: "effects", 
+                check: "effects"
+            }
+        ], 
+        message4: "onlyProjectiles: %1", 
+        args4: [
             {
                 type: "field_dropdown", 
                 name: "onlyProjectiles", 
                 value: "true", 
                 options: enums.booleans
             }
-        ], 
-        message3: "Incomplete"
+        ]
     }, 
     {
         type: "effects_KNOCKBACK", 
@@ -2739,7 +2809,6 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         colour: 295, 
         previousStatement: "effects", 
         nextStatement: "effects", 
-        isAllImplemented: false, 
         message0: "LOCATIONCUBE", 
         message1: "mode: %1", 
         args1: [
@@ -2763,8 +2832,24 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
                 ]
             }
         ], 
-        message2: "verticalRadius: %1", 
+        message2: "conditions: %1", 
         args2: [
+            {
+                type: "input_statement", 
+                name: "conditions", 
+                check: "conditions"
+            }
+        ], 
+        message3: "effects: %1", 
+        args3: [
+            {
+                type: "input_statement", 
+                name: "effects", 
+                check: "effects"
+            }
+        ], 
+        message4: "verticalRadius: %1", 
+        args4: [
             {
                 type: "field_number", 
                 name: "verticalRadius", 
@@ -2772,8 +2857,8 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
                 precision: 1
             }
         ], 
-        message3: "horizontalRadius: %1", 
-        args3: [
+        message5: "horizontalRadius: %1", 
+        args5: [
             {
                 type: "field_number", 
                 name: "horizontalRadius", 
@@ -2781,8 +2866,8 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
                 precision: 1
             }
         ], 
-        message4: "offset: %1", 
-        args4: [
+        message6: "offset: %1", 
+        args6: [
             {
                 type: "input_value", 
                 name: "offset", 
@@ -2790,8 +2875,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
                     "VectorData"
                 ]
             }
-        ], 
-        message5: "Incomplete"
+        ]
     }, 
     {
         type: "effects_PLACEBLOCK", 
@@ -2954,7 +3038,6 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         colour: 295, 
         previousStatement: "effects", 
         nextStatement: "effects", 
-        isAllImplemented: false, 
         message0: "RAYTRACE", 
         message1: "mode: %1", 
         args1: [
@@ -2974,8 +3057,24 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
                 ]
             }
         ], 
-        message2: "maxDistance: %1", 
+        message2: "conditions: %1", 
         args2: [
+            {
+                type: "input_statement", 
+                name: "conditions", 
+                check: "conditions"
+            }
+        ], 
+        message3: "effects: %1", 
+        args3: [
+            {
+                type: "input_statement", 
+                name: "effects", 
+                check: "effects"
+            }
+        ], 
+        message4: "maxDistance: %1", 
+        args4: [
             {
                 type: "field_number", 
                 name: "maxDistance", 
@@ -2983,8 +3082,8 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
                 precision: 1
             }
         ], 
-        message3: "alwaysHit: %1", 
-        args3: [
+        message5: "alwaysHit: %1", 
+        args5: [
             {
                 type: "field_dropdown", 
                 name: "alwaysHit", 
@@ -2992,8 +3091,8 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
                 options: enums.booleans
             }
         ], 
-        message4: "ignorePassanles: %1", 
-        args4: [
+        message6: "ignorePassanles: %1", 
+        args6: [
             {
                 type: "field_dropdown", 
                 name: "ignorePassanles", 
@@ -3001,31 +3100,29 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
                 options: enums.booleans
             }
         ], 
-        message5: "raySize: %1", 
-        args5: [
+        message7: "raySize: %1", 
+        args7: [
             {
                 type: "field_number", 
                 name: "raySize", 
                 value: 1
             }
         ], 
-        message6: "collisionMode: %1", 
-        args6: [
+        message8: "collisionMode: %1", 
+        args8: [
             {
                 type: "field_dropdown", 
                 name: "collisionMode", 
                 value: "NEVER", 
                 options: enums.collisionMode
             }
-        ], 
-        message7: "Incomplete"
+        ]
     }, 
     {
         type: "effects_TIMER", 
         colour: 295, 
         previousStatement: "effects", 
         nextStatement: "effects", 
-        isAllImplemented: false, 
         message0: "TIMER", 
         message1: "mode: %1", 
         args1: [
@@ -3053,32 +3150,47 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
                 ]
             }
         ], 
-        message2: "delay: %1", 
+        message2: "conditions: %1", 
         args2: [
+            {
+                type: "input_statement", 
+                name: "conditions", 
+                check: "conditions"
+            }
+        ], 
+        message3: "effects: %1", 
+        args3: [
+            {
+                type: "input_statement", 
+                name: "effects", 
+                check: "effects"
+            }
+        ], 
+        message4: "delay: %1", 
+        args4: [
             {
                 type: "field_number", 
                 name: "delay", 
                 value: 1
             }
         ], 
-        message3: "period: %1", 
-        args3: [
+        message5: "period: %1", 
+        args5: [
             {
                 type: "field_number", 
                 name: "period", 
                 value: 1
             }
         ], 
-        message4: "numberOfRepeats: %1", 
-        args4: [
+        message6: "numberOfRepeats: %1", 
+        args6: [
             {
                 type: "field_number", 
                 name: "numberOfRepeats", 
                 value: 1, 
                 precision: 1
             }
-        ], 
-        message5: "Incomplete"
+        ]
     }, 
     {
         type: "effects_REMOVEENTITY", 
@@ -3130,7 +3242,23 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
                 ]
             }
         ], 
-        message2: "Incomplete"
+        message2: "conditions: %1", 
+        args2: [
+            {
+                type: "input_statement", 
+                name: "conditions", 
+                check: "conditions"
+            }
+        ], 
+        message3: "effects: %1", 
+        args3: [
+            {
+                type: "input_statement", 
+                name: "effects", 
+                check: "effects"
+            }
+        ], 
+        message4: "Incomplete"
     }, 
     {
         type: "effects_ITEMAMOUNT", 
@@ -3174,7 +3302,6 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         colour: 295, 
         previousStatement: "effects", 
         nextStatement: "effects", 
-        isAllImplemented: false, 
         message0: "SWITCHEROO", 
         message1: "mode: %1", 
         args1: [
@@ -3190,14 +3317,28 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
                 ]
             }
         ], 
-        message2: "Incomplete"
+        message2: "conditions: %1", 
+        args2: [
+            {
+                type: "input_statement", 
+                name: "conditions", 
+                check: "conditions"
+            }
+        ], 
+        message3: "effects: %1", 
+        args3: [
+            {
+                type: "input_statement", 
+                name: "effects", 
+                check: "effects"
+            }
+        ]
     }, 
     {
         type: "effects_LOCATIONOFFSET", 
         colour: 295, 
         previousStatement: "effects", 
         nextStatement: "effects", 
-        isAllImplemented: false, 
         message0: "LOCATIONOFFSET", 
         message1: "mode: %1", 
         args1: [
@@ -3221,8 +3362,24 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
                 ]
             }
         ], 
-        message2: "offset: %1", 
+        message2: "conditions: %1", 
         args2: [
+            {
+                type: "input_statement", 
+                name: "conditions", 
+                check: "conditions"
+            }
+        ], 
+        message3: "effects: %1", 
+        args3: [
+            {
+                type: "input_statement", 
+                name: "effects", 
+                check: "effects"
+            }
+        ], 
+        message4: "offset: %1", 
+        args4: [
             {
                 type: "input_value", 
                 name: "offset", 
@@ -3230,8 +3387,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
                     "VectorData"
                 ]
             }
-        ], 
-        message3: "Incomplete"
+        ]
     }, 
     {
         type: "effects_BONEMEAL", 
@@ -4528,7 +4684,6 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         type: "rewards_BASIC", 
         colour: 10, 
         output: "rewards", 
-        isAllImplemented: false, 
         message0: "BASIC", 
         message1: "commands: %1", 
         args1: [
@@ -4540,16 +4695,23 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
                 ]
             }
         ], 
-        message2: "experience: %1", 
+        message2: "items: %1", 
         args2: [
+            {
+                type: "input_statement", 
+                name: "items", 
+                check: "listtypes_ItemStackData"
+            }
+        ], 
+        message3: "experience: %1", 
+        args3: [
             {
                 type: "field_number", 
                 name: "experience", 
                 value: 100, 
                 precision: 1
             }
-        ], 
-        message3: "Incomplete"
+        ]
     }, 
     {
         type: "distributions_LOOT", 
@@ -5465,6 +5627,22 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
                 type: "field_dropdown", 
                 name: "VALUE", 
                 options: enums.blockFace
+            }
+        ]
+    }, 
+    {
+        type: "listtypes_ItemStackData", 
+        colour: 0, 
+        previousStatement: "listtypes_ItemStackData", 
+        nextStatement: "listtypes_ItemStackData", 
+        message0: "ItemStackData: %1", 
+        args0: [
+            {
+                type: "input_value", 
+                name: "VALUE", 
+                types: [
+                    "ItemStackData"
+                ]
             }
         ]
     }, 

@@ -27,6 +27,7 @@ class Compiler {
 
     enums: EnumMap = {}
     objectTypes: string[] = []
+    recordTypes: StringRecord<Type> = {}
     listTypes: StringRecord<Block> = {}
 
     compile(schema: Schema): compilationOutput {
@@ -99,6 +100,11 @@ class Compiler {
             if (type.type === "object") {
                 this.objectTypes.push(name)
             }
+            if (type.type === "record") {
+                this.recordTypes[name] = type
+                delete types[name]
+                return
+            }
             if (!type.enum) return
             this.enums[name] = type.enum.map(v => [v, v])
             delete types[name]
@@ -135,7 +141,7 @@ class Compiler {
         if (!item.available) return
         const block = new DefaultBlock(type, name)
         if ("supportedModes" in item) {
-            const supportedModes = item.supportedModes as string[]
+            const supportedModes = (item as any).supportedModes as string[]
             var dropdown = new FieldDropdown("mode", "SELF");
             // This is done because setOptions takes in an array of pairs where the left element is the language word
             // and the right is the compiled phrase, we only support english so we duplicate the language-neutral word.
@@ -173,6 +179,14 @@ class Compiler {
             block.addArg(name, new InputValue(name, [type]))
             return
         }
+        if (type in this.recordTypes) {
+            property.recordItem = this.recordTypes[type].recordItem
+            property.type = "record"
+        }
+        if (property.type === "record") {
+            this.compileRecordProperty(block, name, property)
+            return
+        }
 
         if (type === "array") {
             this.compileArrayProperty(block, name, property)
@@ -186,6 +200,21 @@ class Compiler {
         }
 
         block.isAllImplemented = false
+    }
+
+    compileRecordProperty(block: Block, name: string, property: Property) {
+        const recordItem = property.recordItem
+        if (recordItem == undefined) {
+            console.error("I fucked up docs")
+            return
+        }        
+        
+        if (recordItem === "conditions" || recordItem === "effects") {
+			block.addArg(name, new InputStatement(name, recordItem))
+			return
+		}
+		block.addArg(name, new InputStatement(name, "listtypes_"+recordItem))
+        this.compileListTypeBlock(recordItem)
     }
 
     createValueField(type: valueTypes, name: string, _default: any) {

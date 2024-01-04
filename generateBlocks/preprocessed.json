@@ -714,24 +714,16 @@
                 "LOCATION",
                 "ITEM"
             ],
+            "requireMode": false,
             "properties": {
                 "conditions": {
                     "description": "The conditions to OR. \nDefaults to {}",
                     "required": false,
-                    "type": "object",
-                    "default": {},
-                    "patternProperties": {
-                        "\\w": {
-                            "description": "A condition to OR. \nDefaults to {}",
-                            "required": false,
-                            "type": "condition",
-                            "default": {}
-                        }
-                    }
+                    "type": "ConditionList",
+                    "default": {}
                 }
             },
-            "available": true,
-            "requireMode": true
+            "available": true
         },
         "VISIBILITY": {
             "description": "Checks if the user has a direct line of sight to the target entity",
@@ -803,15 +795,8 @@
                 "conditions": {
                     "description": "The conditions to check. \nDefaults to {}",
                     "required": false,
-                    "type": "object",
-                    "default": {},
-                    "patternProperties": {
-                        ".*": {
-                            "description": "A condition",
-                            "required": true,
-                            "type": "condition"
-                        }
-                    }
+                    "type": "ConditionList",
+                    "default": {}
                 }
             }
         },
@@ -823,15 +808,8 @@
                 "conditions": {
                     "description": "The conditions to check. \nDefaults to {}",
                     "required": false,
-                    "type": "object",
-                    "default": {},
-                    "patternProperties": {
-                        ".*": {
-                            "description": "A condition",
-                            "required": true,
-                            "type": "condition"
-                        }
-                    }
+                    "type": "ConditionList",
+                    "default": {}
                 },
                 "slot": {
                     "description": "The slot for the item. \nDefaults to \"HAND\"",
@@ -996,30 +974,14 @@
                 "conditions": {
                     "description": "The list of conditions. \nDefaults to {}",
                     "required": false,
-                    "type": "object",
-                    "default": {},
-                    "patternProperties": {
-                        "\\w": {
-                            "description": "A condition. \nDefaults to {}",
-                            "required": false,
-                            "type": "condition",
-                            "default": {}
-                        }
-                    }
+                    "type": "ConditionList",
+                    "default": {}
                 },
                 "effects": {
                     "description": "The list of effects. \nDefaults to {}",
                     "required": false,
-                    "type": "object",
-                    "default": {},
-                    "patternProperties": {
-                        "\\w": {
-                            "description": "An effect. \nDefaults to {}",
-                            "required": false,
-                            "type": "effect",
-                            "default": {}
-                        }
-                    }
+                    "type": "EffectList",
+                    "default": {}
                 }
             }
         },
@@ -1031,30 +993,14 @@
                 "conditions": {
                     "description": "The list of conditions. \nDefaults to {}",
                     "required": false,
-                    "type": "object",
-                    "default": {},
-                    "patternProperties": {
-                        "\\w": {
-                            "description": "A condition. \nDefaults to {}",
-                            "required": false,
-                            "type": "condition",
-                            "default": {}
-                        }
-                    }
+                    "type": "ConditionList",
+                    "default": {}
                 },
                 "effects": {
                     "description": "The list of effects. \nDefaults to {}",
                     "required": false,
-                    "type": "object",
-                    "default": {},
-                    "patternProperties": {
-                        "\\w": {
-                            "description": "An effect. \nDefaults to {}",
-                            "required": false,
-                            "type": "effect",
-                            "default": {}
-                        }
-                    }
+                    "type": "EffectList",
+                    "default": {}
                 },
                 "radius": {
                     "description": "Half the side length of the box. \nDefaults to 5",
@@ -1138,30 +1084,14 @@
                 "conditions": {
                     "description": "The list of conditions. \nDefaults to {}",
                     "required": false,
-                    "type": "object",
-                    "default": {},
-                    "patternProperties": {
-                        "\\w": {
-                            "description": "A condition. \nDefaults to {}",
-                            "required": false,
-                            "type": "condition",
-                            "default": {}
-                        }
-                    }
+                    "type": "ConditionList",
+                    "default": {}
                 },
                 "effects": {
                     "description": "The list of effects. \nDefaults to {}",
                     "required": false,
-                    "type": "object",
-                    "default": {},
-                    "patternProperties": {
-                        "\\w": {
-                            "description": "An effect. \nDefaults to {}",
-                            "required": false,
-                            "type": "effect",
-                            "default": {}
-                        }
-                    }
+                    "type": "EffectList",
+                    "default": {}
                 },
                 "delay": {
                     "description": "The delay time in seconds (1 is 20 ticks). \nDefaults to 1",
@@ -1704,30 +1634,14 @@
                 "conditions": {
                     "description": "The list of conditions. \nDefaults to {}",
                     "required": false,
-                    "type": "object",
-                    "default": {},
-                    "patternProperties": {
-                        "\\w": {
-                            "description": "A condition. \nDefaults to {}",
-                            "required": false,
-                            "type": "condition",
-                            "default": {}
-                        }
-                    }
+                    "type": "ConditionList",
+                    "default": {}
                 },
                 "effects": {
                     "description": "The list of effects. \nDefaults to {}",
                     "required": false,
-                    "type": "object",
-                    "default": {},
-                    "patternProperties": {
-                        "\\w": {
-                            "description": "An effect. \nDefaults to {}",
-                            "required": false,
-                            "type": "effect",
-                            "default": {}
-                        }
-                    }
+                    "type": "EffectList",
+                    "default": {}
                 },
                 "radius": {
                     "description": "Half the side length of the box. \nDefaults to 5",
@@ -1751,30 +1665,14 @@
                 "conditions": {
                     "description": "The list of conditions. \nDefaults to {}",
                     "required": false,
-                    "type": "object",
-                    "default": {},
-                    "patternProperties": {
-                        "\\w": {
-                            "description": "A condition. \nDefaults to {}",
-                            "required": false,
-                            "type": "condition",
-                            "default": {}
-                        }
-                    }
+                    "type": "ConditionList",
+                    "default": {}
                 },
                 "effects": {
                     "description": "The list of effects. \nDefaults to {}",
                     "required": false,
-                    "type": "object",
-                    "default": {},
-                    "patternProperties": {
-                        "\\w": {
-                            "description": "An effect. \nDefaults to {}",
-                            "required": false,
-                            "type": "effect",
-                            "default": {}
-                        }
-                    }
+                    "type": "EffectList",
+                    "default": {}
                 },
                 "onlyProjectiles": {
                     "description": "If true, only triggers if the original target entity is a projectile. If false, keep the target entity the same. \nDefaults to true",
@@ -1873,30 +1771,14 @@
                 "conditions": {
                     "description": "The list of conditions. \nDefaults to {}",
                     "required": false,
-                    "type": "object",
-                    "default": {},
-                    "patternProperties": {
-                        "\\w": {
-                            "description": "A condition. \nDefaults to {}",
-                            "required": false,
-                            "type": "condition",
-                            "default": {}
-                        }
-                    }
+                    "type": "ConditionList",
+                    "default": {}
                 },
                 "effects": {
                     "description": "The list of effects. \nDefaults to {}",
                     "required": false,
-                    "type": "object",
-                    "default": {},
-                    "patternProperties": {
-                        "\\w": {
-                            "description": "An effect. \nDefaults to {}",
-                            "required": false,
-                            "type": "effect",
-                            "default": {}
-                        }
-                    }
+                    "type": "EffectList",
+                    "default": {}
                 },
                 "verticalRadius": {
                     "description": "Half of the vertical side length of the cube. \nDefaults to 0",
@@ -2018,30 +1900,14 @@
                 "conditions": {
                     "description": "The list of conditions. \nDefaults to {}",
                     "required": false,
-                    "type": "object",
-                    "default": {},
-                    "patternProperties": {
-                        "\\w": {
-                            "description": "A condition. \nDefaults to {}",
-                            "required": false,
-                            "type": "condition",
-                            "default": {}
-                        }
-                    }
+                    "type": "ConditionList",
+                    "default": {}
                 },
                 "effects": {
                     "description": "The list of effects. \nDefaults to {}",
                     "required": false,
-                    "type": "object",
-                    "default": {},
-                    "patternProperties": {
-                        "\\w": {
-                            "description": "An effect. \nDefaults to {}",
-                            "required": false,
-                            "type": "effect",
-                            "default": {}
-                        }
-                    }
+                    "type": "EffectList",
+                    "default": {}
                 },
                 "maxDistance": {
                     "description": "The maximum distance the raytrace can collide. \nDefaults to 10",
@@ -2088,30 +1954,14 @@
                 "conditions": {
                     "description": "The list of conditions. \nDefaults to {}",
                     "required": false,
-                    "type": "object",
-                    "default": {},
-                    "patternProperties": {
-                        "\\w": {
-                            "description": "A condition. \nDefaults to {}",
-                            "required": false,
-                            "type": "condition",
-                            "default": {}
-                        }
-                    }
+                    "type": "ConditionList",
+                    "default": {}
                 },
                 "effects": {
                     "description": "The list of effects. \nDefaults to {}",
                     "required": false,
-                    "type": "object",
-                    "default": {},
-                    "patternProperties": {
-                        "\\w": {
-                            "description": "An effect. \nDefaults to {}",
-                            "required": false,
-                            "type": "effect",
-                            "default": {}
-                        }
-                    }
+                    "type": "EffectList",
+                    "default": {}
                 },
                 "delay": {
                     "description": "The initial delay in seconds (1 is 20 ticks). \nDefaults to 1",
@@ -2158,30 +2008,14 @@
                 "conditions": {
                     "description": "The list of conditions. \nDefaults to {}",
                     "required": false,
-                    "type": "object",
-                    "default": {},
-                    "patternProperties": {
-                        "\\w": {
-                            "description": "A condition. \nDefaults to {}",
-                            "required": false,
-                            "type": "condition",
-                            "default": {}
-                        }
-                    }
+                    "type": "ConditionList",
+                    "default": {}
                 },
                 "effects": {
                     "description": "The list of effects. \nDefaults to {}",
                     "required": false,
-                    "type": "object",
-                    "default": {},
-                    "patternProperties": {
-                        "\\w": {
-                            "description": "An effect. \nDefaults to {}",
-                            "required": false,
-                            "type": "effect",
-                            "default": {}
-                        }
-                    }
+                    "type": "EffectList",
+                    "default": {}
                 },
                 "slot": {
                     "description": "The slot of the item. \nDefaults to \"HAND\"",
@@ -2229,30 +2063,14 @@
                 "conditions": {
                     "description": "The list of conditions. \nDefaults to {}",
                     "required": false,
-                    "type": "object",
-                    "default": {},
-                    "patternProperties": {
-                        "\\w": {
-                            "description": "A condition. \nDefaults to {}",
-                            "required": false,
-                            "type": "condition",
-                            "default": {}
-                        }
-                    }
+                    "type": "ConditionList",
+                    "default": {}
                 },
                 "effects": {
                     "description": "The list of effects. \nDefaults to {}",
                     "required": false,
-                    "type": "object",
-                    "default": {},
-                    "patternProperties": {
-                        "\\w": {
-                            "description": "An effect. \nDefaults to {}",
-                            "required": false,
-                            "type": "effect",
-                            "default": {}
-                        }
-                    }
+                    "type": "EffectList",
+                    "default": {}
                 }
             },
             "supportedModes": [
@@ -2268,30 +2086,14 @@
                 "conditions": {
                     "description": "The list of conditions. \nDefaults to {}",
                     "required": false,
-                    "type": "object",
-                    "default": {},
-                    "patternProperties": {
-                        "\\w": {
-                            "description": "A condition. \nDefaults to {}",
-                            "required": false,
-                            "type": "condition",
-                            "default": {}
-                        }
-                    }
+                    "type": "ConditionList",
+                    "default": {}
                 },
                 "effects": {
                     "description": "The list of effects. \nDefaults to {}",
                     "required": false,
-                    "type": "object",
-                    "default": {},
-                    "patternProperties": {
-                        "\\w": {
-                            "description": "An effect. \nDefaults to {}",
-                            "required": false,
-                            "type": "effect",
-                            "default": {}
-                        }
-                    }
+                    "type": "EffectList",
+                    "default": {}
                 },
                 "offset": {
                     "description": "The offset from the original location. \nDefaults to {\"x\":0,\"y\":0,\"z\":0}",
@@ -2763,14 +2565,8 @@
                         "value": {
                             "description": "The items to drop",
                             "required": true,
-                            "type": "object",
-                            "patternProperties": {
-                                ".*": {
-                                    "description": "An item to drop",
-                                    "required": true,
-                                    "type": "ItemStackData"
-                                }
-                            }
+                            "type": "record",
+                            "recordItem": "ItemStackData"
                         }
                     },
                     "default": {}
@@ -3328,14 +3124,8 @@
                 "items": {
                     "description": "The map of items to give to the player. \nDefaults to {}",
                     "required": false,
-                    "type": "object",
-                    "patternProperties": {
-                        ".*": {
-                            "description": "An item to give",
-                            "required": true,
-                            "type": "ItemStackData"
-                        }
-                    },
+                    "type": "record",
+                    "recordItem": "ItemStackData",
                     "default": {}
                 },
                 "experience": {
@@ -3478,6 +3268,20 @@
                 "ADD_SCALAR",
                 "MULTIPLY_SCALAR_1"
             ],
+            "available": true,
+            "requireMode": true
+        },
+        "ConditionList": {
+            "description": "A list of conditions",
+            "type": "record",
+            "recordItem": "conditions",
+            "available": true,
+            "requireMode": true
+        },
+        "EffectList": {
+            "description": "A list of effects",
+            "type": "record",
+            "recordItem": "effects",
             "available": true,
             "requireMode": true
         },

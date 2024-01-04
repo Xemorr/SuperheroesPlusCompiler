@@ -2477,12 +2477,12 @@
 		"ConditionList": {
 			"description": "A list of conditions",
 			"type": "record",
-			"recordItem": "condition"
+			"recordItem": "conditions"
 		},
 		"EffectList": {
 			"description": "A list of effects",
 			"type": "record",
-			"recordItem": "effect"
+			"recordItem": "effects"
 		},
 		"SpawnData": {
 			"description": "The data for spawning behavior",
