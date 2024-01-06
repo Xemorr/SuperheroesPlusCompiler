@@ -54,7 +54,7 @@ export const categoryData: Record<keyof Schema, CategoryData> = {
 
 type ArgumentList = {
     [K: `message${number}`]: string;
-    [K: `args${number}`]: [Argument]
+    [K: `args${number}`]: Argument[]
 }
 
 export class Block {
@@ -73,6 +73,13 @@ export class Block {
         this.type = type
         this.colour = 0
     }
+	
+	addCustomArg(message: string, ...args: Argument[]) {
+		this.args[`message${this.argCounter}`] = message
+        this.args[`args${this.argCounter}`] = args
+
+        this.argCounter++
+	}
 
     addArg(name: string, arg: Argument) {
         this.args[`message${this.argCounter}`] = `${name}: %1`
@@ -105,12 +112,14 @@ export class Block {
 
 export class DefaultBlock extends Block {
 	
-    constructor(type: keyof Schema, name: string) {
+    constructor(type: keyof Schema, name: string, addTitle: boolean = true) {
         super(`${type}_${name}` as BlockType)
 
         this.loadCategoryData(type, categoryData[type])
-
-        this.addTextArg(name)
+		
+		if (addTitle) {
+			this.addTextArg(name)
+		}
     }
 
     private loadCategoryData(type: keyof Schema, cateroryData: CategoryData) {

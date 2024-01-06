@@ -294,7 +294,6 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         colour: 35, 
         previousStatement: "conditions", 
         nextStatement: "conditions", 
-        isAllImplemented: false, 
         message0: "HEALTH", 
         message1: "mode: %1", 
         args1: [
@@ -314,23 +313,32 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
                 ]
             }
         ], 
-        message2: "minimumHealthPercentage: %1", 
+        message2: "healthPercentange: %1", 
         args2: [
+            {
+                type: "input_value", 
+                name: "healthPercentange", 
+                types: [
+                    "range"
+                ]
+            }
+        ], 
+        message3: "minimumHealthPercentage: %1", 
+        args3: [
             {
                 type: "field_number", 
                 name: "minimumHealthPercentage", 
                 value: 0
             }
         ], 
-        message3: "maximumHealthPercentage: %1", 
-        args3: [
+        message4: "maximumHealthPercentage: %1", 
+        args4: [
             {
                 type: "field_number", 
                 name: "maximumHealthPercentage", 
                 value: 100
             }
-        ], 
-        message4: "Incomplete"
+        ]
     }, 
     {
         type: "conditions_CHANCE", 
@@ -555,7 +563,6 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         colour: 35, 
         previousStatement: "conditions", 
         nextStatement: "conditions", 
-        isAllImplemented: false, 
         message0: "TIME", 
         message1: "mode: %1", 
         args1: [
@@ -589,7 +596,16 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
                 precision: 1
             }
         ], 
-        message4: "Incomplete"
+        message4: "time: %1", 
+        args4: [
+            {
+                type: "input_value", 
+                name: "time", 
+                types: [
+                    "range"
+                ]
+            }
+        ]
     }, 
     {
         type: "conditions_ONGROUND", 
@@ -966,7 +982,6 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         colour: 35, 
         previousStatement: "conditions", 
         nextStatement: "conditions", 
-        isAllImplemented: false, 
         message0: "HEIGHT", 
         message1: "mode: %1", 
         args1: [
@@ -986,7 +1001,16 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
                 ]
             }
         ], 
-        message2: "Incomplete"
+        message2: "height: %1", 
+        args2: [
+            {
+                type: "input_value", 
+                name: "height", 
+                types: [
+                    "range"
+                ]
+            }
+        ]
     }, 
     {
         type: "conditions_BLOCK", 
@@ -1135,7 +1159,6 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         colour: 35, 
         previousStatement: "conditions", 
         nextStatement: "conditions", 
-        isAllImplemented: false, 
         message0: "TEMPERATURE", 
         message1: "mode: %1", 
         args1: [
@@ -1159,14 +1182,22 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
                 ]
             }
         ], 
-        message2: "Incomplete"
+        message2: "temperature: %1", 
+        args2: [
+            {
+                type: "input_value", 
+                name: "temperature", 
+                types: [
+                    "range"
+                ]
+            }
+        ]
     }, 
     {
         type: "conditions_DISTANCE", 
         colour: 35, 
         previousStatement: "conditions", 
         nextStatement: "conditions", 
-        isAllImplemented: false, 
         message0: "DISTANCE", 
         message1: "mode: %1", 
         args1: [
@@ -1182,7 +1213,16 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
                 ]
             }
         ], 
-        message2: "Incomplete"
+        message2: "distance: %1", 
+        args2: [
+            {
+                type: "input_value", 
+                name: "distance", 
+                types: [
+                    "range"
+                ]
+            }
+        ]
     }, 
     {
         type: "conditions_SHIELDED", 
@@ -1270,7 +1310,6 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         colour: 35, 
         previousStatement: "conditions", 
         nextStatement: "conditions", 
-        isAllImplemented: false, 
         message0: "SPEED", 
         message1: "mode: %1", 
         args1: [
@@ -1290,7 +1329,16 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
                 ]
             }
         ], 
-        message2: "Incomplete"
+        message2: "speed: %1", 
+        args2: [
+            {
+                type: "input_value", 
+                name: "speed", 
+                types: [
+                    "range"
+                ]
+            }
+        ]
     }, 
     {
         type: "conditions_SHOOTER", 
@@ -1420,7 +1468,6 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         colour: 35, 
         previousStatement: "conditions", 
         nextStatement: "conditions", 
-        isAllImplemented: false, 
         message0: "ITEMLEVEL", 
         message1: "mode: %1", 
         args1: [
@@ -1440,7 +1487,16 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
                 ]
             }
         ], 
-        message2: "Incomplete"
+        message2: "itemLevel: %1", 
+        args2: [
+            {
+                type: "input_value", 
+                name: "itemLevel", 
+                types: [
+                    "range"
+                ]
+            }
+        ]
     }, 
     {
         type: "effects_DAMAGE", 
@@ -4760,12 +4816,6 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message0: "effect"
     }, 
     {
-        type: "types_range", 
-        colour: 10, 
-        output: "types", 
-        message0: "range"
-    }, 
-    {
         type: "types_SpawnData", 
         colour: 10, 
         output: "types", 
@@ -5237,7 +5287,6 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         type: "types_BlockDataComparison", 
         colour: 10, 
         output: "types", 
-        isAllImplemented: false, 
         message0: "BlockDataComparison", 
         message1: "types: %1", 
         args1: [
@@ -5258,7 +5307,26 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
                 options: enums.material
             }
         ], 
-        message3: "Incomplete"
+        message3: "level: %1", 
+        args3: [
+            {
+                type: "input_value", 
+                name: "level", 
+                types: [
+                    "range"
+                ]
+            }
+        ], 
+        message4: "age: %1", 
+        args4: [
+            {
+                type: "input_value", 
+                name: "age", 
+                types: [
+                    "range"
+                ]
+            }
+        ]
     }, 
     {
         type: "types_LoreData", 
@@ -5302,7 +5370,6 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         type: "types_ItemComparisonData", 
         colour: 10, 
         output: "types", 
-        isAllImplemented: false, 
         message0: "ItemComparisonData", 
         message1: "types: %1", 
         args1: [
@@ -5323,8 +5390,18 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
                 options: enums.material
             }
         ], 
-        message3: "metadata: %1", 
+        message3: "amount: %1", 
         args3: [
+            {
+                type: "input_value", 
+                name: "amount", 
+                types: [
+                    "range"
+                ]
+            }
+        ], 
+        message4: "metadata: %1", 
+        args4: [
             {
                 type: "input_value", 
                 name: "metadata", 
@@ -5332,8 +5409,25 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
                     "ItemMetaComparisonData"
                 ]
             }
-        ], 
-        message4: "Incomplete"
+        ]
+    }, 
+    {
+        type: "types_range", 
+        colour: 10, 
+        output: "types", 
+        message0: "range: %1 - %2", 
+        args0: [
+            {
+                type: "field_number", 
+                name: "MIN", 
+                value: null
+            }, 
+            {
+                type: "field_number", 
+                name: "MAX", 
+                value: null
+            }
+        ]
     }, 
     {
         type: "startpoint_hero", 

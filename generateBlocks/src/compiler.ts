@@ -99,18 +99,25 @@ class Compiler {
         forEachEntry(types, (name, type) => {
             if (type.type === "object") {
                 this.objectTypes.push(name)
+				return
             }
             if (type.type === "record") {
                 this.recordTypes[name] = type
                 delete types[name]
                 return
             }
-            if (!type.enum) return
-            this.enums[name] = type.enum.map(v => [v, v])
-            delete types[name]
+            if (type.enum) {
+				this.enums[name] = type.enum.map(v => [v, v])
+				delete types[name]
+			}
         })
+		// for ease of compiling, range is treated like an object
+		{
+			this.objectTypes.push("range")
+			delete types["range"]
+		}
         forEachEntry(types, (name, type) => {
-            if (type.type === "string") console.log(name + "has no enum and is a strings")
+            if (type.type === "string") console.log(name + " has no enum and is a strings")
         })
 
         const typeBlocks = Object.values(objectMap(types, this.generateTypeBlock.bind(this)))
@@ -123,18 +130,24 @@ class Compiler {
             }
             return blocksArray
         })
+		
+		const blockedSchema = { ...itemBlocks, types: typeBlocks }
+		
+		this.handleSpecialItems(schema, blockedSchema)
 
-        return { ...itemBlocks, types: typeBlocks }
+        return blockedSchema
     }
 
     // for adding special items
-    handleSpecialItems(schema: Schema): Block[] {
-
+    handleSpecialItems(schema: Schema, blockedSchema: BlockedSchema): void {
         /* RangeData */ {
-            // delete schema.types["range"]
-            // add to blocks
+			const block = new DefaultBlock("types", "range", false)
+			block.addCustomArg(`range: %1 - %2`, 
+				new FieldNumber(`MIN`, Number.NEGATIVE_INFINITY),
+				new FieldNumber(`MAX`, Number.POSITIVE_INFINITY)
+			)
+			blockedSchema.types.push(block)
         }
-        return []
     }
 
     generateItemBlock(type: keyof Schema, name: string, item: Item): Block | undefined {
@@ -179,6 +192,7 @@ class Compiler {
             block.addArg(name, new InputValue(name, [type]))
             return
         }
+		
         if (type in this.recordTypes) {
             property.recordItem = this.recordTypes[type].recordItem
             property.type = "record"
@@ -192,7 +206,7 @@ class Compiler {
             this.compileArrayProperty(block, name, property)
             return
         }
-
+		
         if (valueTypes.includes(type as any)) {
             const arg = this.createValueField(type as valueTypes, name, property.default)
             block.addArg(name, arg)

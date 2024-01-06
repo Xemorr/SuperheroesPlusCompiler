@@ -681,10 +681,6 @@ export const toolbox = {
                 }, 
                 {
                     kind: "block", 
-                    type: "types_range"
-                }, 
-                {
-                    kind: "block", 
                     type: "types_SpawnData"
                 }, 
                 {
@@ -754,6 +750,10 @@ export const toolbox = {
                 {
                     kind: "block", 
                     type: "types_ItemComparisonData"
+                }, 
+                {
+                    kind: "block", 
+                    type: "types_range"
                 }
             ]
         }, 

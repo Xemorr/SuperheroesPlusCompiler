@@ -15,12 +15,18 @@ superheroesGenerator['blockToCode'] = function(block) {
     if (superheroesGenerator[block_category] !== undefined) return superheroesGenerator[block_category](block);
     return blockToYaml(block);
 }
+
 superheroesGenerator['listtypes'] = function(block, generator) {
 	const field = block.getFieldValue("VALUE")
 	if (field != null) return field
 	const input = getInputBlock(block, "VALUE")
 	if (input != null) return superheroesGenerator.blockToCode(input)
 	return "~"
+}
+superheroesGenerator['types_range'] = function(block) {
+	const min = block.getFieldValue("MIN")
+	const max = block.getFieldValue("MAX")
+	return `${min} - ${max}`
 }
 
 function getInputBlock(block, name) {
@@ -42,12 +48,13 @@ function blockToYaml(block) {
     
     const valueEntries = blockFields.map(keyval => `${keyval[0]}: ${keyval[1]}`);
     const objectEntries = [
-		...getBlockValues(block).map(value => `${value[0]}: ${indent("\r\n" + superheroesGenerator.blockToCode(value[1]))}`),
+		...getBlockValues(block).map(value => `${value[0]}: ${indent(superheroesGenerator.blockToCode(value[1]))}`),
 		...blockStatementsToYaml(getBlockStatements(block))
     ];
     
-    if (sectionName === undefined) return [...valueEntries, ...objectEntries].join("\r\n");
-    return `${sectionName}: ` + indent("\r\n" + [...valueEntries, ...objectEntries].join("\r\n"));
+	const entriesString = [...valueEntries, ...objectEntries].join("\r\n")
+    if (sectionName === undefined) return "\r\n" + entriesString;
+    return `\r\n${sectionName}: ` + indent("\r\n" + entriesString);
 }
 
 function getBlockSectionName(blockFields) {
@@ -64,9 +71,9 @@ function blockStatementsToYaml(statements) {
 			const isList = statementName.endsWith("_array")
 			statementName = statementName.substring(0, statementName.length - (isList? "_array".length : 0))
 			
-			const statementListString = statementList
+			let statementListString = statementList
 				.map(block => superheroesGenerator.blockToCode(block))
-				.map(block => indent("\r\n" + block))
+				.map(block => indent(block))
 				.map((block, index) => {
 					if (isList) {
 						block = block.trimStart()
