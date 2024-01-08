@@ -33,17 +33,22 @@ function getInputBlock(block, name) {
 	return block.getInput(name).connection.targetBlock()
 }
 
-
+const typeField = {
+	"triggers": "type",
+	"conditions": "type",
+	"effects": "type",
+	"skills": "skill",
+	"damagemodifiers": "type",
+	"rewards": "type",
+	"distributions": "type",
+}
 // default yaml serialization
 function blockToYaml(block) {
     const blockFields = getBlockFields(block);
     const [block_category, block_name] = block.type.split("_");
-    if (block_category === "skills") {
-        blockFields.unshift(["skill", block_name])
-    }
-    else if (block_category === "effects" || block_category === "conditions" || block_category === "triggers" || block_category === "damagemodifiers") {
-        blockFields.unshift(["type", block_name])
-    }
+	if (block_category in typeField) {
+		blockFields.unshift([typeField[block_category], block_name])
+	}
     let sectionName = getBlockSectionName(blockFields);
     
     const valueEntries = blockFields.map(keyval => `${keyval[0]}: ${keyval[1]}`);
@@ -94,7 +99,8 @@ function getBlockFields(block) {
         .flatMap(input => input.fieldRow)
         .filter(field => !isFieldLabel(field))
         .map(field => field.name)
-        .map(fieldName => [fieldName, block.getFieldValue(fieldName)]);
+        .map(fieldName => [fieldName, block.getFieldValue(fieldName)])
+		.filter(x => x[1])
 }
 
 function getBlockValues(block) {

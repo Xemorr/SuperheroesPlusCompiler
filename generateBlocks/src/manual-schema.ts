@@ -87,11 +87,11 @@ const boss = {
         "check": "skills"
     }
   ],
-  "message6": "rewards: %1",
+  "message6": "reward: %1",
   "args6": [
     {
         "type": "input_value",
-        "name": "rewards",
+        "name": "reward",
         "types": ["rewards"]
     }
   ],
@@ -166,16 +166,16 @@ const custom = {
           check: "triggers"
       }
   ], 
-  message2: "conditions: %1",
+  // message2: "conditions: %1",
+  // args2: [
+    // {
+      // type: "input_statement",
+      // name: "conditions",
+      // check: "conditions"
+    // }
+  // ],
+  message2: "effects: %1", 
   args2: [
-    {
-      type: "input_statement",
-      name: "conditions",
-      check: "conditions"
-    }
-  ],
-  message3: "effects: %1", 
-  args3: [
       {
           type: "input_statement", 
           name: "effects", 

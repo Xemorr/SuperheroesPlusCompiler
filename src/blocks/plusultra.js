@@ -6,13 +6,29 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         type: "triggers_DAMAGEDENTITY", 
         colour: 120, 
         output: "triggers", 
-        message0: "DAMAGEDENTITY"
+        message0: "DAMAGEDENTITY", 
+        message1: "conditions: %1", 
+        args1: [
+            {
+                type: "input_statement", 
+                name: "conditions", 
+                check: "conditions"
+            }
+        ]
     }, 
     {
         type: "triggers_DAMAGEDBYENTITY", 
         colour: 120, 
         output: "triggers", 
-        message0: "DAMAGEDBYENTITY"
+        message0: "DAMAGEDBYENTITY", 
+        message1: "conditions: %1", 
+        args1: [
+            {
+                type: "input_statement", 
+                name: "conditions", 
+                check: "conditions"
+            }
+        ]
     }, 
     {
         type: "triggers_DAMAGEDBYPROJECTILE", 
@@ -26,6 +42,14 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
                 name: "onlyProjectiles", 
                 value: "false", 
                 options: enums.booleans
+            }
+        ], 
+        message2: "conditions: %1", 
+        args2: [
+            {
+                type: "input_statement", 
+                name: "conditions", 
+                check: "conditions"
             }
         ]
     }, 
@@ -42,19 +66,43 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
                 value: "false", 
                 options: enums.booleans
             }
+        ], 
+        message2: "conditions: %1", 
+        args2: [
+            {
+                type: "input_statement", 
+                name: "conditions", 
+                check: "conditions"
+            }
         ]
     }, 
     {
         type: "triggers_LAUNCHPROJECTILE", 
         colour: 120, 
         output: "triggers", 
-        message0: "LAUNCHPROJECTILE"
+        message0: "LAUNCHPROJECTILE", 
+        message1: "conditions: %1", 
+        args1: [
+            {
+                type: "input_statement", 
+                name: "conditions", 
+                check: "conditions"
+            }
+        ]
     }, 
     {
         type: "triggers_PROJECTILEHIT", 
         colour: 120, 
         output: "triggers", 
-        message0: "PROJECTILEHIT"
+        message0: "PROJECTILEHIT", 
+        message1: "conditions: %1", 
+        args1: [
+            {
+                type: "input_statement", 
+                name: "conditions", 
+                check: "conditions"
+            }
+        ]
     }, 
     {
         type: "triggers_DAMAGED", 
@@ -70,25 +118,57 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
                     "listtypes_damageCause"
                 ]
             }
+        ], 
+        message2: "conditions: %1", 
+        args2: [
+            {
+                type: "input_statement", 
+                name: "conditions", 
+                check: "conditions"
+            }
         ]
     }, 
     {
         type: "triggers_SNEAK", 
         colour: 120, 
         output: "triggers", 
-        message0: "SNEAK"
+        message0: "SNEAK", 
+        message1: "conditions: %1", 
+        args1: [
+            {
+                type: "input_statement", 
+                name: "conditions", 
+                check: "conditions"
+            }
+        ]
     }, 
     {
         type: "triggers_TOGGLEGLIDE", 
         colour: 120, 
         output: "triggers", 
-        message0: "TOGGLEGLIDE"
+        message0: "TOGGLEGLIDE", 
+        message1: "conditions: %1", 
+        args1: [
+            {
+                type: "input_statement", 
+                name: "conditions", 
+                check: "conditions"
+            }
+        ]
     }, 
     {
         type: "triggers_PLAYERJUMP", 
         colour: 120, 
         output: "triggers", 
-        message0: "PLAYERJUMP"
+        message0: "PLAYERJUMP", 
+        message1: "conditions: %1", 
+        args1: [
+            {
+                type: "input_statement", 
+                name: "conditions", 
+                check: "conditions"
+            }
+        ]
     }, 
     {
         type: "triggers_LOOP", 
@@ -102,73 +182,169 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
                 name: "period", 
                 value: 1
             }
+        ], 
+        message2: "conditions: %1", 
+        args2: [
+            {
+                type: "input_statement", 
+                name: "conditions", 
+                check: "conditions"
+            }
         ]
     }, 
     {
         type: "triggers_COMBAT", 
         colour: 120, 
         output: "triggers", 
-        message0: "COMBAT"
+        message0: "COMBAT", 
+        message1: "conditions: %1", 
+        args1: [
+            {
+                type: "input_statement", 
+                name: "conditions", 
+                check: "conditions"
+            }
+        ]
     }, 
     {
         type: "triggers_DEATH", 
         colour: 120, 
         output: "triggers", 
-        message0: "DEATH"
+        message0: "DEATH", 
+        message1: "conditions: %1", 
+        args1: [
+            {
+                type: "input_statement", 
+                name: "conditions", 
+                check: "conditions"
+            }
+        ]
     }, 
     {
         type: "triggers_SPAWN", 
         colour: 120, 
         output: "triggers", 
-        message0: "SPAWN"
+        message0: "SPAWN", 
+        message1: "conditions: %1", 
+        args1: [
+            {
+                type: "input_statement", 
+                name: "conditions", 
+                check: "conditions"
+            }
+        ]
     }, 
     {
         type: "triggers_TARGET", 
         colour: 120, 
         output: "triggers", 
-        message0: "TARGET"
+        message0: "TARGET", 
+        message1: "conditions: %1", 
+        args1: [
+            {
+                type: "input_statement", 
+                name: "conditions", 
+                check: "conditions"
+            }
+        ]
     }, 
     {
         type: "triggers_TARGETED", 
         colour: 120, 
         output: "triggers", 
-        message0: "TARGETED"
+        message0: "TARGETED", 
+        message1: "conditions: %1", 
+        args1: [
+            {
+                type: "input_statement", 
+                name: "conditions", 
+                check: "conditions"
+            }
+        ]
     }, 
     {
         type: "triggers_VEHICLE", 
         colour: 120, 
         output: "triggers", 
-        message0: "VEHICLE"
+        message0: "VEHICLE", 
+        message1: "conditions: %1", 
+        args1: [
+            {
+                type: "input_statement", 
+                name: "conditions", 
+                check: "conditions"
+            }
+        ]
     }, 
     {
         type: "triggers_ENTERVEHICLE", 
         colour: 120, 
         output: "triggers", 
-        message0: "ENTERVEHICLE"
+        message0: "ENTERVEHICLE", 
+        message1: "conditions: %1", 
+        args1: [
+            {
+                type: "input_statement", 
+                name: "conditions", 
+                check: "conditions"
+            }
+        ]
     }, 
     {
         type: "triggers_BECOMEVEHICLE", 
         colour: 120, 
         output: "triggers", 
-        message0: "BECOMEVEHICLE"
+        message0: "BECOMEVEHICLE", 
+        message1: "conditions: %1", 
+        args1: [
+            {
+                type: "input_statement", 
+                name: "conditions", 
+                check: "conditions"
+            }
+        ]
     }, 
     {
         type: "triggers_EXITVEHICLE", 
         colour: 120, 
         output: "triggers", 
-        message0: "EXITVEHICLE"
+        message0: "EXITVEHICLE", 
+        message1: "conditions: %1", 
+        args1: [
+            {
+                type: "input_statement", 
+                name: "conditions", 
+                check: "conditions"
+            }
+        ]
     }, 
     {
         type: "triggers_PLAYERJOIN", 
         colour: 120, 
         output: "triggers", 
-        message0: "PLAYERJOIN"
+        message0: "PLAYERJOIN", 
+        message1: "conditions: %1", 
+        args1: [
+            {
+                type: "input_statement", 
+                name: "conditions", 
+                check: "conditions"
+            }
+        ]
     }, 
     {
         type: "triggers_PLAYERQUIT", 
         colour: 120, 
         output: "triggers", 
-        message0: "PLAYERQUIT"
+        message0: "PLAYERQUIT", 
+        message1: "conditions: %1", 
+        args1: [
+            {
+                type: "input_statement", 
+                name: "conditions", 
+                check: "conditions"
+            }
+        ]
     }, 
     {
         type: "triggers_PROJECTILECOMBAT", 
@@ -183,13 +359,29 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
                 value: "false", 
                 options: enums.booleans
             }
+        ], 
+        message2: "conditions: %1", 
+        args2: [
+            {
+                type: "input_statement", 
+                name: "conditions", 
+                check: "conditions"
+            }
         ]
     }, 
     {
         type: "triggers_TAME", 
         colour: 120, 
         output: "triggers", 
-        message0: "TAME"
+        message0: "TAME", 
+        message1: "conditions: %1", 
+        args1: [
+            {
+                type: "input_statement", 
+                name: "conditions", 
+                check: "conditions"
+            }
+        ]
     }, 
     {
         type: "triggers_INTERACT", 
@@ -205,13 +397,29 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
                     "listtypes_action"
                 ]
             }
+        ], 
+        message2: "conditions: %1", 
+        args2: [
+            {
+                type: "input_statement", 
+                name: "conditions", 
+                check: "conditions"
+            }
         ]
     }, 
     {
         type: "triggers_KILL", 
         colour: 120, 
         output: "triggers", 
-        message0: "KILL"
+        message0: "KILL", 
+        message1: "conditions: %1", 
+        args1: [
+            {
+                type: "input_statement", 
+                name: "conditions", 
+                check: "conditions"
+            }
+        ]
     }, 
     {
         type: "triggers_POTIONEFFECT", 
@@ -227,67 +435,155 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
                     "listtypes_potion"
                 ]
             }
+        ], 
+        message2: "conditions: %1", 
+        args2: [
+            {
+                type: "input_statement", 
+                name: "conditions", 
+                check: "conditions"
+            }
         ]
     }, 
     {
         type: "triggers_INTERACTENTITY", 
         colour: 120, 
         output: "triggers", 
-        message0: "INTERACTENTITY"
+        message0: "INTERACTENTITY", 
+        message1: "conditions: %1", 
+        args1: [
+            {
+                type: "input_statement", 
+                name: "conditions", 
+                check: "conditions"
+            }
+        ]
     }, 
     {
         type: "triggers_RIPTIDE", 
         colour: 120, 
         output: "triggers", 
-        message0: "RIPTIDE"
+        message0: "RIPTIDE", 
+        message1: "conditions: %1", 
+        args1: [
+            {
+                type: "input_statement", 
+                name: "conditions", 
+                check: "conditions"
+            }
+        ]
     }, 
     {
         type: "triggers_CHANGEMAINHAND", 
         colour: 120, 
         output: "triggers", 
-        message0: "CHANGEMAINHAND"
+        message0: "CHANGEMAINHAND", 
+        message1: "conditions: %1", 
+        args1: [
+            {
+                type: "input_statement", 
+                name: "conditions", 
+                check: "conditions"
+            }
+        ]
     }, 
     {
         type: "triggers_EQUIPARMOR", 
         colour: 120, 
         output: "triggers", 
-        message0: "EQUIPARMOR"
+        message0: "EQUIPARMOR", 
+        message1: "conditions: %1", 
+        args1: [
+            {
+                type: "input_statement", 
+                name: "conditions", 
+                check: "conditions"
+            }
+        ]
     }, 
     {
         type: "triggers_SPRINT", 
         colour: 120, 
         output: "triggers", 
-        message0: "SPRINT"
+        message0: "SPRINT", 
+        message1: "conditions: %1", 
+        args1: [
+            {
+                type: "input_statement", 
+                name: "conditions", 
+                check: "conditions"
+            }
+        ]
     }, 
     {
         type: "triggers_BLOCKBREAK", 
         colour: 120, 
         output: "triggers", 
-        message0: "BLOCKBREAK"
+        message0: "BLOCKBREAK", 
+        message1: "conditions: %1", 
+        args1: [
+            {
+                type: "input_statement", 
+                name: "conditions", 
+                check: "conditions"
+            }
+        ]
     }, 
     {
         type: "triggers_TOTEM", 
         colour: 120, 
         output: "triggers", 
-        message0: "TOTEM"
+        message0: "TOTEM", 
+        message1: "conditions: %1", 
+        args1: [
+            {
+                type: "input_statement", 
+                name: "conditions", 
+                check: "conditions"
+            }
+        ]
     }, 
     {
         type: "triggers_CONSUME", 
         colour: 120, 
         output: "triggers", 
-        message0: "CONSUME"
+        message0: "CONSUME", 
+        message1: "conditions: %1", 
+        args1: [
+            {
+                type: "input_statement", 
+                name: "conditions", 
+                check: "conditions"
+            }
+        ]
     }, 
     {
         type: "triggers_MOVE", 
         colour: 120, 
         output: "triggers", 
-        message0: "MOVE"
+        message0: "MOVE", 
+        message1: "conditions: %1", 
+        args1: [
+            {
+                type: "input_statement", 
+                name: "conditions", 
+                check: "conditions"
+            }
+        ]
     }, 
     {
         type: "triggers_SWAPHANDS", 
         colour: 120, 
         output: "triggers", 
-        message0: "SWAPHANDS"
+        message0: "SWAPHANDS", 
+        message1: "conditions: %1", 
+        args1: [
+            {
+                type: "input_statement", 
+                name: "conditions", 
+                check: "conditions"
+            }
+        ]
     }, 
     {
         type: "conditions_HEALTH", 
@@ -3878,16 +4174,8 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
                 check: "triggers"
             }
         ], 
-        message2: "conditions: %1", 
+        message2: "effects: %1", 
         args2: [
-            {
-                type: "input_statement", 
-                name: "conditions", 
-                check: "conditions"
-            }
-        ], 
-        message3: "effects: %1", 
-        args3: [
             {
                 type: "input_statement", 
                 name: "effects", 
@@ -5517,11 +5805,11 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
                 check: "skills"
             }
         ], 
-        message6: "rewards: %1", 
+        message6: "reward: %1", 
         args6: [
             {
                 type: "input_value", 
-                name: "rewards", 
+                name: "reward", 
                 types: [
                     "rewards"
                 ]

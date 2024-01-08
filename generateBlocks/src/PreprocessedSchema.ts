@@ -68,7 +68,7 @@ interface Reward extends Item {}
 interface Distribution extends Item {}
 
 type PropertyTypes = PropertyStringTypes | "array" | "record" | "object" | "string" | "number" | "integer" | "boolean"
-type PropertyStringTypes = "string" | "range" | "comparison" | "operation" | "entity" | "block" | "item" | "enchantment" | "potion" | "biome" | "world" | "equipmentSlot" | "attribute" | "sound" | "conditions" | "effects"
+type PropertyStringTypes = "string" | "range" | "comparison" | "operation" | "entity" | "block" | "item" | "enchantment" | "potion" | "biome" | "world" | "equipmentSlot" | "attribute" | "sound" | "conditions" | "effects" | string
 type PropertiesMap = {
 	key: PropertiesMapKey
 	value: Property

@@ -1,7 +1,7 @@
 import { Argument, dropdownOption, FieldBoolean, FieldDropdown, FieldEnum, FieldInput, FieldInteger, FieldNumber, InputStatement, InputValue } from "./blockly/Arguments.js";
 import { Block, categoryData, DefaultBlock, JSONBlock, ListTypeBlock } from "./blockly/Block.js";
 import { Schema, Item, Type, PropertyMap, Property, PropertyType, PropertyTypes } from "./PreprocessedSchema.js";
-import { forEachEntry, JSONStringify, objectMap, StringRecord, toArray } from "./utils.js";
+import { forEachEntry, forEachValue, JSONStringify, objectMap, StringRecord, toArray } from "./utils.js";
 import { hero, boss, item, custom } from "./manual-schema.js"
 
 type EnumMap = StringRecord<dropdownOption[]>
@@ -95,6 +95,16 @@ class Compiler {
         ]
 
         const { types, ...items } = schema
+				
+		forEachValue(items.triggers, x => {
+			if (!x.properties) x.properties = {}
+			x.properties['conditions'] = {
+				description: "The conditions to check",
+				required: false,
+				type: "ConditionList",
+				default: {}
+			}
+		})
 
         forEachEntry(types, (name, type) => {
             if (type.type === "object") {
