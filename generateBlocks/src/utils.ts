@@ -28,7 +28,9 @@ export class Variable {
 		this.identifier = indentifier
 	}
 
-	toJSON() {
+	toJSON(quoteKeys?: boolean) {
+		// because it is easier to compare when it is converted into a string
+		if (quoteKeys) return JSON.stringify(this.identifier)
 		return this.identifier
 	}
 }
@@ -39,7 +41,7 @@ export function indent(s: string, indent: string = "    ") {
 		.join("\r\n")
 }
 
-export function JSONStringify(object: unknown, calledFromToJson?: true): string {
+export function JSONStringify(object: unknown, calledFromToJson?: boolean, quoteKeys?: boolean): string {
 	if (object === null) {
 		return "null"
 	}
@@ -50,7 +52,7 @@ export function JSONStringify(object: unknown, calledFromToJson?: true): string 
 		if ("toJSON" in object) {
 			const _object = object as any
 			if (typeof _object.toJSON === "function") {
-				const ret = _object.toJSON()
+				const ret = _object.toJSON(quoteKeys)
 				if (typeof ret === "string") {
 					return ret
 				}
@@ -59,16 +61,18 @@ export function JSONStringify(object: unknown, calledFromToJson?: true): string 
 	}
 	if (Array.isArray(object)) {
 		const stringified = object
-			.map(val => JSONStringify(val))
+			.map(val => JSONStringify(val, false, quoteKeys))
 			.map(val => indent(val))
 			.join(", \r\n")
 		return `[\r\n${stringified}\r\n]`
 	}
 	const stringified = Object.entries(object)
 		.filter(([_, val]) => val !== undefined)
-		.map(([key, val]) => [key, JSONStringify(val)])
-		.map(([key, val]) => `${key}: ${val}`)
-		.map(val => indent(val))
+		.map(([key, val]) => {
+			if (quoteKeys) key = JSON.stringify(key)
+			const valStr = JSONStringify(val, false, quoteKeys)
+			return indent(`${key}: ${valStr}`)
+		})
 		.join(", \r\n")
 	return `{\r\n${stringified}\r\n}`
 }

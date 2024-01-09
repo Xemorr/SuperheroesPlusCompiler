@@ -6,10 +6,14 @@ import { hero, boss, item, custom } from "./manual-schema.js"
 
 type EnumMap = StringRecord<dropdownOption[]>
 
+type outputs = {
+	json: string
+	code: string
+}
 type compilationOutput = {
-    enumCode: string
-    blocksCode: string
-    toolboxCode: string
+    enumCode: outputs
+    blocksCode: outputs
+    toolboxCode: outputs
 }
 
 type BlockedSchema = {
@@ -36,11 +40,11 @@ class Compiler {
         blocks.skills.unshift(new JSONBlock("skills", "CUSTOM", custom))
         blocks.listtypes = Object.values(this.listTypes);
 
-        var toolbox = this.generateToolbox(blocks)
+        const toolbox = this.generateToolbox(blocks)
         return {
             enumCode: this.stringifyEnum(),
             blocksCode: this.stringifyBlocks(blocks),
-            toolboxCode: "export const toolbox = " + JSONStringify(toolbox)
+            toolboxCode: this.stringifyToolbox(toolbox)
         }
     }
 
@@ -54,17 +58,31 @@ class Compiler {
                 }
             }))
         })
-        return "export default " + JSONStringify(compactedEnum)
+        return {
+			json: JSONStringify(compactedEnum, undefined, true),
+			code: "export default " + JSONStringify(compactedEnum),
+		}
     }
 
     stringifyBlocks(blocks: BlockedSchema) {
         const flattened = Object.values(blocks).flat()
-        return "import * as Blockly from 'blockly'\r\n" +
-        "import enums from './enums.js'\r\n" +
-        "\r\n" +
-        "export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray(" +
-        JSONStringify(flattened) + ")\r\n"
+		return {
+			json: JSONStringify(flattened, undefined, true),
+			code: 
+				"import * as Blockly from 'blockly'\r\n" +
+				"import enums from './enums.js'\r\n" +
+				"\r\n" +
+				"export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray(" +
+				JSONStringify(flattened) + ")\r\n",
+		}
     }
+	
+	stringifyToolbox(toolbox: any) {
+		return {
+			json: JSONStringify(toolbox, undefined, true),
+			code: "export const toolbox = " + JSONStringify(toolbox),
+		}
+	}
 
     generateToolbox(blocks: BlockedSchema) {
         const contents = Object.values(objectMap(blocks, (cat, list) => {

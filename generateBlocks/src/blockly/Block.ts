@@ -66,7 +66,7 @@ export class Block {
     nextStatement?: string
 
     args: ArgumentList = {}
-    argCounter: number = 0
+	argCounter: number = 0
     isAllImplemented: boolean = true
 	
 	constructor(type: BlockType) {
@@ -76,25 +76,20 @@ export class Block {
 	
 	addCustomArg(message: string, ...args: Argument[]) {
 		this.args[`message${this.argCounter}`] = message
-        this.args[`args${this.argCounter}`] = args
+		if (args.length > 0) this.args[`args${this.argCounter}`] = args
 
         this.argCounter++
 	}
 
     addArg(name: string, arg: Argument) {
-        this.args[`message${this.argCounter}`] = `${name}: %1`
-        this.args[`args${this.argCounter}`] = [arg]
-
-        this.argCounter++
+		this.addCustomArg(`${name}: %1`, arg)
     }
 
     addTextArg(name: string) {
-        this.args[`message${this.argCounter}`] = name
-
-        this.argCounter++
+		this.addCustomArg(name)
     }
 
-    toJSON() {
+    toJSON(quoteKeys?: boolean) {
         const excludes = {
             argCounter: undefined,
             args: undefined,
@@ -105,7 +100,7 @@ export class Block {
         } else {
             excludes.isAllImplemented = undefined
         }
-        return JSONStringify({...this, ...this.args, ...excludes}, true)
+        return JSONStringify({...this, ...this.args, ...excludes}, true, quoteKeys)
     }
 
 }
@@ -157,7 +152,7 @@ export class JSONBlock extends DefaultBlock {
         this.json_block = json_block
     }
 
-    override toJSON(): string {
-        return JSONStringify(this.json_block, true)
+    override toJSON(quoteKeys?: boolean): string {
+        return JSONStringify(this.json_block, true, quoteKeys)
     }
 }

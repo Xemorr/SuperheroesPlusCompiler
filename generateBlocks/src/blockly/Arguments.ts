@@ -23,7 +23,7 @@ type ArgumentType =
 type Argument = {
     type: ArgumentType
     name: string
-    toJSON: () => string
+    toJSON: (quoteKeys?: boolean) => string
 }
 
 class InputValue implements Argument {
@@ -40,8 +40,8 @@ class InputValue implements Argument {
         this.types = types
     }
 
-    toJSON(): string {
-        return JSONStringify(this, true)
+    toJSON(quoteKeys?: boolean): string {
+        return JSONStringify(this, true, quoteKeys)
     }
     
 }
@@ -56,8 +56,8 @@ class InputStatement implements Argument {
         this.check = check
     }
 
-    toJSON(): string {
-        return JSONStringify(this, true)
+    toJSON(quoteKeys?: boolean): string {
+        return JSONStringify(this, true, quoteKeys)
     }
 
 }
@@ -72,8 +72,8 @@ class FieldNumber implements Argument {
         this.value = value
     }
 
-    toJSON(): string {
-        return JSONStringify(this, true)
+    toJSON(quoteKeys?: boolean): string {
+        return JSONStringify(this, true, quoteKeys)
     }
     
 }
@@ -115,8 +115,8 @@ class FieldDropdown implements Argument {
         this.options = new Variable(varName)
     }
 
-    toJSON(): string {
-        return JSONStringify(this, true)
+    toJSON(quoteKeys?: boolean): string {
+        return JSONStringify(this, true, quoteKeys)
     }
 
 }
@@ -148,8 +148,8 @@ class FieldInput implements Argument {
         this.text = _default
     }
 
-    toJSON(): string {
-        return JSONStringify(this, true)
+    toJSON(quoteKeys?: boolean): string {
+        return JSONStringify(this, true, quoteKeys)
     }
 }
 
