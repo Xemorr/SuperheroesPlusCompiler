@@ -144,7 +144,13 @@ function getBlockFields(block) {
         .filter(field => !isFieldLabel(field))
         .map(field => field.name)
         .filter(notUndefined)
-        .map(fieldName => definedEntry(fieldName, block.getFieldValue(fieldName)))
+        .map(fieldName => {
+			let value = block.getFieldValue(fieldName)
+			if (typeof value === "string") {
+				if (value.length === 0) value =  undefined
+			}
+			return definedEntry(fieldName, value)
+		})
 		.filter(notUndefined)
     
     // adds in the type field
