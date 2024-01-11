@@ -1344,7 +1344,9 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         colour: 35, 
         previousStatement: "conditions", 
         nextStatement: "conditions", 
-        isAllImplemented: false, 
+        unimplemented: [
+            "slot: multiple types\r\n"
+        ], 
         message0: "ITEM", 
         message1: "mode: %1", 
         args1: [
@@ -1546,7 +1548,9 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         colour: 35, 
         previousStatement: "conditions", 
         nextStatement: "conditions", 
-        isAllImplemented: false, 
+        unimplemented: [
+            "slot: multiple types\r\n"
+        ], 
         message0: "ITEMWRAPPER", 
         message1: "mode: %1", 
         args1: [
@@ -3574,7 +3578,9 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         colour: 295, 
         previousStatement: "effects", 
         nextStatement: "effects", 
-        isAllImplemented: false, 
+        unimplemented: [
+            "slot: multiple types\r\n"
+        ], 
         message0: "ITEMSTACK", 
         message1: "mode: %1", 
         args1: [
@@ -4449,7 +4455,9 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         colour: 230, 
         previousStatement: "skills", 
         nextStatement: "skills", 
-        isAllImplemented: false, 
+        unimplemented: [
+            "convertMap: ?"
+        ], 
         message0: "BLOCKDROPS", 
         message1: "replaceDrops: %1", 
         args1: [
@@ -4700,7 +4708,9 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         colour: 230, 
         previousStatement: "skills", 
         nextStatement: "skills", 
-        isAllImplemented: false, 
+        unimplemented: [
+            "transmutationData: ?"
+        ], 
         message0: "SPELL", 
         message1: "spell: %1", 
         args1: [
@@ -4929,7 +4939,11 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         colour: 230, 
         previousStatement: "skills", 
         nextStatement: "skills", 
-        isAllImplemented: false, 
+        unimplemented: [
+            "recipeKeys: ?", 
+            "recipe: array item is a Property object", 
+            "ingredients: ?"
+        ], 
         message0: "CRAFTING", 
         message1: "isShaped: %1", 
         args1: [
@@ -5087,7 +5101,10 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         colour: 10, 
         previousStatement: "distributions", 
         nextStatement: "distributions", 
-        isAllImplemented: false, 
+        unimplemented: [
+            "recipe: array item is a Property object", 
+            "recipeKeys: ?"
+        ], 
         message0: "CRAFTING", 
         message1: "Incomplete"
     }, 
@@ -5241,7 +5258,12 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         type: "types_ItemMetaData", 
         colour: 10, 
         output: "types", 
-        isAllImplemented: false, 
+        unimplemented: [
+            "trim: ?", 
+            "color: ?", 
+            "book: ?", 
+            "potion: ?"
+        ], 
         message0: "ItemMetaData", 
         message1: "displayName: %1", 
         args1: [
@@ -5354,7 +5376,9 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         type: "types_EntityData", 
         colour: 10, 
         output: "types", 
-        isAllImplemented: false, 
+        unimplemented: [
+            "extra: ?"
+        ], 
         message0: "EntityData", 
         message1: "type: %1", 
         args1: [
@@ -5632,7 +5656,9 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         type: "types_ItemMetaComparisonData", 
         colour: 10, 
         output: "types", 
-        isAllImplemented: false, 
+        unimplemented: [
+            "lore: ?"
+        ], 
         message0: "ItemMetaComparisonData", 
         message1: "displayName: %1", 
         args1: [

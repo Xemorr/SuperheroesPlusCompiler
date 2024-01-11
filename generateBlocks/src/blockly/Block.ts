@@ -70,7 +70,7 @@ export class Block {
     nextStatement?: string
 
     args: ArgumentEntry[] = []
-    isAllImplemented: boolean = true
+	unimplemented: string[] = []
     sort: boolean = true
 	
 	constructor(type: BlockType) {
@@ -95,10 +95,9 @@ export class Block {
     }
 
     toJSON(quoteKeys?: boolean) {
-        const excludes = {
+        const excludes: any = {
             args: undefined,
             sort: undefined,
-            isAllImplemented: this.isAllImplemented as boolean | undefined
         }
         this.args.sort((a, b) => {
 			const aPrecedence = (a.args[0]?.precedence ?? -1)
@@ -112,10 +111,10 @@ export class Block {
                 blocklyArgs[`args${index}`] = entry.args
             }
         })
-        if (!this.isAllImplemented) {
+        if (this.unimplemented.length > 0) {
             blocklyArgs[`message${this.args.length}`] = "Incomplete"
         } else {
-            excludes.isAllImplemented = undefined
+			excludes.unimplemented = undefined
         }
         return JSONStringify({...this, ...blocklyArgs, ...excludes}, true, quoteKeys)
     }

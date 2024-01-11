@@ -207,7 +207,7 @@ class Compiler {
 
     compileProperty(block: Block, name: string, property: Property): void {
         if (Array.isArray(property.type)) {
-            block.isAllImplemented = false
+			block.unimplemented.push(`${name}: multiple types\r\n`)
             return
         }
         const type = property.type
@@ -240,8 +240,8 @@ class Compiler {
             block.addArg(name, arg)
             return
         }
-
-        block.isAllImplemented = false
+        
+		block.unimplemented.push(`${name}: ?`)
     }
 
     compileRecordProperty(block: Block, name: string, property: Property) {
@@ -275,7 +275,7 @@ class Compiler {
             return
         }
         if (typeof itemType === "object" && !Array.isArray(itemType)) {
-            block.isAllImplemented = false
+            block.unimplemented.push(`${name}: array item is a Property object`)
             return
         }
         itemType = toArray(itemType)
