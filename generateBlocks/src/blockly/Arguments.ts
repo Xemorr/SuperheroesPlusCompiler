@@ -21,12 +21,14 @@ type ArgumentType =
     "field_input"
 
 type Argument = {
+    precedence: number
     type: ArgumentType
     name: string
     toJSON: (quoteKeys?: boolean) => string
 }
 
 class InputValue implements Argument {
+    precedence: number = 2
     type: ArgumentType = "input_value"
     name: string
     types?: string[]
@@ -41,12 +43,13 @@ class InputValue implements Argument {
     }
 
     toJSON(quoteKeys?: boolean): string {
-        return JSONStringify(this, true, quoteKeys)
+        return JSONStringify({ ...this, precedence: undefined }, true, quoteKeys)
     }
     
 }
 
 class InputStatement implements Argument {
+    precedence: number = 3
     type: ArgumentType = "input_statement"
     name: string
     check: string | string[]
@@ -57,12 +60,13 @@ class InputStatement implements Argument {
     }
 
     toJSON(quoteKeys?: boolean): string {
-        return JSONStringify(this, true, quoteKeys)
+        return JSONStringify({ ...this, precedence: undefined }, true, quoteKeys)
     }
 
 }
 
 class FieldNumber implements Argument {
+    precedence: number = 1
     type: ArgumentType = "field_number"
     name: string
     value?: number
@@ -73,7 +77,7 @@ class FieldNumber implements Argument {
     }
 
     toJSON(quoteKeys?: boolean): string {
-        return JSONStringify(this, true, quoteKeys)
+        return JSONStringify({ ...this, precedence: undefined }, true, quoteKeys)
     }
     
 }
@@ -91,6 +95,7 @@ type dropdownLabel = string
 export type dropdownOption = [dropdownLabel, string]
 
 class FieldDropdown implements Argument {
+    precedence: number = 1
     type: ArgumentType = "field_dropdown"
     name: string
     value: any
@@ -116,7 +121,7 @@ class FieldDropdown implements Argument {
     }
 
     toJSON(quoteKeys?: boolean): string {
-        return JSONStringify(this, true, quoteKeys)
+        return JSONStringify({ ...this, precedence: undefined }, true, quoteKeys)
     }
 
 }
@@ -139,6 +144,7 @@ class FieldBoolean extends FieldEnum {
 }
 
 class FieldInput implements Argument {
+    precedence: number = 1
     type: ArgumentType = "field_input"
     name: string
     text: string
@@ -149,7 +155,7 @@ class FieldInput implements Argument {
     }
 
     toJSON(quoteKeys?: boolean): string {
-        return JSONStringify(this, true, quoteKeys)
+        return JSONStringify({ ...this, precedence: undefined }, true, quoteKeys)
     }
 }
 

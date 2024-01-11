@@ -53,8 +53,12 @@ export const categoryData: Record<keyof Schema, CategoryData> = {
 }
 
 type ArgumentList = {
-    [K: `message${number}`]: string;
+    [K: `message${number}`]: string
     [K: `args${number}`]: Argument[]
+}
+type ArgumentEntry = {
+    message: string
+    args: Argument[]
 }
 
 export class Block {
@@ -65,20 +69,21 @@ export class Block {
     previousStatement?: string
     nextStatement?: string
 
-    args: ArgumentList = {}
-	argCounter: number = 0
+    args: ArgumentEntry[] = []
     isAllImplemented: boolean = true
+    sort: boolean = true
 	
 	constructor(type: BlockType) {
         this.type = type
         this.colour = 0
     }
 	
+    /**
+     * if it is supplied with more than 1 args, the sorting for this block is disabled
+     */
 	addCustomArg(message: string, ...args: Argument[]) {
-		this.args[`message${this.argCounter}`] = message
-		if (args.length > 0) this.args[`args${this.argCounter}`] = args
-
-        this.argCounter++
+        if (args.length > 1) this.sort = false
+        this.args.push({ message, args })
 	}
 
     addArg(name: string, arg: Argument) {
@@ -91,16 +96,28 @@ export class Block {
 
     toJSON(quoteKeys?: boolean) {
         const excludes = {
-            argCounter: undefined,
             args: undefined,
+            sort: undefined,
             isAllImplemented: this.isAllImplemented as boolean | undefined
         }
+        this.args.sort((a, b) => {
+			const aPrecedence = (a.args[0]?.precedence ?? -1)
+			const bPrecedence = (b.args[0]?.precedence ?? -1)
+			return aPrecedence - bPrecedence
+		})
+        const blocklyArgs: ArgumentList = {}
+        this.args.forEach((entry, index) => {
+            blocklyArgs[`message${index}`] = entry.message
+            if (entry.args.length > 0) {
+                blocklyArgs[`args${index}`] = entry.args
+            }
+        })
         if (!this.isAllImplemented) {
-            this.args[`message${this.argCounter}`] = "Incomplete"
+            blocklyArgs[`message${this.args.length}`] = "Incomplete"
         } else {
             excludes.isAllImplemented = undefined
         }
-        return JSONStringify({...this, ...this.args, ...excludes}, true, quoteKeys)
+        return JSONStringify({...this, ...blocklyArgs, ...excludes}, true, quoteKeys)
     }
 
 }

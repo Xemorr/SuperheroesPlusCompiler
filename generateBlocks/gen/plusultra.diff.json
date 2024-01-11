@@ -1,1 +1,4578 @@
-{}
+{
+    "2": {
+        "message1": [
+            "conditions: %1",
+            "onlyProjectiles: %1"
+        ],
+        "args1": {
+            "0": {
+                "type": [
+                    "input_statement",
+                    "field_dropdown"
+                ],
+                "name": [
+                    "conditions",
+                    "onlyProjectiles"
+                ],
+                "check": [
+                    "type string",
+                    "type undefined"
+                ],
+                "value": [
+                    "type undefined",
+                    "type string"
+                ],
+                "options": [
+                    "type undefined",
+                    "type string"
+                ]
+            }
+        },
+        "message2": [
+            "onlyProjectiles: %1",
+            "conditions: %1"
+        ],
+        "args2": {
+            "0": {
+                "type": [
+                    "field_dropdown",
+                    "input_statement"
+                ],
+                "name": [
+                    "onlyProjectiles",
+                    "conditions"
+                ],
+                "value": [
+                    "type string",
+                    "type undefined"
+                ],
+                "options": [
+                    "type string",
+                    "type undefined"
+                ],
+                "check": [
+                    "type undefined",
+                    "type string"
+                ]
+            }
+        }
+    },
+    "3": {
+        "message1": [
+            "conditions: %1",
+            "onlyProjectiles: %1"
+        ],
+        "args1": {
+            "0": {
+                "type": [
+                    "input_statement",
+                    "field_dropdown"
+                ],
+                "name": [
+                    "conditions",
+                    "onlyProjectiles"
+                ],
+                "check": [
+                    "type string",
+                    "type undefined"
+                ],
+                "value": [
+                    "type undefined",
+                    "type string"
+                ],
+                "options": [
+                    "type undefined",
+                    "type string"
+                ]
+            }
+        },
+        "message2": [
+            "onlyProjectiles: %1",
+            "conditions: %1"
+        ],
+        "args2": {
+            "0": {
+                "type": [
+                    "field_dropdown",
+                    "input_statement"
+                ],
+                "name": [
+                    "onlyProjectiles",
+                    "conditions"
+                ],
+                "value": [
+                    "type string",
+                    "type undefined"
+                ],
+                "options": [
+                    "type string",
+                    "type undefined"
+                ],
+                "check": [
+                    "type undefined",
+                    "type string"
+                ]
+            }
+        }
+    },
+    "10": {
+        "message1": [
+            "conditions: %1",
+            "period: %1"
+        ],
+        "args1": {
+            "0": {
+                "type": [
+                    "input_statement",
+                    "field_number"
+                ],
+                "name": [
+                    "conditions",
+                    "period"
+                ],
+                "check": [
+                    "type string",
+                    "type undefined"
+                ],
+                "value": [
+                    "type undefined",
+                    "type number"
+                ]
+            }
+        },
+        "message2": [
+            "period: %1",
+            "conditions: %1"
+        ],
+        "args2": {
+            "0": {
+                "type": [
+                    "field_number",
+                    "input_statement"
+                ],
+                "name": [
+                    "period",
+                    "conditions"
+                ],
+                "value": [
+                    "type number",
+                    "type undefined"
+                ],
+                "check": [
+                    "type undefined",
+                    "type string"
+                ]
+            }
+        }
+    },
+    "22": {
+        "message1": [
+            "conditions: %1",
+            "onlyProjectiles: %1"
+        ],
+        "args1": {
+            "0": {
+                "type": [
+                    "input_statement",
+                    "field_dropdown"
+                ],
+                "name": [
+                    "conditions",
+                    "onlyProjectiles"
+                ],
+                "check": [
+                    "type string",
+                    "type undefined"
+                ],
+                "value": [
+                    "type undefined",
+                    "type string"
+                ],
+                "options": [
+                    "type undefined",
+                    "type string"
+                ]
+            }
+        },
+        "message2": [
+            "onlyProjectiles: %1",
+            "conditions: %1"
+        ],
+        "args2": {
+            "0": {
+                "type": [
+                    "field_dropdown",
+                    "input_statement"
+                ],
+                "name": [
+                    "onlyProjectiles",
+                    "conditions"
+                ],
+                "value": [
+                    "type string",
+                    "type undefined"
+                ],
+                "options": [
+                    "type string",
+                    "type undefined"
+                ],
+                "check": [
+                    "type undefined",
+                    "type string"
+                ]
+            }
+        }
+    },
+    "37": {
+        "message1": [
+            "healthPercentange: %1",
+            "mode: %1"
+        ],
+        "args1": {
+            "0": {
+                "type": [
+                    "input_value",
+                    "field_dropdown"
+                ],
+                "name": [
+                    "healthPercentange",
+                    "mode"
+                ],
+                "types": [
+                    "type object",
+                    "type undefined"
+                ],
+                "value": [
+                    "type undefined",
+                    "type string"
+                ],
+                "options": [
+                    "type undefined",
+                    "type object"
+                ]
+            }
+        },
+        "message2": [
+            "mode: %1",
+            "healthPercentange: %1"
+        ],
+        "args2": {
+            "0": {
+                "type": [
+                    "field_dropdown",
+                    "input_value"
+                ],
+                "name": [
+                    "mode",
+                    "healthPercentange"
+                ],
+                "value": [
+                    "type string",
+                    "type undefined"
+                ],
+                "options": [
+                    "type object",
+                    "type undefined"
+                ],
+                "types": [
+                    "type undefined",
+                    "type object"
+                ]
+            }
+        }
+    },
+    "40": {
+        "message1": [
+            "entities: %1",
+            "mode: %1"
+        ],
+        "args1": {
+            "0": {
+                "type": [
+                    "input_statement",
+                    "field_dropdown"
+                ],
+                "name": [
+                    "entities_array",
+                    "mode"
+                ],
+                "check": [
+                    "type object",
+                    "type undefined"
+                ],
+                "value": [
+                    "type undefined",
+                    "type string"
+                ],
+                "options": [
+                    "type undefined",
+                    "type object"
+                ]
+            }
+        },
+        "message2": [
+            "mode: %1",
+            "whitelist: %1"
+        ],
+        "args2": {
+            "0": {
+                "name": [
+                    "mode",
+                    "whitelist"
+                ],
+                "value": [
+                    "SELF",
+                    "true"
+                ],
+                "options": [
+                    "type object",
+                    "type string"
+                ]
+            }
+        },
+        "message3": [
+            "whitelist: %1",
+            "entities: %1"
+        ],
+        "args3": {
+            "0": {
+                "type": [
+                    "field_dropdown",
+                    "input_statement"
+                ],
+                "name": [
+                    "whitelist",
+                    "entities_array"
+                ],
+                "value": [
+                    "type string",
+                    "type undefined"
+                ],
+                "options": [
+                    "type string",
+                    "type undefined"
+                ],
+                "check": [
+                    "type undefined",
+                    "type object"
+                ]
+            }
+        }
+    },
+    "42": {
+        "message1": [
+            "condition: %1",
+            "mode: %1"
+        ],
+        "args1": {
+            "0": {
+                "type": [
+                    "input_value",
+                    "field_dropdown"
+                ],
+                "name": [
+                    "condition",
+                    "mode"
+                ],
+                "types": [
+                    "type object",
+                    "type undefined"
+                ],
+                "value": [
+                    "type undefined",
+                    "type string"
+                ],
+                "options": [
+                    "type undefined",
+                    "type object"
+                ]
+            }
+        },
+        "message2": [
+            "mode: %1",
+            "condition: %1"
+        ],
+        "args2": {
+            "0": {
+                "type": [
+                    "field_dropdown",
+                    "input_value"
+                ],
+                "name": [
+                    "mode",
+                    "condition"
+                ],
+                "value": [
+                    "type string",
+                    "type undefined"
+                ],
+                "options": [
+                    "type object",
+                    "type undefined"
+                ],
+                "types": [
+                    "type undefined",
+                    "type object"
+                ]
+            }
+        }
+    },
+    "44": {
+        "message1": [
+            "time: %1",
+            "mode: %1"
+        ],
+        "args1": {
+            "0": {
+                "type": [
+                    "input_value",
+                    "field_dropdown"
+                ],
+                "name": [
+                    "time",
+                    "mode"
+                ],
+                "types": [
+                    "type object",
+                    "type undefined"
+                ],
+                "value": [
+                    "type undefined",
+                    "type string"
+                ],
+                "options": [
+                    "type undefined",
+                    "type object"
+                ]
+            }
+        },
+        "message2": [
+            "mode: %1",
+            "minimumTime: %1"
+        ],
+        "args2": {
+            "0": {
+                "type": [
+                    "field_dropdown",
+                    "field_number"
+                ],
+                "name": [
+                    "mode",
+                    "minimumTime"
+                ],
+                "value": [
+                    "type string",
+                    "type number"
+                ],
+                "options": [
+                    "type object",
+                    "type undefined"
+                ],
+                "precision": [
+                    "type undefined",
+                    "type number"
+                ]
+            }
+        },
+        "message3": [
+            "minimumTime: %1",
+            "maximumTime: %1"
+        ],
+        "args3": {
+            "0": {
+                "name": [
+                    "minimumTime",
+                    "maximumTime"
+                ],
+                "value": [
+                    0,
+                    24000
+                ]
+            }
+        },
+        "message4": [
+            "maximumTime: %1",
+            "time: %1"
+        ],
+        "args4": {
+            "0": {
+                "type": [
+                    "field_number",
+                    "input_value"
+                ],
+                "name": [
+                    "maximumTime",
+                    "time"
+                ],
+                "value": [
+                    "type number",
+                    "type undefined"
+                ],
+                "precision": [
+                    "type number",
+                    "type undefined"
+                ],
+                "types": [
+                    "type undefined",
+                    "type object"
+                ]
+            }
+        }
+    },
+    "47": {
+        "message1": [
+            "biomes: %1",
+            "mode: %1"
+        ],
+        "args1": {
+            "0": {
+                "type": [
+                    "input_statement",
+                    "field_dropdown"
+                ],
+                "name": [
+                    "biomes_array",
+                    "mode"
+                ],
+                "check": [
+                    "type object",
+                    "type undefined"
+                ],
+                "value": [
+                    "type undefined",
+                    "type string"
+                ],
+                "options": [
+                    "type undefined",
+                    "type object"
+                ]
+            }
+        },
+        "message2": [
+            "mode: %1",
+            "biomes: %1"
+        ],
+        "args2": {
+            "0": {
+                "type": [
+                    "field_dropdown",
+                    "input_statement"
+                ],
+                "name": [
+                    "mode",
+                    "biomes_array"
+                ],
+                "value": [
+                    "type string",
+                    "type undefined"
+                ],
+                "options": [
+                    "type object",
+                    "type undefined"
+                ],
+                "check": [
+                    "type undefined",
+                    "type object"
+                ]
+            }
+        }
+    },
+    "51": {
+        "message1": [
+            "blocks: %1",
+            "mode: %1"
+        ],
+        "args1": {
+            "0": {
+                "type": [
+                    "input_statement",
+                    "field_dropdown"
+                ],
+                "name": [
+                    "blocks_array",
+                    "mode"
+                ],
+                "check": [
+                    "type object",
+                    "type undefined"
+                ],
+                "value": [
+                    "type undefined",
+                    "type string"
+                ],
+                "options": [
+                    "type undefined",
+                    "type object"
+                ]
+            }
+        },
+        "message2": [
+            "mode: %1",
+            "blocks: %1"
+        ],
+        "args2": {
+            "0": {
+                "type": [
+                    "field_dropdown",
+                    "input_statement"
+                ],
+                "name": [
+                    "mode",
+                    "blocks_array"
+                ],
+                "value": [
+                    "type string",
+                    "type undefined"
+                ],
+                "options": [
+                    "type object",
+                    "type undefined"
+                ],
+                "check": [
+                    "type undefined",
+                    "type object"
+                ]
+            }
+        }
+    },
+    "52": {
+        "message1": [
+            "worlds: %1",
+            "mode: %1"
+        ],
+        "args1": {
+            "0": {
+                "type": [
+                    "input_statement",
+                    "field_dropdown"
+                ],
+                "name": [
+                    "worlds_array",
+                    "mode"
+                ],
+                "check": [
+                    "type object",
+                    "type undefined"
+                ],
+                "value": [
+                    "type undefined",
+                    "type string"
+                ],
+                "options": [
+                    "type undefined",
+                    "type object"
+                ]
+            }
+        },
+        "message2": [
+            "mode: %1",
+            "worlds: %1"
+        ],
+        "args2": {
+            "0": {
+                "type": [
+                    "field_dropdown",
+                    "input_statement"
+                ],
+                "name": [
+                    "mode",
+                    "worlds_array"
+                ],
+                "value": [
+                    "type string",
+                    "type undefined"
+                ],
+                "options": [
+                    "type object",
+                    "type undefined"
+                ],
+                "check": [
+                    "type undefined",
+                    "type object"
+                ]
+            }
+        }
+    },
+    "56": {
+        "message1": [
+            "height: %1",
+            "mode: %1"
+        ],
+        "args1": {
+            "0": {
+                "type": [
+                    "input_value",
+                    "field_dropdown"
+                ],
+                "name": [
+                    "height",
+                    "mode"
+                ],
+                "types": [
+                    "type object",
+                    "type undefined"
+                ],
+                "value": [
+                    "type undefined",
+                    "type string"
+                ],
+                "options": [
+                    "type undefined",
+                    "type object"
+                ]
+            }
+        },
+        "message2": [
+            "mode: %1",
+            "height: %1"
+        ],
+        "args2": {
+            "0": {
+                "type": [
+                    "field_dropdown",
+                    "input_value"
+                ],
+                "name": [
+                    "mode",
+                    "height"
+                ],
+                "value": [
+                    "type string",
+                    "type undefined"
+                ],
+                "options": [
+                    "type object",
+                    "type undefined"
+                ],
+                "types": [
+                    "type undefined",
+                    "type object"
+                ]
+            }
+        }
+    },
+    "57": {
+        "message1": [
+            "materials: %1",
+            "mode: %1"
+        ],
+        "args1": {
+            "0": {
+                "type": [
+                    "input_statement",
+                    "field_dropdown"
+                ],
+                "name": [
+                    "materials_array",
+                    "mode"
+                ],
+                "check": [
+                    "type object",
+                    "type undefined"
+                ],
+                "value": [
+                    "type undefined",
+                    "type string"
+                ],
+                "options": [
+                    "type undefined",
+                    "type object"
+                ]
+            }
+        },
+        "message2": [
+            "mode: %1",
+            "materials: %1"
+        ],
+        "args2": {
+            "0": {
+                "type": [
+                    "field_dropdown",
+                    "input_statement"
+                ],
+                "name": [
+                    "mode",
+                    "materials_array"
+                ],
+                "value": [
+                    "type string",
+                    "type undefined"
+                ],
+                "options": [
+                    "type object",
+                    "type undefined"
+                ],
+                "check": [
+                    "type undefined",
+                    "type object"
+                ]
+            }
+        }
+    },
+    "58": {
+        "message1": [
+            "item: %1",
+            "mode: %1"
+        ],
+        "args1": {
+            "0": {
+                "type": [
+                    "input_value",
+                    "field_dropdown"
+                ],
+                "name": [
+                    "item",
+                    "mode"
+                ],
+                "types": [
+                    "type object",
+                    "type undefined"
+                ],
+                "value": [
+                    "type undefined",
+                    "type string"
+                ],
+                "options": [
+                    "type undefined",
+                    "type object"
+                ]
+            }
+        },
+        "message2": [
+            "mode: %1",
+            "item: %1"
+        ],
+        "args2": {
+            "0": {
+                "type": [
+                    "field_dropdown",
+                    "input_value"
+                ],
+                "name": [
+                    "mode",
+                    "item"
+                ],
+                "value": [
+                    "type string",
+                    "type undefined"
+                ],
+                "options": [
+                    "type object",
+                    "type undefined"
+                ],
+                "types": [
+                    "type undefined",
+                    "type object"
+                ]
+            }
+        }
+    },
+    "59": {
+        "message1": [
+            "conditions: %1",
+            "mode: %1"
+        ],
+        "args1": {
+            "0": {
+                "type": [
+                    "input_statement",
+                    "field_dropdown"
+                ],
+                "name": [
+                    "conditions",
+                    "mode"
+                ],
+                "check": [
+                    "type string",
+                    "type undefined"
+                ],
+                "value": [
+                    "type undefined",
+                    "type string"
+                ],
+                "options": [
+                    "type undefined",
+                    "type object"
+                ]
+            }
+        },
+        "message2": [
+            "mode: %1",
+            "conditions: %1"
+        ],
+        "args2": {
+            "0": {
+                "type": [
+                    "field_dropdown",
+                    "input_statement"
+                ],
+                "name": [
+                    "mode",
+                    "conditions"
+                ],
+                "value": [
+                    "type string",
+                    "type undefined"
+                ],
+                "options": [
+                    "type object",
+                    "type undefined"
+                ],
+                "check": [
+                    "type undefined",
+                    "type string"
+                ]
+            }
+        }
+    },
+    "61": {
+        "message1": [
+            "temperature: %1",
+            "mode: %1"
+        ],
+        "args1": {
+            "0": {
+                "type": [
+                    "input_value",
+                    "field_dropdown"
+                ],
+                "name": [
+                    "temperature",
+                    "mode"
+                ],
+                "types": [
+                    "type object",
+                    "type undefined"
+                ],
+                "value": [
+                    "type undefined",
+                    "type string"
+                ],
+                "options": [
+                    "type undefined",
+                    "type object"
+                ]
+            }
+        },
+        "message2": [
+            "mode: %1",
+            "temperature: %1"
+        ],
+        "args2": {
+            "0": {
+                "type": [
+                    "field_dropdown",
+                    "input_value"
+                ],
+                "name": [
+                    "mode",
+                    "temperature"
+                ],
+                "value": [
+                    "type string",
+                    "type undefined"
+                ],
+                "options": [
+                    "type object",
+                    "type undefined"
+                ],
+                "types": [
+                    "type undefined",
+                    "type object"
+                ]
+            }
+        }
+    },
+    "62": {
+        "message1": [
+            "distance: %1",
+            "mode: %1"
+        ],
+        "args1": {
+            "0": {
+                "type": [
+                    "input_value",
+                    "field_dropdown"
+                ],
+                "name": [
+                    "distance",
+                    "mode"
+                ],
+                "types": [
+                    "type object",
+                    "type undefined"
+                ],
+                "value": [
+                    "type undefined",
+                    "type string"
+                ],
+                "options": [
+                    "type undefined",
+                    "type object"
+                ]
+            }
+        },
+        "message2": [
+            "mode: %1",
+            "distance: %1"
+        ],
+        "args2": {
+            "0": {
+                "type": [
+                    "field_dropdown",
+                    "input_value"
+                ],
+                "name": [
+                    "mode",
+                    "distance"
+                ],
+                "value": [
+                    "type string",
+                    "type undefined"
+                ],
+                "options": [
+                    "type object",
+                    "type undefined"
+                ],
+                "types": [
+                    "type undefined",
+                    "type object"
+                ]
+            }
+        }
+    },
+    "64": {
+        "message1": [
+            "conditions: %1",
+            "mode: %1"
+        ],
+        "args1": {
+            "0": {
+                "type": [
+                    "input_statement",
+                    "field_dropdown"
+                ],
+                "name": [
+                    "conditions",
+                    "mode"
+                ],
+                "check": [
+                    "type string",
+                    "type undefined"
+                ],
+                "value": [
+                    "type undefined",
+                    "type string"
+                ],
+                "options": [
+                    "type undefined",
+                    "type object"
+                ]
+            }
+        },
+        "message2": [
+            "mode: %1",
+            "conditions: %1"
+        ],
+        "args2": {
+            "0": {
+                "type": [
+                    "field_dropdown",
+                    "input_statement"
+                ],
+                "name": [
+                    "mode",
+                    "conditions"
+                ],
+                "value": [
+                    "type string",
+                    "type undefined"
+                ],
+                "options": [
+                    "type object",
+                    "type undefined"
+                ],
+                "check": [
+                    "type undefined",
+                    "type string"
+                ]
+            }
+        }
+    },
+    "66": {
+        "message1": [
+            "speed: %1",
+            "mode: %1"
+        ],
+        "args1": {
+            "0": {
+                "type": [
+                    "input_value",
+                    "field_dropdown"
+                ],
+                "name": [
+                    "speed",
+                    "mode"
+                ],
+                "types": [
+                    "type object",
+                    "type undefined"
+                ],
+                "value": [
+                    "type undefined",
+                    "type string"
+                ],
+                "options": [
+                    "type undefined",
+                    "type object"
+                ]
+            }
+        },
+        "message2": [
+            "mode: %1",
+            "speed: %1"
+        ],
+        "args2": {
+            "0": {
+                "type": [
+                    "field_dropdown",
+                    "input_value"
+                ],
+                "name": [
+                    "mode",
+                    "speed"
+                ],
+                "value": [
+                    "type string",
+                    "type undefined"
+                ],
+                "options": [
+                    "type object",
+                    "type undefined"
+                ],
+                "types": [
+                    "type undefined",
+                    "type object"
+                ]
+            }
+        }
+    },
+    "68": {
+        "message1": [
+            "heroes: %1",
+            "mode: %1"
+        ],
+        "args1": {
+            "0": {
+                "type": [
+                    "input_statement",
+                    "field_dropdown"
+                ],
+                "name": [
+                    "heroes_array",
+                    "mode"
+                ],
+                "check": [
+                    "type object",
+                    "type undefined"
+                ],
+                "value": [
+                    "type undefined",
+                    "type string"
+                ],
+                "options": [
+                    "type undefined",
+                    "type object"
+                ]
+            }
+        },
+        "message2": [
+            "mode: %1",
+            "heroes: %1"
+        ],
+        "args2": {
+            "0": {
+                "type": [
+                    "field_dropdown",
+                    "input_statement"
+                ],
+                "name": [
+                    "mode",
+                    "heroes_array"
+                ],
+                "value": [
+                    "type string",
+                    "type undefined"
+                ],
+                "options": [
+                    "type object",
+                    "type undefined"
+                ],
+                "check": [
+                    "type undefined",
+                    "type object"
+                ]
+            }
+        }
+    },
+    "69": {
+        "message1": [
+            "entities: %1",
+            "mode: %1"
+        ],
+        "args1": {
+            "0": {
+                "type": [
+                    "input_statement",
+                    "field_dropdown"
+                ],
+                "name": [
+                    "entities_array",
+                    "mode"
+                ],
+                "check": [
+                    "type object",
+                    "type undefined"
+                ],
+                "value": [
+                    "type undefined",
+                    "type string"
+                ],
+                "options": [
+                    "type undefined",
+                    "type object"
+                ]
+            }
+        },
+        "message2": [
+            "mode: %1",
+            "entities: %1"
+        ],
+        "args2": {
+            "0": {
+                "type": [
+                    "field_dropdown",
+                    "input_statement"
+                ],
+                "name": [
+                    "mode",
+                    "entities_array"
+                ],
+                "value": [
+                    "type string",
+                    "type undefined"
+                ],
+                "options": [
+                    "type object",
+                    "type undefined"
+                ],
+                "check": [
+                    "type undefined",
+                    "type object"
+                ]
+            }
+        }
+    },
+    "71": {
+        "message1": [
+            "itemLevel: %1",
+            "mode: %1"
+        ],
+        "args1": {
+            "0": {
+                "type": [
+                    "input_value",
+                    "field_dropdown"
+                ],
+                "name": [
+                    "itemLevel",
+                    "mode"
+                ],
+                "types": [
+                    "type object",
+                    "type undefined"
+                ],
+                "value": [
+                    "type undefined",
+                    "type string"
+                ],
+                "options": [
+                    "type undefined",
+                    "type object"
+                ]
+            }
+        },
+        "message2": [
+            "mode: %1",
+            "itemLevel: %1"
+        ],
+        "args2": {
+            "0": {
+                "type": [
+                    "field_dropdown",
+                    "input_value"
+                ],
+                "name": [
+                    "mode",
+                    "itemLevel"
+                ],
+                "value": [
+                    "type string",
+                    "type undefined"
+                ],
+                "options": [
+                    "type object",
+                    "type undefined"
+                ],
+                "types": [
+                    "type undefined",
+                    "type object"
+                ]
+            }
+        }
+    },
+    "73": {
+        "message1": [
+            "conditions: %1",
+            "mode: %1"
+        ],
+        "args1": {
+            "0": {
+                "type": [
+                    "input_statement",
+                    "field_dropdown"
+                ],
+                "name": [
+                    "conditions",
+                    "mode"
+                ],
+                "check": [
+                    "type string",
+                    "type undefined"
+                ],
+                "value": [
+                    "type undefined",
+                    "type string"
+                ],
+                "options": [
+                    "type undefined",
+                    "type object"
+                ]
+            }
+        },
+        "message2": [
+            "effects: %1",
+            "conditions: %1"
+        ],
+        "args2": {
+            "0": {
+                "name": [
+                    "effects",
+                    "conditions"
+                ],
+                "check": [
+                    "effects",
+                    "conditions"
+                ]
+            }
+        },
+        "message3": [
+            "mode: %1",
+            "effects: %1"
+        ],
+        "args3": {
+            "0": {
+                "type": [
+                    "field_dropdown",
+                    "input_statement"
+                ],
+                "name": [
+                    "mode",
+                    "effects"
+                ],
+                "value": [
+                    "type string",
+                    "type undefined"
+                ],
+                "options": [
+                    "type object",
+                    "type undefined"
+                ],
+                "check": [
+                    "type undefined",
+                    "type string"
+                ]
+            }
+        }
+    },
+    "77": {
+        "message1": [
+            "conditions: %1",
+            "mode: %1"
+        ],
+        "args1": {
+            "0": {
+                "type": [
+                    "input_statement",
+                    "field_dropdown"
+                ],
+                "name": [
+                    "conditions",
+                    "mode"
+                ],
+                "check": [
+                    "type string",
+                    "type undefined"
+                ],
+                "value": [
+                    "type undefined",
+                    "type string"
+                ],
+                "options": [
+                    "type undefined",
+                    "type object"
+                ]
+            }
+        },
+        "message2": [
+            "effects: %1",
+            "conditions: %1"
+        ],
+        "args2": {
+            "0": {
+                "name": [
+                    "effects",
+                    "conditions"
+                ],
+                "check": [
+                    "effects",
+                    "conditions"
+                ]
+            }
+        },
+        "message3": [
+            "mode: %1",
+            "effects: %1"
+        ],
+        "args3": {
+            "0": {
+                "type": [
+                    "field_dropdown",
+                    "input_statement"
+                ],
+                "name": [
+                    "mode",
+                    "effects"
+                ],
+                "value": [
+                    "type string",
+                    "type undefined"
+                ],
+                "options": [
+                    "type object",
+                    "type undefined"
+                ],
+                "check": [
+                    "type undefined",
+                    "type string"
+                ]
+            }
+        }
+    },
+    "78": {
+        "message1": [
+            "potion: %1",
+            "mode: %1"
+        ],
+        "args1": {
+            "0": {
+                "type": [
+                    "input_value",
+                    "field_dropdown"
+                ],
+                "name": [
+                    "potion",
+                    "mode"
+                ],
+                "types": [
+                    "type object",
+                    "type undefined"
+                ],
+                "value": [
+                    "type undefined",
+                    "type string"
+                ],
+                "options": [
+                    "type undefined",
+                    "type object"
+                ]
+            }
+        },
+        "message2": [
+            "mode: %1",
+            "potion: %1"
+        ],
+        "args2": {
+            "0": {
+                "type": [
+                    "field_dropdown",
+                    "input_value"
+                ],
+                "name": [
+                    "mode",
+                    "potion"
+                ],
+                "value": [
+                    "type string",
+                    "type undefined"
+                ],
+                "options": [
+                    "type object",
+                    "type undefined"
+                ],
+                "types": [
+                    "type undefined",
+                    "type object"
+                ]
+            }
+        }
+    },
+    "92": {
+        "message1": [
+            "item: %1",
+            "mode: %1"
+        ],
+        "args1": {
+            "0": {
+                "type": [
+                    "input_value",
+                    "field_dropdown"
+                ],
+                "name": [
+                    "item",
+                    "mode"
+                ],
+                "types": [
+                    "type object",
+                    "type undefined"
+                ],
+                "value": [
+                    "type undefined",
+                    "type string"
+                ],
+                "options": [
+                    "type undefined",
+                    "type object"
+                ]
+            }
+        },
+        "message2": [
+            "mode: %1",
+            "dropIfFull: %1"
+        ],
+        "args2": {
+            "0": {
+                "name": [
+                    "mode",
+                    "dropIfFull"
+                ],
+                "value": [
+                    "SELF",
+                    "true"
+                ],
+                "options": [
+                    "type object",
+                    "type string"
+                ]
+            }
+        },
+        "message3": [
+            "dropIfFull: %1",
+            "item: %1"
+        ],
+        "args3": {
+            "0": {
+                "type": [
+                    "field_dropdown",
+                    "input_value"
+                ],
+                "name": [
+                    "dropIfFull",
+                    "item"
+                ],
+                "value": [
+                    "type string",
+                    "type undefined"
+                ],
+                "options": [
+                    "type string",
+                    "type undefined"
+                ],
+                "types": [
+                    "type undefined",
+                    "type object"
+                ]
+            }
+        }
+    },
+    "95": {
+        "message1": [
+            "entity: %1",
+            "mode: %1"
+        ],
+        "args1": {
+            "0": {
+                "type": [
+                    "input_value",
+                    "field_dropdown"
+                ],
+                "name": [
+                    "entity",
+                    "mode"
+                ],
+                "types": [
+                    "type object",
+                    "type undefined"
+                ],
+                "value": [
+                    "type undefined",
+                    "type string"
+                ],
+                "options": [
+                    "type undefined",
+                    "type object"
+                ]
+            }
+        },
+        "message2": [
+            "mode: %1",
+            "entity: %1"
+        ],
+        "args2": {
+            "0": {
+                "type": [
+                    "field_dropdown",
+                    "input_value"
+                ],
+                "name": [
+                    "mode",
+                    "entity"
+                ],
+                "value": [
+                    "type string",
+                    "type undefined"
+                ],
+                "options": [
+                    "type object",
+                    "type undefined"
+                ],
+                "types": [
+                    "type undefined",
+                    "type object"
+                ]
+            }
+        }
+    },
+    "96": {
+        "message1": [
+            "sound: %1",
+            "mode: %1"
+        ],
+        "args1": {
+            "0": {
+                "type": [
+                    "input_value",
+                    "field_dropdown"
+                ],
+                "name": [
+                    "sound",
+                    "mode"
+                ],
+                "types": [
+                    "type object",
+                    "type undefined"
+                ],
+                "value": [
+                    "type undefined",
+                    "type string"
+                ],
+                "options": [
+                    "type undefined",
+                    "type object"
+                ]
+            }
+        },
+        "message2": [
+            "mode: %1",
+            "sound: %1"
+        ],
+        "args2": {
+            "0": {
+                "type": [
+                    "field_dropdown",
+                    "input_value"
+                ],
+                "name": [
+                    "mode",
+                    "sound"
+                ],
+                "value": [
+                    "type string",
+                    "type undefined"
+                ],
+                "options": [
+                    "type object",
+                    "type undefined"
+                ],
+                "types": [
+                    "type undefined",
+                    "type object"
+                ]
+            }
+        }
+    },
+    "97": {
+        "message1": [
+            "commands: %1",
+            "mode: %1"
+        ],
+        "args1": {
+            "0": {
+                "type": [
+                    "input_statement",
+                    "field_dropdown"
+                ],
+                "name": [
+                    "commands_array",
+                    "mode"
+                ],
+                "check": [
+                    "type object",
+                    "type undefined"
+                ],
+                "value": [
+                    "type undefined",
+                    "type string"
+                ],
+                "options": [
+                    "type undefined",
+                    "type object"
+                ]
+            }
+        },
+        "message2": [
+            "mode: %1",
+            "executor: %1"
+        ],
+        "args2": {
+            "0": {
+                "type": [
+                    "field_dropdown",
+                    "field_input"
+                ],
+                "name": [
+                    "mode",
+                    "executor"
+                ],
+                "value": [
+                    "type string",
+                    "type undefined"
+                ],
+                "options": [
+                    "type object",
+                    "type undefined"
+                ],
+                "text": [
+                    "type undefined",
+                    "type string"
+                ]
+            }
+        },
+        "message3": [
+            "executor: %1",
+            "commands: %1"
+        ],
+        "args3": {
+            "0": {
+                "type": [
+                    "field_input",
+                    "input_statement"
+                ],
+                "name": [
+                    "executor",
+                    "commands_array"
+                ],
+                "text": [
+                    "type string",
+                    "type undefined"
+                ],
+                "check": [
+                    "type undefined",
+                    "type object"
+                ]
+            }
+        }
+    },
+    "99": {
+        "message1": [
+            "conditions: %1",
+            "mode: %1"
+        ],
+        "args1": {
+            "0": {
+                "type": [
+                    "input_statement",
+                    "field_dropdown"
+                ],
+                "name": [
+                    "conditions",
+                    "mode"
+                ],
+                "check": [
+                    "type string",
+                    "type undefined"
+                ],
+                "value": [
+                    "type undefined",
+                    "type string"
+                ],
+                "options": [
+                    "type undefined",
+                    "type object"
+                ]
+            }
+        },
+        "message2": [
+            "effects: %1",
+            "conditions: %1"
+        ],
+        "args2": {
+            "0": {
+                "name": [
+                    "effects",
+                    "conditions"
+                ],
+                "check": [
+                    "effects",
+                    "conditions"
+                ]
+            }
+        },
+        "message3": [
+            "mode: %1",
+            "effects: %1"
+        ],
+        "args3": {
+            "0": {
+                "type": [
+                    "field_dropdown",
+                    "input_statement"
+                ],
+                "name": [
+                    "mode",
+                    "effects"
+                ],
+                "value": [
+                    "type string",
+                    "type undefined"
+                ],
+                "options": [
+                    "type object",
+                    "type undefined"
+                ],
+                "check": [
+                    "type undefined",
+                    "type string"
+                ]
+            }
+        }
+    },
+    "100": {
+        "message1": [
+            "conditions: %1",
+            "mode: %1"
+        ],
+        "args1": {
+            "0": {
+                "type": [
+                    "input_statement",
+                    "field_dropdown"
+                ],
+                "name": [
+                    "conditions",
+                    "mode"
+                ],
+                "check": [
+                    "type string",
+                    "type undefined"
+                ],
+                "value": [
+                    "type undefined",
+                    "type string"
+                ],
+                "options": [
+                    "type undefined",
+                    "type object"
+                ]
+            }
+        },
+        "message2": [
+            "effects: %1",
+            "conditions: %1"
+        ],
+        "args2": {
+            "0": {
+                "name": [
+                    "effects",
+                    "conditions"
+                ],
+                "check": [
+                    "effects",
+                    "conditions"
+                ]
+            }
+        },
+        "message3": [
+            "mode: %1",
+            "effects: %1"
+        ],
+        "args3": {
+            "0": {
+                "type": [
+                    "field_dropdown",
+                    "input_statement"
+                ],
+                "name": [
+                    "mode",
+                    "effects"
+                ],
+                "value": [
+                    "type string",
+                    "type undefined"
+                ],
+                "options": [
+                    "type object",
+                    "type undefined"
+                ],
+                "check": [
+                    "type undefined",
+                    "type string"
+                ]
+            }
+        }
+    },
+    "106": {
+        "message1": [
+            "conditions: %1",
+            "mode: %1"
+        ],
+        "args1": {
+            "0": {
+                "type": [
+                    "input_statement",
+                    "field_dropdown"
+                ],
+                "name": [
+                    "conditions",
+                    "mode"
+                ],
+                "check": [
+                    "type string",
+                    "type undefined"
+                ],
+                "value": [
+                    "type undefined",
+                    "type string"
+                ],
+                "options": [
+                    "type undefined",
+                    "type object"
+                ]
+            }
+        },
+        "message2": [
+            "effects: %1",
+            "conditions: %1"
+        ],
+        "args2": {
+            "0": {
+                "name": [
+                    "effects",
+                    "conditions"
+                ],
+                "check": [
+                    "effects",
+                    "conditions"
+                ]
+            }
+        },
+        "message3": [
+            "offset: %1",
+            "effects: %1"
+        ],
+        "args3": {
+            "0": {
+                "type": [
+                    "input_value",
+                    "input_statement"
+                ],
+                "name": [
+                    "offset",
+                    "effects"
+                ],
+                "types": [
+                    "type object",
+                    "type undefined"
+                ],
+                "check": [
+                    "type undefined",
+                    "type string"
+                ]
+            }
+        },
+        "message4": [
+            "mode: %1",
+            "verticalRadius: %1"
+        ],
+        "args4": {
+            "0": {
+                "type": [
+                    "field_dropdown",
+                    "field_number"
+                ],
+                "name": [
+                    "mode",
+                    "verticalRadius"
+                ],
+                "value": [
+                    "type string",
+                    "type number"
+                ],
+                "options": [
+                    "type object",
+                    "type undefined"
+                ],
+                "precision": [
+                    "type undefined",
+                    "type number"
+                ]
+            }
+        },
+        "message5": [
+            "verticalRadius: %1",
+            "horizontalRadius: %1"
+        ],
+        "args5": {
+            "0": {
+                "name": [
+                    "verticalRadius",
+                    "horizontalRadius"
+                ]
+            }
+        },
+        "message6": [
+            "horizontalRadius: %1",
+            "offset: %1"
+        ],
+        "args6": {
+            "0": {
+                "type": [
+                    "field_number",
+                    "input_value"
+                ],
+                "name": [
+                    "horizontalRadius",
+                    "offset"
+                ],
+                "value": [
+                    "type number",
+                    "type undefined"
+                ],
+                "precision": [
+                    "type number",
+                    "type undefined"
+                ],
+                "types": [
+                    "type undefined",
+                    "type object"
+                ]
+            }
+        }
+    },
+    "107": {
+        "message1": [
+            "block: %1",
+            "mode: %1"
+        ],
+        "args1": {
+            "0": {
+                "type": [
+                    "input_value",
+                    "field_dropdown"
+                ],
+                "name": [
+                    "block",
+                    "mode"
+                ],
+                "types": [
+                    "type object",
+                    "type undefined"
+                ],
+                "value": [
+                    "type undefined",
+                    "type string"
+                ],
+                "options": [
+                    "type undefined",
+                    "type object"
+                ]
+            }
+        },
+        "message2": [
+            "mode: %1",
+            "material: %1"
+        ],
+        "args2": {
+            "0": {
+                "name": [
+                    "mode",
+                    "material"
+                ],
+                "value": [
+                    "type string",
+                    "type object"
+                ],
+                "options": [
+                    "type object",
+                    "type string"
+                ]
+            }
+        },
+        "message3": [
+            "material: %1",
+            "block: %1"
+        ],
+        "args3": {
+            "0": {
+                "type": [
+                    "field_dropdown",
+                    "input_value"
+                ],
+                "name": [
+                    "material",
+                    "block"
+                ],
+                "value": [
+                    "type object",
+                    "type undefined"
+                ],
+                "options": [
+                    "type string",
+                    "type undefined"
+                ],
+                "types": [
+                    "type undefined",
+                    "type object"
+                ]
+            }
+        }
+    },
+    "108": {
+        "message1": [
+            "entity: %1",
+            "mode: %1"
+        ],
+        "args1": {
+            "0": {
+                "type": [
+                    "input_value",
+                    "field_dropdown"
+                ],
+                "name": [
+                    "entity",
+                    "mode"
+                ],
+                "types": [
+                    "type object",
+                    "type undefined"
+                ],
+                "value": [
+                    "type undefined",
+                    "type string"
+                ],
+                "options": [
+                    "type undefined",
+                    "type object"
+                ]
+            }
+        },
+        "message2": [
+            "mode: %1",
+            "entity: %1"
+        ],
+        "args2": {
+            "0": {
+                "type": [
+                    "field_dropdown",
+                    "input_value"
+                ],
+                "name": [
+                    "mode",
+                    "entity"
+                ],
+                "value": [
+                    "type string",
+                    "type undefined"
+                ],
+                "options": [
+                    "type object",
+                    "type undefined"
+                ],
+                "types": [
+                    "type undefined",
+                    "type object"
+                ]
+            }
+        }
+    },
+    "109": {
+        "message1": [
+            "types: %1",
+            "mode: %1"
+        ],
+        "args1": {
+            "0": {
+                "type": [
+                    "input_statement",
+                    "field_dropdown"
+                ],
+                "name": [
+                    "types_array",
+                    "mode"
+                ],
+                "check": [
+                    "type object",
+                    "type undefined"
+                ],
+                "value": [
+                    "type undefined",
+                    "type string"
+                ],
+                "options": [
+                    "type undefined",
+                    "type object"
+                ]
+            }
+        },
+        "message2": [
+            "mode: %1",
+            "types: %1"
+        ],
+        "args2": {
+            "0": {
+                "type": [
+                    "field_dropdown",
+                    "input_statement"
+                ],
+                "name": [
+                    "mode",
+                    "types_array"
+                ],
+                "value": [
+                    "type string",
+                    "type undefined"
+                ],
+                "options": [
+                    "type object",
+                    "type undefined"
+                ],
+                "check": [
+                    "type undefined",
+                    "type object"
+                ]
+            }
+        }
+    },
+    "111": {
+        "message1": [
+            "conditions: %1",
+            "mode: %1"
+        ],
+        "args1": {
+            "0": {
+                "type": [
+                    "input_statement",
+                    "field_dropdown"
+                ],
+                "name": [
+                    "conditions",
+                    "mode"
+                ],
+                "check": [
+                    "type string",
+                    "type undefined"
+                ],
+                "value": [
+                    "type undefined",
+                    "type string"
+                ],
+                "options": [
+                    "type undefined",
+                    "type object"
+                ]
+            }
+        },
+        "message2": [
+            "effects: %1",
+            "conditions: %1"
+        ],
+        "args2": {
+            "0": {
+                "name": [
+                    "effects",
+                    "conditions"
+                ],
+                "check": [
+                    "effects",
+                    "conditions"
+                ]
+            }
+        },
+        "message3": [
+            "mode: %1",
+            "effects: %1"
+        ],
+        "args3": {
+            "0": {
+                "type": [
+                    "field_dropdown",
+                    "input_statement"
+                ],
+                "name": [
+                    "mode",
+                    "effects"
+                ],
+                "value": [
+                    "type string",
+                    "type undefined"
+                ],
+                "options": [
+                    "type object",
+                    "type undefined"
+                ],
+                "check": [
+                    "type undefined",
+                    "type string"
+                ]
+            }
+        }
+    },
+    "112": {
+        "message1": [
+            "conditions: %1",
+            "mode: %1"
+        ],
+        "args1": {
+            "0": {
+                "type": [
+                    "input_statement",
+                    "field_dropdown"
+                ],
+                "name": [
+                    "conditions",
+                    "mode"
+                ],
+                "check": [
+                    "type string",
+                    "type undefined"
+                ],
+                "value": [
+                    "type undefined",
+                    "type string"
+                ],
+                "options": [
+                    "type undefined",
+                    "type object"
+                ]
+            }
+        },
+        "message2": [
+            "effects: %1",
+            "conditions: %1"
+        ],
+        "args2": {
+            "0": {
+                "name": [
+                    "effects",
+                    "conditions"
+                ],
+                "check": [
+                    "effects",
+                    "conditions"
+                ]
+            }
+        },
+        "message3": [
+            "mode: %1",
+            "effects: %1"
+        ],
+        "args3": {
+            "0": {
+                "type": [
+                    "field_dropdown",
+                    "input_statement"
+                ],
+                "name": [
+                    "mode",
+                    "effects"
+                ],
+                "value": [
+                    "type string",
+                    "type undefined"
+                ],
+                "options": [
+                    "type object",
+                    "type undefined"
+                ],
+                "check": [
+                    "type undefined",
+                    "type string"
+                ]
+            }
+        }
+    },
+    "114": {
+        "message1": [
+            "conditions: %1",
+            "mode: %1"
+        ],
+        "args1": {
+            "0": {
+                "type": [
+                    "input_statement",
+                    "field_dropdown"
+                ],
+                "name": [
+                    "conditions",
+                    "mode"
+                ],
+                "check": [
+                    "type string",
+                    "type undefined"
+                ],
+                "value": [
+                    "type undefined",
+                    "type string"
+                ],
+                "options": [
+                    "type undefined",
+                    "type object"
+                ]
+            }
+        },
+        "message2": [
+            "effects: %1",
+            "conditions: %1"
+        ],
+        "args2": {
+            "0": {
+                "name": [
+                    "effects",
+                    "conditions"
+                ],
+                "check": [
+                    "effects",
+                    "conditions"
+                ]
+            }
+        },
+        "message3": [
+            "mode: %1",
+            "effects: %1"
+        ],
+        "args3": {
+            "0": {
+                "type": [
+                    "field_dropdown",
+                    "input_statement"
+                ],
+                "name": [
+                    "mode",
+                    "effects"
+                ],
+                "value": [
+                    "type string",
+                    "type undefined"
+                ],
+                "options": [
+                    "type object",
+                    "type undefined"
+                ],
+                "check": [
+                    "type undefined",
+                    "type string"
+                ]
+            }
+        }
+    },
+    "116": {
+        "message1": [
+            "conditions: %1",
+            "mode: %1"
+        ],
+        "args1": {
+            "0": {
+                "type": [
+                    "input_statement",
+                    "field_dropdown"
+                ],
+                "name": [
+                    "conditions",
+                    "mode"
+                ],
+                "check": [
+                    "type string",
+                    "type undefined"
+                ],
+                "value": [
+                    "type undefined",
+                    "type string"
+                ],
+                "options": [
+                    "type undefined",
+                    "type object"
+                ]
+            }
+        },
+        "message2": [
+            "effects: %1",
+            "conditions: %1"
+        ],
+        "args2": {
+            "0": {
+                "name": [
+                    "effects",
+                    "conditions"
+                ],
+                "check": [
+                    "effects",
+                    "conditions"
+                ]
+            }
+        },
+        "message3": [
+            "mode: %1",
+            "effects: %1"
+        ],
+        "args3": {
+            "0": {
+                "type": [
+                    "field_dropdown",
+                    "input_statement"
+                ],
+                "name": [
+                    "mode",
+                    "effects"
+                ],
+                "value": [
+                    "type string",
+                    "type undefined"
+                ],
+                "options": [
+                    "type object",
+                    "type undefined"
+                ],
+                "check": [
+                    "type undefined",
+                    "type string"
+                ]
+            }
+        }
+    },
+    "117": {
+        "message1": [
+            "conditions: %1",
+            "mode: %1"
+        ],
+        "args1": {
+            "0": {
+                "type": [
+                    "input_statement",
+                    "field_dropdown"
+                ],
+                "name": [
+                    "conditions",
+                    "mode"
+                ],
+                "check": [
+                    "type string",
+                    "type undefined"
+                ],
+                "value": [
+                    "type undefined",
+                    "type string"
+                ],
+                "options": [
+                    "type undefined",
+                    "type object"
+                ]
+            }
+        },
+        "message2": [
+            "effects: %1",
+            "conditions: %1"
+        ],
+        "args2": {
+            "0": {
+                "name": [
+                    "effects",
+                    "conditions"
+                ],
+                "check": [
+                    "effects",
+                    "conditions"
+                ]
+            }
+        },
+        "message3": [
+            "offset: %1",
+            "effects: %1"
+        ],
+        "args3": {
+            "0": {
+                "type": [
+                    "input_value",
+                    "input_statement"
+                ],
+                "name": [
+                    "offset",
+                    "effects"
+                ],
+                "types": [
+                    "type object",
+                    "type undefined"
+                ],
+                "check": [
+                    "type undefined",
+                    "type string"
+                ]
+            }
+        },
+        "message4": [
+            "mode: %1",
+            "offset: %1"
+        ],
+        "args4": {
+            "0": {
+                "type": [
+                    "field_dropdown",
+                    "input_value"
+                ],
+                "name": [
+                    "mode",
+                    "offset"
+                ],
+                "value": [
+                    "type string",
+                    "type undefined"
+                ],
+                "options": [
+                    "type object",
+                    "type undefined"
+                ],
+                "types": [
+                    "type undefined",
+                    "type object"
+                ]
+            }
+        }
+    },
+    "118": {
+        "message1": [
+            "faces: %1",
+            "mode: %1"
+        ],
+        "args1": {
+            "0": {
+                "type": [
+                    "input_statement",
+                    "field_dropdown"
+                ],
+                "name": [
+                    "faces_array",
+                    "mode"
+                ],
+                "check": [
+                    "type object",
+                    "type undefined"
+                ],
+                "value": [
+                    "type undefined",
+                    "type string"
+                ],
+                "options": [
+                    "type undefined",
+                    "type object"
+                ]
+            }
+        },
+        "message2": [
+            "mode: %1",
+            "faces: %1"
+        ],
+        "args2": {
+            "0": {
+                "type": [
+                    "field_dropdown",
+                    "input_statement"
+                ],
+                "name": [
+                    "mode",
+                    "faces_array"
+                ],
+                "value": [
+                    "type string",
+                    "type undefined"
+                ],
+                "options": [
+                    "type object",
+                    "type undefined"
+                ],
+                "check": [
+                    "type undefined",
+                    "type object"
+                ]
+            }
+        }
+    },
+    "121": {
+        "message1": [
+            "types: %1",
+            "mode: %1"
+        ],
+        "args1": {
+            "0": {
+                "type": [
+                    "input_statement",
+                    "field_dropdown"
+                ],
+                "name": [
+                    "types_array",
+                    "mode"
+                ],
+                "check": [
+                    "type object",
+                    "type undefined"
+                ],
+                "value": [
+                    "type undefined",
+                    "type string"
+                ],
+                "options": [
+                    "type undefined",
+                    "type object"
+                ]
+            }
+        },
+        "message2": [
+            "mode: %1",
+            "types: %1"
+        ],
+        "args2": {
+            "0": {
+                "type": [
+                    "field_dropdown",
+                    "input_statement"
+                ],
+                "name": [
+                    "mode",
+                    "types_array"
+                ],
+                "value": [
+                    "type string",
+                    "type undefined"
+                ],
+                "options": [
+                    "type object",
+                    "type undefined"
+                ],
+                "check": [
+                    "type undefined",
+                    "type object"
+                ]
+            }
+        }
+    },
+    "132": {
+        "message1": [
+            "entityBlacklist: %1",
+            "multiplier: %1"
+        ],
+        "args1": {
+            "0": {
+                "type": [
+                    "input_statement",
+                    "field_number"
+                ],
+                "name": [
+                    "entityBlacklist_array",
+                    "multiplier"
+                ],
+                "check": [
+                    "type object",
+                    "type undefined"
+                ],
+                "value": [
+                    "type undefined",
+                    "type number"
+                ]
+            }
+        },
+        "message2": [
+            "multiplier: %1",
+            "radius: %1"
+        ],
+        "args2": {
+            "0": {
+                "name": [
+                    "multiplier",
+                    "radius"
+                ],
+                "value": [
+                    1,
+                    5
+                ]
+            }
+        },
+        "message3": [
+            "radius: %1",
+            "entityBlacklist: %1"
+        ],
+        "args3": {
+            "0": {
+                "type": [
+                    "field_number",
+                    "input_statement"
+                ],
+                "name": [
+                    "radius",
+                    "entityBlacklist_array"
+                ],
+                "value": [
+                    "type number",
+                    "type undefined"
+                ],
+                "check": [
+                    "type undefined",
+                    "type object"
+                ]
+            }
+        }
+    },
+    "135": {
+        "message1": [
+            "inputBlocks: %1",
+            "cooldown: %1"
+        ],
+        "args1": {
+            "0": {
+                "type": [
+                    "input_statement",
+                    "field_number"
+                ],
+                "name": [
+                    "inputBlocks_array",
+                    "cooldown"
+                ],
+                "check": [
+                    "type object",
+                    "type undefined"
+                ],
+                "value": [
+                    "type undefined",
+                    "type object"
+                ]
+            }
+        },
+        "message2": [
+            "cooldown: %1",
+            "cooldownMessage: %1"
+        ],
+        "args2": {
+            "0": {
+                "type": [
+                    "field_number",
+                    "field_input"
+                ],
+                "name": [
+                    "cooldown",
+                    "cooldownMessage"
+                ],
+                "value": [
+                    "type object",
+                    "type undefined"
+                ],
+                "text": [
+                    "type undefined",
+                    "type object"
+                ]
+            }
+        },
+        "message3": [
+            "cooldownMessage: %1",
+            "outputBlock: %1"
+        ],
+        "args3": {
+            "0": {
+                "type": [
+                    "field_input",
+                    "field_dropdown"
+                ],
+                "name": [
+                    "cooldownMessage",
+                    "outputBlock"
+                ],
+                "text": [
+                    "type object",
+                    "type undefined"
+                ],
+                "value": [
+                    "type undefined",
+                    "type string"
+                ],
+                "options": [
+                    "type undefined",
+                    "type string"
+                ]
+            }
+        },
+        "message4": [
+            "outputBlock: %1",
+            "inputBlocks: %1"
+        ],
+        "args4": {
+            "0": {
+                "type": [
+                    "field_dropdown",
+                    "input_statement"
+                ],
+                "name": [
+                    "outputBlock",
+                    "inputBlocks_array"
+                ],
+                "value": [
+                    "type string",
+                    "type undefined"
+                ],
+                "options": [
+                    "type string",
+                    "type undefined"
+                ],
+                "check": [
+                    "type undefined",
+                    "type object"
+                ]
+            }
+        }
+    },
+    "136": {
+        "message1": [
+            "explodable: %1",
+            "cooldown: %1"
+        ],
+        "args1": {
+            "0": {
+                "type": [
+                    "input_statement",
+                    "field_number"
+                ],
+                "name": [
+                    "explodable_array",
+                    "cooldown"
+                ],
+                "check": [
+                    "type object",
+                    "type undefined"
+                ],
+                "value": [
+                    "type undefined",
+                    "type object"
+                ]
+            }
+        },
+        "message2": [
+            "cooldown: %1",
+            "cooldownMessage: %1"
+        ],
+        "args2": {
+            "0": {
+                "type": [
+                    "field_number",
+                    "field_input"
+                ],
+                "name": [
+                    "cooldown",
+                    "cooldownMessage"
+                ],
+                "value": [
+                    "type object",
+                    "type undefined"
+                ],
+                "text": [
+                    "type undefined",
+                    "type object"
+                ]
+            }
+        },
+        "message3": [
+            "cooldownMessage: %1",
+            "explosionStrength: %1"
+        ],
+        "args3": {
+            "0": {
+                "type": [
+                    "field_input",
+                    "field_number"
+                ],
+                "name": [
+                    "cooldownMessage",
+                    "explosionStrength"
+                ],
+                "text": [
+                    "type object",
+                    "type undefined"
+                ],
+                "value": [
+                    "type undefined",
+                    "type number"
+                ]
+            }
+        },
+        "message4": [
+            "explosionStrength: %1",
+            "explodable: %1"
+        ],
+        "args4": {
+            "0": {
+                "type": [
+                    "field_number",
+                    "input_statement"
+                ],
+                "name": [
+                    "explosionStrength",
+                    "explodable_array"
+                ],
+                "value": [
+                    "type number",
+                    "type undefined"
+                ],
+                "check": [
+                    "type undefined",
+                    "type object"
+                ]
+            }
+        }
+    },
+    "139": {
+        "message1": [
+            "item: %1",
+            "canStore: %1"
+        ],
+        "args1": {
+            "0": {
+                "type": [
+                    "input_value",
+                    "field_dropdown"
+                ],
+                "name": [
+                    "item",
+                    "canStore"
+                ],
+                "types": [
+                    "type object",
+                    "type undefined"
+                ],
+                "value": [
+                    "type undefined",
+                    "type string"
+                ],
+                "options": [
+                    "type undefined",
+                    "type string"
+                ]
+            }
+        },
+        "message2": [
+            "canStore: %1",
+            "canDrop: %1"
+        ],
+        "args2": {
+            "0": {
+                "name": [
+                    "canStore",
+                    "canDrop"
+                ]
+            }
+        },
+        "message3": [
+            "canDrop: %1",
+            "canLoseOnDeath: %1"
+        ],
+        "args3": {
+            "0": {
+                "name": [
+                    "canDrop",
+                    "canLoseOnDeath"
+                ]
+            }
+        },
+        "message4": [
+            "canLoseOnDeath: %1",
+            "loseItemOnHeroLoss: %1"
+        ],
+        "args4": {
+            "0": {
+                "name": [
+                    "canLoseOnDeath",
+                    "loseItemOnHeroLoss"
+                ]
+            }
+        },
+        "message5": [
+            "loseItemOnHeroLoss: %1",
+            "item: %1"
+        ],
+        "args5": {
+            "0": {
+                "type": [
+                    "field_dropdown",
+                    "input_value"
+                ],
+                "name": [
+                    "loseItemOnHeroLoss",
+                    "item"
+                ],
+                "value": [
+                    "type string",
+                    "type undefined"
+                ],
+                "options": [
+                    "type string",
+                    "type undefined"
+                ],
+                "types": [
+                    "type undefined",
+                    "type object"
+                ]
+            }
+        }
+    },
+    "140": {
+        "message1": [
+            "shootSound: %1",
+            "cooldown: %1"
+        ],
+        "args1": {
+            "0": {
+                "type": [
+                    "input_value",
+                    "field_number"
+                ],
+                "name": [
+                    "shootSound",
+                    "cooldown"
+                ],
+                "types": [
+                    "type object",
+                    "type undefined"
+                ],
+                "value": [
+                    "type undefined",
+                    "type object"
+                ]
+            }
+        },
+        "message2": [
+            "trailParticle: %1",
+            "cooldownMessage: %1"
+        ],
+        "args2": {
+            "0": {
+                "type": [
+                    "input_value",
+                    "field_input"
+                ],
+                "name": [
+                    "trailParticle",
+                    "cooldownMessage"
+                ],
+                "types": [
+                    "type object",
+                    "type undefined"
+                ],
+                "text": [
+                    "type undefined",
+                    "type object"
+                ]
+            }
+        },
+        "message3": [
+            "hitParticle: %1",
+            "maxDistance: %1"
+        ],
+        "args3": {
+            "0": {
+                "type": [
+                    "input_value",
+                    "field_number"
+                ],
+                "name": [
+                    "hitParticle",
+                    "maxDistance"
+                ],
+                "types": [
+                    "type object",
+                    "type undefined"
+                ],
+                "value": [
+                    "type undefined",
+                    "type number"
+                ]
+            }
+        },
+        "message4": [
+            "cooldown: %1",
+            "bulletSize: %1"
+        ],
+        "args4": {
+            "0": {
+                "name": [
+                    "cooldown",
+                    "bulletSize"
+                ],
+                "value": [
+                    "type object",
+                    "type number"
+                ]
+            }
+        },
+        "message5": [
+            "cooldownMessage: %1",
+            "damage: %1"
+        ],
+        "args5": {
+            "0": {
+                "type": [
+                    "field_input",
+                    "field_number"
+                ],
+                "name": [
+                    "cooldownMessage",
+                    "damage"
+                ],
+                "text": [
+                    "type object",
+                    "type undefined"
+                ],
+                "value": [
+                    "type undefined",
+                    "type number"
+                ]
+            }
+        },
+        "message6": [
+            "maxDistance: %1",
+            "item: %1"
+        ],
+        "args6": {
+            "0": {
+                "type": [
+                    "field_number",
+                    "field_dropdown"
+                ],
+                "name": [
+                    "maxDistance",
+                    "item"
+                ],
+                "value": [
+                    "type number",
+                    "type undefined"
+                ],
+                "options": [
+                    "type undefined",
+                    "type string"
+                ]
+            }
+        },
+        "message7": [
+            "bulletSize: %1",
+            "shootSound: %1"
+        ],
+        "args7": {
+            "0": {
+                "type": [
+                    "field_number",
+                    "input_value"
+                ],
+                "name": [
+                    "bulletSize",
+                    "shootSound"
+                ],
+                "value": [
+                    "type number",
+                    "type undefined"
+                ],
+                "types": [
+                    "type undefined",
+                    "type object"
+                ]
+            }
+        },
+        "message8": [
+            "damage: %1",
+            "trailParticle: %1"
+        ],
+        "args8": {
+            "0": {
+                "type": [
+                    "field_number",
+                    "input_value"
+                ],
+                "name": [
+                    "damage",
+                    "trailParticle"
+                ],
+                "value": [
+                    "type number",
+                    "type undefined"
+                ],
+                "types": [
+                    "type undefined",
+                    "type object"
+                ]
+            }
+        },
+        "message9": [
+            "item: %1",
+            "hitParticle: %1"
+        ],
+        "args9": {
+            "0": {
+                "type": [
+                    "field_dropdown",
+                    "input_value"
+                ],
+                "name": [
+                    "item",
+                    "hitParticle"
+                ],
+                "options": [
+                    "type string",
+                    "type undefined"
+                ],
+                "types": [
+                    "type undefined",
+                    "type object"
+                ]
+            }
+        }
+    },
+    "143": {
+        "message1": [
+            "loreFormat: %1",
+            "spell: %1"
+        ],
+        "args1": {
+            "0": {
+                "type": [
+                    "input_statement",
+                    "field_input"
+                ],
+                "name": [
+                    "loreFormat_array",
+                    "spell"
+                ],
+                "check": [
+                    "type object",
+                    "type undefined"
+                ]
+            }
+        },
+        "message2": [
+            "spell: %1",
+            "fuel: %1"
+        ],
+        "args2": {
+            "0": {
+                "type": [
+                    "field_input",
+                    "field_dropdown"
+                ],
+                "name": [
+                    "spell",
+                    "fuel"
+                ],
+                "value": [
+                    "type undefined",
+                    "type string"
+                ],
+                "options": [
+                    "type undefined",
+                    "type string"
+                ]
+            }
+        },
+        "message3": [
+            "fuel: %1",
+            "cooldown: %1"
+        ],
+        "args3": {
+            "0": {
+                "type": [
+                    "field_dropdown",
+                    "field_number"
+                ],
+                "name": [
+                    "fuel",
+                    "cooldown"
+                ],
+                "value": [
+                    "type string",
+                    "type number"
+                ],
+                "options": [
+                    "type string",
+                    "type undefined"
+                ]
+            }
+        },
+        "message4": [
+            "cooldown: %1",
+            "cost: %1"
+        ],
+        "args4": {
+            "0": {
+                "name": [
+                    "cooldown",
+                    "cost"
+                ]
+            }
+        },
+        "message5": [
+            "cost: %1",
+            "spellName: %1"
+        ],
+        "args5": {
+            "0": {
+                "type": [
+                    "field_number",
+                    "field_input"
+                ],
+                "name": [
+                    "cost",
+                    "spellName"
+                ],
+                "value": [
+                    "type number",
+                    "type undefined"
+                ],
+                "text": [
+                    "type undefined",
+                    "type string"
+                ]
+            }
+        },
+        "message6": [
+            "spellName: %1",
+            "cooldownMessage: %1"
+        ],
+        "args6": {
+            "0": {
+                "name": [
+                    "spellName",
+                    "cooldownMessage"
+                ],
+                "text": [
+                    "",
+                    "%spellName% has %currentcooldown% seconds remaining."
+                ]
+            }
+        },
+        "message7": [
+            "cooldownMessage: %1",
+            "moreFuelMessage: %1"
+        ],
+        "args7": {
+            "0": {
+                "name": [
+                    "cooldownMessage",
+                    "moreFuelMessage"
+                ],
+                "text": [
+                    "%spellName% has %currentcooldown% seconds remaining.",
+                    "This spell needs %fuelneeded% more %fuel%"
+                ]
+            }
+        },
+        "message8": [
+            "moreFuelMessage: %1",
+            "displayNameFormat: %1"
+        ],
+        "args8": {
+            "0": {
+                "name": [
+                    "moreFuelMessage",
+                    "displayNameFormat"
+                ],
+                "text": [
+                    "This spell needs %fuelneeded% more %fuel%",
+                    "&5%spellName%"
+                ]
+            }
+        },
+        "message9": [
+            "displayNameFormat: %1",
+            "loreFormat: %1"
+        ],
+        "args9": {
+            "0": {
+                "type": [
+                    "field_input",
+                    "input_statement"
+                ],
+                "name": [
+                    "displayNameFormat",
+                    "loreFormat_array"
+                ],
+                "text": [
+                    "type string",
+                    "type undefined"
+                ],
+                "check": [
+                    "type undefined",
+                    "type object"
+                ]
+            }
+        }
+    },
+    "144": {
+        "message1": [
+            "actions: %1",
+            "cooldown: %1"
+        ],
+        "args1": {
+            "0": {
+                "type": [
+                    "input_statement",
+                    "field_number"
+                ],
+                "name": [
+                    "actions_array",
+                    "cooldown"
+                ],
+                "check": [
+                    "type object",
+                    "type undefined"
+                ],
+                "value": [
+                    "type undefined",
+                    "type object"
+                ]
+            }
+        },
+        "message2": [
+            "item: %1",
+            "cooldownMessage: %1"
+        ],
+        "args2": {
+            "0": {
+                "type": [
+                    "input_value",
+                    "field_input"
+                ],
+                "name": [
+                    "item",
+                    "cooldownMessage"
+                ],
+                "types": [
+                    "type object",
+                    "type undefined"
+                ],
+                "text": [
+                    "type undefined",
+                    "type object"
+                ]
+            }
+        },
+        "message3": [
+            "cooldown: %1",
+            "ammoCost: %1"
+        ],
+        "args3": {
+            "0": {
+                "name": [
+                    "cooldown",
+                    "ammoCost"
+                ],
+                "value": [
+                    "type object",
+                    "type number"
+                ]
+            }
+        },
+        "message4": [
+            "cooldownMessage: %1",
+            "item: %1"
+        ],
+        "args4": {
+            "0": {
+                "type": [
+                    "field_input",
+                    "input_value"
+                ],
+                "name": [
+                    "cooldownMessage",
+                    "item"
+                ],
+                "text": [
+                    "type object",
+                    "type undefined"
+                ],
+                "types": [
+                    "type undefined",
+                    "type object"
+                ]
+            }
+        },
+        "message5": [
+            "ammoCost: %1",
+            "projectile: %1"
+        ],
+        "args5": {
+            "0": {
+                "type": [
+                    "field_number",
+                    "field_dropdown"
+                ],
+                "name": [
+                    "ammoCost",
+                    "projectile"
+                ],
+                "value": [
+                    "type number",
+                    "type string"
+                ],
+                "options": [
+                    "type undefined",
+                    "type string"
+                ]
+            }
+        },
+        "message6": [
+            "projectile: %1",
+            "actions: %1"
+        ],
+        "args6": {
+            "0": {
+                "type": [
+                    "field_dropdown",
+                    "input_statement"
+                ],
+                "name": [
+                    "projectile",
+                    "actions_array"
+                ],
+                "value": [
+                    "type string",
+                    "type undefined"
+                ],
+                "options": [
+                    "type string",
+                    "type undefined"
+                ],
+                "check": [
+                    "type undefined",
+                    "type object"
+                ]
+            }
+        }
+    },
+    "146": {
+        "message1": [
+            "result: %1",
+            "isShaped: %1"
+        ],
+        "args1": {
+            "0": {
+                "type": [
+                    "input_value",
+                    "field_dropdown"
+                ],
+                "name": [
+                    "result",
+                    "isShaped"
+                ],
+                "types": [
+                    "type object",
+                    "type undefined"
+                ],
+                "value": [
+                    "type undefined",
+                    "type string"
+                ],
+                "options": [
+                    "type undefined",
+                    "type string"
+                ]
+            }
+        },
+        "message2": [
+            "isShaped: %1",
+            "result: %1"
+        ],
+        "args2": {
+            "0": {
+                "type": [
+                    "field_dropdown",
+                    "input_value"
+                ],
+                "name": [
+                    "isShaped",
+                    "result"
+                ],
+                "value": [
+                    "type string",
+                    "type undefined"
+                ],
+                "options": [
+                    "type string",
+                    "type undefined"
+                ],
+                "types": [
+                    "type undefined",
+                    "type object"
+                ]
+            }
+        }
+    },
+    "152": {
+        "message1": [
+            "loottables: %1",
+            "chance: %1"
+        ],
+        "args1": {
+            "0": {
+                "type": [
+                    "input_statement",
+                    "field_number"
+                ],
+                "name": [
+                    "loottables_array",
+                    "chance"
+                ],
+                "check": [
+                    "type object",
+                    "type undefined"
+                ],
+                "value": [
+                    "type undefined",
+                    "type number"
+                ]
+            }
+        },
+        "message2": [
+            "chance: %1",
+            "loottables: %1"
+        ],
+        "args2": {
+            "0": {
+                "type": [
+                    "field_number",
+                    "input_statement"
+                ],
+                "name": [
+                    "chance",
+                    "loottables_array"
+                ],
+                "value": [
+                    "type number",
+                    "type undefined"
+                ],
+                "check": [
+                    "type undefined",
+                    "type object"
+                ]
+            }
+        }
+    },
+    "156": {
+        "message1": [
+            "biomes: %1",
+            "enabled: %1"
+        ],
+        "args1": {
+            "0": {
+                "type": [
+                    "input_statement",
+                    "field_dropdown"
+                ],
+                "name": [
+                    "biomes_array",
+                    "enabled"
+                ],
+                "check": [
+                    "type object",
+                    "type undefined"
+                ],
+                "value": [
+                    "type undefined",
+                    "type string"
+                ],
+                "options": [
+                    "type undefined",
+                    "type string"
+                ]
+            }
+        },
+        "message2": [
+            "worlds: %1",
+            "weighting: %1"
+        ],
+        "args2": {
+            "0": {
+                "type": [
+                    "input_statement",
+                    "field_number"
+                ],
+                "name": [
+                    "worlds_array",
+                    "weighting"
+                ],
+                "check": [
+                    "type object",
+                    "type undefined"
+                ],
+                "value": [
+                    "type undefined",
+                    "type number"
+                ],
+                "precision": [
+                    "type undefined",
+                    "type number"
+                ]
+            }
+        },
+        "message3": [
+            "enabled: %1",
+            "biomes: %1"
+        ],
+        "args3": {
+            "0": {
+                "type": [
+                    "field_dropdown",
+                    "input_statement"
+                ],
+                "name": [
+                    "enabled",
+                    "biomes_array"
+                ],
+                "value": [
+                    "type string",
+                    "type undefined"
+                ],
+                "options": [
+                    "type string",
+                    "type undefined"
+                ],
+                "check": [
+                    "type undefined",
+                    "type object"
+                ]
+            }
+        },
+        "message4": [
+            "weighting: %1",
+            "worlds: %1"
+        ],
+        "args4": {
+            "0": {
+                "type": [
+                    "field_number",
+                    "input_statement"
+                ],
+                "name": [
+                    "weighting",
+                    "worlds_array"
+                ],
+                "value": [
+                    "type number",
+                    "type undefined"
+                ],
+                "precision": [
+                    "type number",
+                    "type undefined"
+                ],
+                "check": [
+                    "type undefined",
+                    "type object"
+                ]
+            }
+        }
+    },
+    "157": {
+        "message1": [
+            "flags: %1",
+            "enabled: %1"
+        ],
+        "args1": {
+            "0": {
+                "type": [
+                    "input_statement",
+                    "field_dropdown"
+                ],
+                "name": [
+                    "flags_array",
+                    "enabled"
+                ],
+                "check": [
+                    "type object",
+                    "type undefined"
+                ],
+                "value": [
+                    "type undefined",
+                    "type string"
+                ],
+                "options": [
+                    "type undefined",
+                    "type string"
+                ]
+            }
+        },
+        "message2": [
+            "enabled: %1",
+            "flags: %1"
+        ],
+        "args2": {
+            "0": {
+                "type": [
+                    "field_dropdown",
+                    "input_statement"
+                ],
+                "name": [
+                    "enabled",
+                    "flags_array"
+                ],
+                "value": [
+                    "type string",
+                    "type undefined"
+                ],
+                "options": [
+                    "type string",
+                    "type undefined"
+                ],
+                "check": [
+                    "type undefined",
+                    "type object"
+                ]
+            }
+        }
+    },
+    "160": {
+        "message1": [
+            "lore: %1",
+            "displayName: %1"
+        ],
+        "args1": {
+            "0": {
+                "type": [
+                    "input_statement",
+                    "field_input"
+                ],
+                "name": [
+                    "lore_array",
+                    "displayName"
+                ],
+                "check": [
+                    "type object",
+                    "type undefined"
+                ],
+                "text": [
+                    "type undefined",
+                    "type string"
+                ]
+            }
+        },
+        "message2": [
+            "attributes: %1",
+            "lore: %1"
+        ],
+        "args2": {
+            "0": {
+                "type": [
+                    "input_value",
+                    "input_statement"
+                ],
+                "name": [
+                    "attributes",
+                    "lore_array"
+                ],
+                "types": [
+                    "type object",
+                    "type undefined"
+                ],
+                "check": [
+                    "type undefined",
+                    "type object"
+                ]
+            }
+        },
+        "message3": [
+            "enchants: %1",
+            "isUnbreakable: %1"
+        ],
+        "args3": {
+            "0": {
+                "type": [
+                    "input_value",
+                    "field_dropdown"
+                ],
+                "name": [
+                    "enchants",
+                    "isUnbreakable"
+                ],
+                "types": [
+                    "type object",
+                    "type undefined"
+                ],
+                "value": [
+                    "type undefined",
+                    "type string"
+                ],
+                "options": [
+                    "type undefined",
+                    "type string"
+                ]
+            }
+        },
+        "message4": [
+            "displayName: %1",
+            "durability: %1"
+        ],
+        "args4": {
+            "0": {
+                "type": [
+                    "field_input",
+                    "field_number"
+                ],
+                "name": [
+                    "displayName",
+                    "durability"
+                ],
+                "text": [
+                    "type string",
+                    "type undefined"
+                ],
+                "value": [
+                    "type undefined",
+                    "type number"
+                ],
+                "precision": [
+                    "type undefined",
+                    "type number"
+                ]
+            }
+        },
+        "message5": [
+            "isUnbreakable: %1",
+            "customModelData: %1"
+        ],
+        "args5": {
+            "0": {
+                "type": [
+                    "field_dropdown",
+                    "field_number"
+                ],
+                "name": [
+                    "isUnbreakable",
+                    "customModelData"
+                ],
+                "value": [
+                    "type string",
+                    "type number"
+                ],
+                "options": [
+                    "type string",
+                    "type undefined"
+                ],
+                "precision": [
+                    "type undefined",
+                    "type number"
+                ]
+            }
+        },
+        "message6": [
+            "durability: %1",
+            "attributes: %1"
+        ],
+        "args6": {
+            "0": {
+                "type": [
+                    "field_number",
+                    "input_value"
+                ],
+                "name": [
+                    "durability",
+                    "attributes"
+                ],
+                "value": [
+                    "type number",
+                    "type undefined"
+                ],
+                "precision": [
+                    "type number",
+                    "type undefined"
+                ],
+                "types": [
+                    "type undefined",
+                    "type object"
+                ]
+            }
+        },
+        "message7": [
+            "customModelData: %1",
+            "enchants: %1"
+        ],
+        "args7": {
+            "0": {
+                "type": [
+                    "field_number",
+                    "input_value"
+                ],
+                "name": [
+                    "customModelData",
+                    "enchants"
+                ],
+                "value": [
+                    "type number",
+                    "type undefined"
+                ],
+                "precision": [
+                    "type number",
+                    "type undefined"
+                ],
+                "types": [
+                    "type undefined",
+                    "type object"
+                ]
+            }
+        }
+    },
+    "161": {
+        "message1": [
+            "metadata: %1",
+            "type: %1"
+        ],
+        "args1": {
+            "0": {
+                "type": [
+                    "input_value",
+                    "field_dropdown"
+                ],
+                "name": [
+                    "metadata",
+                    "type"
+                ],
+                "types": [
+                    "type object",
+                    "type undefined"
+                ],
+                "value": [
+                    "type undefined",
+                    "type string"
+                ],
+                "options": [
+                    "type undefined",
+                    "type string"
+                ]
+            }
+        },
+        "message2": [
+            "type: %1",
+            "amount: %1"
+        ],
+        "args2": {
+            "0": {
+                "type": [
+                    "field_dropdown",
+                    "field_number"
+                ],
+                "name": [
+                    "type",
+                    "amount"
+                ],
+                "value": [
+                    "type string",
+                    "type number"
+                ],
+                "options": [
+                    "type string",
+                    "type undefined"
+                ],
+                "precision": [
+                    "type undefined",
+                    "type number"
+                ]
+            }
+        },
+        "message3": [
+            "amount: %1",
+            "metadata: %1"
+        ],
+        "args3": {
+            "0": {
+                "type": [
+                    "field_number",
+                    "input_value"
+                ],
+                "name": [
+                    "amount",
+                    "metadata"
+                ],
+                "value": [
+                    "type number",
+                    "type undefined"
+                ],
+                "precision": [
+                    "type number",
+                    "type undefined"
+                ],
+                "types": [
+                    "type undefined",
+                    "type object"
+                ]
+            }
+        }
+    },
+    "163": {
+        "message1": [
+            "passenger: %1",
+            "type: %1"
+        ],
+        "args1": {
+            "0": {
+                "type": [
+                    "input_value",
+                    "field_dropdown"
+                ],
+                "name": [
+                    "passenger",
+                    "type"
+                ],
+                "types": [
+                    "type object",
+                    "type undefined"
+                ],
+                "value": [
+                    "type undefined",
+                    "type string"
+                ],
+                "options": [
+                    "type undefined",
+                    "type string"
+                ]
+            }
+        },
+        "message2": [
+            "attributes: %1",
+            "nametag: %1"
+        ],
+        "args2": {
+            "0": {
+                "type": [
+                    "input_value",
+                    "field_input"
+                ],
+                "name": [
+                    "attributes",
+                    "nametag"
+                ],
+                "types": [
+                    "type object",
+                    "type undefined"
+                ],
+                "text": [
+                    "type undefined",
+                    "type string"
+                ]
+            }
+        },
+        "message3": [
+            "type: %1",
+            "shouldDespawn: %1"
+        ],
+        "args3": {
+            "0": {
+                "name": [
+                    "type",
+                    "shouldDespawn"
+                ],
+                "value": [
+                    "ZOMBIE",
+                    "true"
+                ],
+                "options": [
+                    "enums.entity",
+                    "enums.booleans"
+                ]
+            }
+        },
+        "message4": [
+            "nametag: %1",
+            "passenger: %1"
+        ],
+        "args4": {
+            "0": {
+                "type": [
+                    "field_input",
+                    "input_value"
+                ],
+                "name": [
+                    "nametag",
+                    "passenger"
+                ],
+                "text": [
+                    "type string",
+                    "type undefined"
+                ],
+                "types": [
+                    "type undefined",
+                    "type object"
+                ]
+            }
+        },
+        "message5": [
+            "shouldDespawn: %1",
+            "attributes: %1"
+        ],
+        "args5": {
+            "0": {
+                "type": [
+                    "field_dropdown",
+                    "input_value"
+                ],
+                "name": [
+                    "shouldDespawn",
+                    "attributes"
+                ],
+                "value": [
+                    "type string",
+                    "type undefined"
+                ],
+                "options": [
+                    "type string",
+                    "type undefined"
+                ],
+                "types": [
+                    "type undefined",
+                    "type object"
+                ]
+            }
+        }
+    },
+    "169": {
+        "message2": [
+            "level: %1",
+            "type: %1"
+        ],
+        "args2": {
+            "0": {
+                "type": [
+                    "input_value",
+                    "field_dropdown"
+                ],
+                "name": [
+                    "level",
+                    "type"
+                ],
+                "types": [
+                    "type object",
+                    "type undefined"
+                ],
+                "value": [
+                    "type undefined",
+                    "type string"
+                ],
+                "options": [
+                    "type undefined",
+                    "type string"
+                ]
+            }
+        },
+        "message3": [
+            "age: %1",
+            "level: %1"
+        ],
+        "args3": {
+            "0": {
+                "name": [
+                    "age",
+                    "level"
+                ]
+            }
+        },
+        "message4": [
+            "type: %1",
+            "age: %1"
+        ],
+        "args4": {
+            "0": {
+                "type": [
+                    "field_dropdown",
+                    "input_value"
+                ],
+                "name": [
+                    "type",
+                    "age"
+                ],
+                "value": [
+                    "type string",
+                    "type undefined"
+                ],
+                "options": [
+                    "type string",
+                    "type undefined"
+                ],
+                "types": [
+                    "type undefined",
+                    "type object"
+                ]
+            }
+        }
+    },
+    "172": {
+        "message1": [
+            "enchants: %1",
+            "displayName: %1"
+        ],
+        "args1": {
+            "0": {
+                "type": [
+                    "input_value",
+                    "field_input"
+                ],
+                "name": [
+                    "enchants",
+                    "displayName"
+                ],
+                "types": [
+                    "type object",
+                    "type undefined"
+                ],
+                "text": [
+                    "type undefined",
+                    "type string"
+                ]
+            }
+        },
+        "message2": [
+            "displayName: %1",
+            "enchants: %1"
+        ],
+        "args2": {
+            "0": {
+                "type": [
+                    "field_input",
+                    "input_value"
+                ],
+                "name": [
+                    "displayName",
+                    "enchants"
+                ],
+                "text": [
+                    "type string",
+                    "type undefined"
+                ],
+                "types": [
+                    "type undefined",
+                    "type object"
+                ]
+            }
+        }
+    },
+    "173": {
+        "message2": [
+            "amount: %1",
+            "type: %1"
+        ],
+        "args2": {
+            "0": {
+                "type": [
+                    "input_value",
+                    "field_dropdown"
+                ],
+                "name": [
+                    "amount",
+                    "type"
+                ],
+                "types": [
+                    "type object",
+                    "type undefined"
+                ],
+                "value": [
+                    "type undefined",
+                    "type string"
+                ],
+                "options": [
+                    "type undefined",
+                    "type string"
+                ]
+            }
+        },
+        "message3": [
+            "metadata: %1",
+            "amount: %1"
+        ],
+        "args3": {
+            "0": {
+                "name": [
+                    "metadata",
+                    "amount"
+                ],
+                "types": {
+                    "0": [
+                        "ItemMetaComparisonData",
+                        "range"
+                    ]
+                }
+            }
+        },
+        "message4": [
+            "type: %1",
+            "metadata: %1"
+        ],
+        "args4": {
+            "0": {
+                "type": [
+                    "field_dropdown",
+                    "input_value"
+                ],
+                "name": [
+                    "type",
+                    "metadata"
+                ],
+                "value": [
+                    "type string",
+                    "type undefined"
+                ],
+                "options": [
+                    "type string",
+                    "type undefined"
+                ],
+                "types": [
+                    "type undefined",
+                    "type object"
+                ]
+            }
+        }
+    }
+}
