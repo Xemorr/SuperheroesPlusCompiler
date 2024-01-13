@@ -16,7 +16,7 @@ export {
 type ArgumentType = 
     "input_value" | 
     "input_statement" |
-    "field_dropdown" |
+    "field_dropdown_default" |
     "field_number" |
     "field_input"
 
@@ -96,7 +96,7 @@ export type dropdownOption = [dropdownLabel, string]
 
 class FieldDropdown implements Argument {
     precedence: number = 1
-    type: ArgumentType = "field_dropdown"
+    type: ArgumentType = "field_dropdown_default"
     name: string
     value: any
     options?: dropdownOption[] | Variable

@@ -38,7 +38,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "onlyProjectiles: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "onlyProjectiles", 
                 value: "false", 
                 options: enums.booleans
@@ -61,7 +61,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "onlyProjectiles: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "onlyProjectiles", 
                 value: "false", 
                 options: enums.booleans
@@ -354,7 +354,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "onlyProjectiles: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "onlyProjectiles", 
                 value: "false", 
                 options: enums.booleans
@@ -594,7 +594,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "mode: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "mode", 
                 value: "SELF", 
                 options: [
@@ -645,7 +645,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "mode: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "mode", 
                 value: "SELF", 
                 options: [
@@ -674,7 +674,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "mode: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "mode", 
                 value: "SELF", 
                 options: [
@@ -703,7 +703,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "mode: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "mode", 
                 value: "SELF", 
                 options: [
@@ -717,7 +717,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message2: "whitelist: %1", 
         args2: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "whitelist", 
                 value: "true", 
                 options: enums.booleans
@@ -743,7 +743,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "mode: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "mode", 
                 value: "SELF", 
                 options: [
@@ -786,7 +786,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "mode: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "mode", 
                 value: "SELF", 
                 options: [
@@ -829,7 +829,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "mode: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "mode", 
                 value: "SELF", 
                 options: [
@@ -847,7 +847,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message2: "sneak: %1", 
         args2: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "sneak", 
                 value: "true", 
                 options: enums.booleans
@@ -863,7 +863,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "mode: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "mode", 
                 value: "SELF", 
                 options: [
@@ -912,7 +912,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "mode: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "mode", 
                 value: "SELF", 
                 options: [
@@ -930,7 +930,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message2: "grounded: %1", 
         args2: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "grounded", 
                 value: "true", 
                 options: enums.booleans
@@ -946,7 +946,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "mode: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "mode", 
                 value: "SELF", 
                 options: [
@@ -960,7 +960,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message2: "shouldGlide: %1", 
         args2: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "shouldGlide", 
                 value: "true", 
                 options: enums.booleans
@@ -969,7 +969,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message3: "glide: %1", 
         args3: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "glide", 
                 value: "true", 
                 options: enums.booleans
@@ -985,7 +985,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "mode: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "mode", 
                 value: "SELF", 
                 options: [
@@ -1024,7 +1024,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "mode: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "mode", 
                 value: "SELF", 
                 options: [
@@ -1042,7 +1042,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message2: "comparison: %1", 
         args2: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "comparison", 
                 value: "EQUALS", 
                 options: enums.comparison
@@ -1073,7 +1073,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "mode: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "mode", 
                 value: "SELF", 
                 options: [
@@ -1091,7 +1091,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message2: "isNPC: %1", 
         args2: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "isNPC", 
                 value: "false", 
                 options: enums.booleans
@@ -1107,7 +1107,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "mode: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "mode", 
                 value: "SELF", 
                 options: [
@@ -1128,7 +1128,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "mode: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "mode", 
                 value: "SELF", 
                 options: [
@@ -1163,7 +1163,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "mode: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "mode", 
                 value: "SELF", 
                 options: [
@@ -1202,7 +1202,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "mode: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "mode", 
                 value: "SELF", 
                 options: [
@@ -1216,7 +1216,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message2: "checkOwner: %1", 
         args2: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "checkOwner", 
                 value: "true", 
                 options: enums.booleans
@@ -1232,7 +1232,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "mode: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "mode", 
                 value: "SELF", 
                 options: [
@@ -1257,7 +1257,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "mode: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "mode", 
                 value: "SELF", 
                 options: [
@@ -1282,7 +1282,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "mode: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "mode", 
                 value: "SELF", 
                 options: [
@@ -1317,7 +1317,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "mode: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "mode", 
                 value: "SELF", 
                 options: [
@@ -1351,7 +1351,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "mode: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "mode", 
                 value: "SELF", 
                 options: [
@@ -1391,7 +1391,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "mode: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "mode", 
                 value: "SELF", 
                 options: [
@@ -1432,7 +1432,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "mode: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "mode", 
                 value: "SELF", 
                 options: [
@@ -1461,7 +1461,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "mode: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "mode", 
                 value: "SELF", 
                 options: [
@@ -1500,7 +1500,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "mode: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "mode", 
                 value: "SELF", 
                 options: [
@@ -1531,7 +1531,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "mode: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "mode", 
                 value: "SELF", 
                 options: [
@@ -1555,7 +1555,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "mode: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "mode", 
                 value: "SELF", 
                 options: [
@@ -1589,7 +1589,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "mode: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "mode", 
                 value: "SELF", 
                 options: [
@@ -1614,7 +1614,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "mode: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "mode", 
                 value: "SELF", 
                 options: [
@@ -1649,7 +1649,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "mode: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "mode", 
                 value: "SELF", 
                 options: [
@@ -1670,7 +1670,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "mode: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "mode", 
                 value: "SELF", 
                 options: [
@@ -1705,7 +1705,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "mode: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "mode", 
                 value: "SELF", 
                 options: [
@@ -1740,7 +1740,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "mode: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "mode", 
                 value: "SELF", 
                 options: [
@@ -1772,7 +1772,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "mode: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "mode", 
                 value: "SELF", 
                 options: [
@@ -1807,7 +1807,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "mode: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "mode", 
                 value: "SELF", 
                 options: [
@@ -1833,7 +1833,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message3: "cause: %1", 
         args3: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "cause", 
                 value: "CUSTOM", 
                 options: enums.damageCause
@@ -1849,7 +1849,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "mode: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "mode", 
                 value: "SELF", 
                 options: [
@@ -1894,7 +1894,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "mode: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "mode", 
                 value: "SELF", 
                 options: [
@@ -1912,7 +1912,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message2: "operation: %1", 
         args2: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "operation", 
                 options: enums.operation
             }
@@ -1950,7 +1950,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "mode: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "mode", 
                 value: "SELF", 
                 options: [
@@ -1971,7 +1971,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "mode: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "mode", 
                 value: "SELF", 
                 options: [
@@ -1989,7 +1989,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message2: "glide: %1", 
         args2: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "glide", 
                 value: "true", 
                 options: enums.booleans
@@ -2005,7 +2005,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "mode: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "mode", 
                 value: "SELF", 
                 options: [
@@ -2062,7 +2062,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "mode: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "mode", 
                 value: "SELF", 
                 options: [
@@ -2097,7 +2097,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "mode: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "mode", 
                 value: "SELF", 
                 options: [
@@ -2119,7 +2119,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message3: "block: %1", 
         args3: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "block", 
                 value: "COBWEB", 
                 options: enums.material
@@ -2135,7 +2135,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "mode: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "mode", 
                 value: "SELF", 
                 options: [
@@ -2157,7 +2157,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message3: "block: %1", 
         args3: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "block", 
                 value: "COBWEB", 
                 options: enums.material
@@ -2173,7 +2173,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "mode: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "mode", 
                 value: "SELF", 
                 options: [
@@ -2195,7 +2195,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message3: "entity: %1", 
         args3: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "entity", 
                 value: "arrow", 
                 options: enums.entity
@@ -2229,7 +2229,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "mode: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "mode", 
                 value: "SELF", 
                 options: [
@@ -2247,7 +2247,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message2: "operation: %1", 
         args2: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "operation", 
                 options: enums.operation
             }
@@ -2263,7 +2263,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message4: "attribute: %1", 
         args4: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "attribute", 
                 options: enums.attribute
             }
@@ -2278,7 +2278,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "mode: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "mode", 
                 value: "SELF", 
                 options: [
@@ -2296,7 +2296,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message2: "entity: %1", 
         args2: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "entity", 
                 value: "FIREBALL", 
                 options: enums.entity
@@ -2320,7 +2320,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "mode: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "mode", 
                 value: "SELF", 
                 options: [
@@ -2352,7 +2352,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "mode: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "mode", 
                 value: "SELF", 
                 options: [
@@ -2373,7 +2373,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "mode: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "mode", 
                 value: "SELF", 
                 options: [
@@ -2395,7 +2395,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message3: "add: %1", 
         args3: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "add", 
                 value: "false", 
                 options: enums.booleans
@@ -2411,7 +2411,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "mode: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "mode", 
                 value: "SELF", 
                 options: [
@@ -2429,7 +2429,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message2: "operation: %1", 
         args2: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "operation", 
                 options: enums.operation
             }
@@ -2445,7 +2445,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message4: "retainHealth: %1", 
         args4: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "retainHealth", 
                 value: "true", 
                 options: enums.booleans
@@ -2461,7 +2461,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "mode: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "mode", 
                 value: "SELF", 
                 options: [
@@ -2479,7 +2479,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message2: "fake: %1", 
         args2: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "fake", 
                 value: "false", 
                 options: enums.booleans
@@ -2495,7 +2495,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "mode: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "mode", 
                 value: "SELF", 
                 options: [
@@ -2513,7 +2513,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message2: "fake: %1", 
         args2: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "fake", 
                 value: "false", 
                 options: enums.booleans
@@ -2529,7 +2529,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "mode: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "mode", 
                 value: "SELF", 
                 options: [
@@ -2547,7 +2547,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message2: "operation: %1", 
         args2: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "operation", 
                 options: enums.operation
             }
@@ -2585,7 +2585,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "mode: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "mode", 
                 value: "SELF", 
                 options: [
@@ -2603,7 +2603,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message2: "operation: %1", 
         args2: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "operation", 
                 options: enums.operation
             }
@@ -2633,7 +2633,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "mode: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "mode", 
                 value: "SELF", 
                 options: [
@@ -2651,7 +2651,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message2: "dropIfFull: %1", 
         args2: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "dropIfFull", 
                 value: "true", 
                 options: enums.booleans
@@ -2677,7 +2677,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "mode: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "mode", 
                 value: "SELF", 
                 options: [
@@ -2702,7 +2702,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "mode: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "mode", 
                 value: "SELF", 
                 options: [
@@ -2743,7 +2743,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "mode: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "mode", 
                 value: "SELF", 
                 options: [
@@ -2790,7 +2790,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "mode: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "mode", 
                 value: "SELF", 
                 options: [
@@ -2829,7 +2829,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "mode: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "mode", 
                 value: "SELF", 
                 options: [
@@ -2872,7 +2872,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "mode: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "mode", 
                 value: "SELF", 
                 options: [
@@ -2906,7 +2906,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message4: "overwrite: %1", 
         args4: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "overwrite", 
                 value: "true", 
                 options: enums.booleans
@@ -2922,7 +2922,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "mode: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "mode", 
                 value: "SELF", 
                 options: [
@@ -2975,7 +2975,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "mode: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "mode", 
                 value: "SELF", 
                 options: [
@@ -2989,7 +2989,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message2: "onlyProjectiles: %1", 
         args2: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "onlyProjectiles", 
                 value: "true", 
                 options: enums.booleans
@@ -3021,7 +3021,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "mode: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "mode", 
                 value: "SELF", 
                 options: [
@@ -3043,7 +3043,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message3: "overwriteCurrentVelocity: %1", 
         args3: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "overwriteCurrentVelocity", 
                 value: "true", 
                 options: enums.booleans
@@ -3059,7 +3059,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "mode: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "mode", 
                 value: "SELF", 
                 options: [
@@ -3093,7 +3093,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "mode: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "mode", 
                 value: "SELF", 
                 options: [
@@ -3127,7 +3127,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "mode: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "mode", 
                 value: "SELF", 
                 options: [
@@ -3148,7 +3148,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "mode: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "mode", 
                 value: "SELF", 
                 options: [
@@ -3169,7 +3169,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "mode: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "mode", 
                 value: "SELF", 
                 options: [
@@ -3242,7 +3242,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "mode: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "mode", 
                 value: "SELF", 
                 options: [
@@ -3256,7 +3256,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message2: "material: %1", 
         args2: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "material", 
                 value: null, 
                 options: enums.material
@@ -3265,7 +3265,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message3: "updatePhysics: %1", 
         args3: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "updatePhysics", 
                 value: "true", 
                 options: enums.booleans
@@ -3299,7 +3299,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "mode: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "mode", 
                 value: "SELF", 
                 options: [
@@ -3338,7 +3338,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "mode: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "mode", 
                 value: "SELF", 
                 options: [
@@ -3373,7 +3373,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "mode: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "mode", 
                 value: "SELF", 
                 options: [
@@ -3398,7 +3398,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "mode: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "mode", 
                 value: "SELF", 
                 options: [
@@ -3425,7 +3425,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message3: "alwaysHit: %1", 
         args3: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "alwaysHit", 
                 value: "true", 
                 options: enums.booleans
@@ -3434,7 +3434,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message4: "ignorePassanles: %1", 
         args4: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "ignorePassanles", 
                 value: "true", 
                 options: enums.booleans
@@ -3451,7 +3451,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message6: "collisionMode: %1", 
         args6: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "collisionMode", 
                 value: "NEVER", 
                 options: enums.collisionMode
@@ -3483,7 +3483,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "mode: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "mode", 
                 value: "SELF", 
                 options: [
@@ -3557,7 +3557,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "mode: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "mode", 
                 value: "SELF", 
                 options: [
@@ -3585,7 +3585,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "mode: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "mode", 
                 value: "SELF", 
                 options: [
@@ -3627,7 +3627,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "mode: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "mode", 
                 value: "SELF", 
                 options: [
@@ -3641,7 +3641,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message2: "operation: %1", 
         args2: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "operation", 
                 options: enums.operation
             }
@@ -3664,7 +3664,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "mode: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "mode", 
                 value: "SELF", 
                 options: [
@@ -3701,7 +3701,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "mode: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "mode", 
                 value: "SELF", 
                 options: [
@@ -3756,7 +3756,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "mode: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "mode", 
                 value: "SELF", 
                 options: [
@@ -3795,7 +3795,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "mode: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "mode", 
                 value: "SELF", 
                 options: [
@@ -3813,7 +3813,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message2: "operation: %1", 
         args2: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "operation", 
                 options: enums.operation
             }
@@ -3836,7 +3836,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "mode: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "mode", 
                 value: "SELF", 
                 options: [
@@ -3857,7 +3857,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "mode: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "mode", 
                 value: "SELF", 
                 options: [
@@ -3879,7 +3879,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message3: "allowMultiTypeVein: %1", 
         args3: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "allowMultiTypeVein", 
                 value: "false", 
                 options: enums.booleans
@@ -3914,7 +3914,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "mode: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "mode", 
                 value: "SELF", 
                 options: [
@@ -3946,7 +3946,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "mode: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "mode", 
                 value: "SELF", 
                 options: [
@@ -3964,7 +3964,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message2: "operation: %1", 
         args2: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "operation", 
                 options: enums.operation
             }
@@ -3987,7 +3987,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "mode: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "mode", 
                 value: "SELF", 
                 options: [
@@ -4005,7 +4005,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message2: "operation: %1", 
         args2: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "operation", 
                 options: enums.operation
             }
@@ -4028,7 +4028,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "mode: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "mode", 
                 value: "SELF", 
                 options: [
@@ -4046,7 +4046,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message2: "fly: %1", 
         args2: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "fly", 
                 value: "true", 
                 options: enums.booleans
@@ -4062,7 +4062,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "mode: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "mode", 
                 value: "SELF", 
                 options: [
@@ -4080,7 +4080,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message2: "fly: %1", 
         args2: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "fly", 
                 value: "true", 
                 options: enums.booleans
@@ -4096,7 +4096,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "mode: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "mode", 
                 value: "SELF", 
                 options: [
@@ -4130,7 +4130,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message4: "spawnOnTarget: %1", 
         args4: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "spawnOnTarget", 
                 value: "true", 
                 options: enums.booleans
@@ -4146,7 +4146,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "mode: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "mode", 
                 value: "SELF", 
                 options: [
@@ -4207,7 +4207,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message2: "type: %1", 
         args2: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "type", 
                 value: {
                 
@@ -4365,7 +4365,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message3: "outputBlock: %1", 
         args3: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "outputBlock", 
                 value: "GOLD_BLOCK", 
                 options: enums.material
@@ -4415,7 +4415,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message4: "spawnsFire: %1", 
         args4: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "spawnsFire", 
                 value: "false", 
                 options: enums.booleans
@@ -4424,7 +4424,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message5: "breakBlocks: %1", 
         args5: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "breakBlocks", 
                 value: "true", 
                 options: enums.booleans
@@ -4433,7 +4433,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message6: "removeDetonatedEntity: %1", 
         args6: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "removeDetonatedEntity", 
                 value: "true", 
                 options: enums.booleans
@@ -4462,7 +4462,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "replaceDrops: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "replaceDrops", 
                 value: "false", 
                 options: enums.booleans
@@ -4534,7 +4534,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "canStore: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "canStore", 
                 value: "true", 
                 options: enums.booleans
@@ -4543,7 +4543,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message2: "canDrop: %1", 
         args2: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "canDrop", 
                 value: "true", 
                 options: enums.booleans
@@ -4552,7 +4552,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message3: "canLoseOnDeath: %1", 
         args3: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "canLoseOnDeath", 
                 value: "true", 
                 options: enums.booleans
@@ -4561,7 +4561,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message4: "loseItemOnHeroLoss: %1", 
         args4: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "loseItemOnHeroLoss", 
                 value: "true", 
                 options: enums.booleans
@@ -4627,7 +4627,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message6: "item: %1", 
         args6: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "item", 
                 options: enums.material
             }
@@ -4672,7 +4672,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "mustSneak: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "mustSneak", 
                 value: "true", 
                 options: enums.booleans
@@ -4681,7 +4681,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message2: "needsInvisibility: %1", 
         args2: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "needsInvisibility", 
                 value: "false", 
                 options: enums.booleans
@@ -4722,7 +4722,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message2: "fuel: %1", 
         args2: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "fuel", 
                 value: "REDSTONE", 
                 options: enums.material
@@ -4821,7 +4821,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message4: "projectile: %1", 
         args4: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "projectile", 
                 value: "SNOWBALL", 
                 options: enums.entity
@@ -4830,7 +4830,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message5: "canPickUp: %1", 
         args5: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "canPickUp", 
                 value: "false", 
                 options: enums.booleans
@@ -4898,7 +4898,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message3: "shouldRevert: %1", 
         args3: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "shouldRevert", 
                 value: "false", 
                 options: enums.booleans
@@ -4948,7 +4948,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "isShaped: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "isShaped", 
                 value: "true", 
                 options: enums.booleans
@@ -5128,7 +5128,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "enabled: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "enabled", 
                 value: "false", 
                 options: enums.booleans
@@ -5146,7 +5146,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message3: "biomesWhitelist: %1", 
         args3: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "biomesWhitelist", 
                 value: "true", 
                 options: enums.booleans
@@ -5164,7 +5164,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message5: "spawnOnAir: %1", 
         args5: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "spawnOnAir", 
                 value: "false", 
                 options: enums.booleans
@@ -5207,7 +5207,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "enabled: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "enabled", 
                 value: "false", 
                 options: enums.booleans
@@ -5216,7 +5216,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message2: "color: %1", 
         args2: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "color", 
                 value: "PURPLE", 
                 options: enums.bossBarColor
@@ -5225,7 +5225,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message3: "style: %1", 
         args3: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "style", 
                 value: "PROGRESS", 
                 options: enums.bossBarStyle
@@ -5276,7 +5276,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message2: "isUnbreakable: %1", 
         args2: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "isUnbreakable", 
                 value: "false", 
                 options: enums.booleans
@@ -5340,7 +5340,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "type: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "type", 
                 value: "STONE", 
                 options: enums.material
@@ -5383,7 +5383,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "type: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "type", 
                 value: "ZOMBIE", 
                 options: enums.entity
@@ -5400,7 +5400,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message3: "shouldDespawn: %1", 
         args3: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "shouldDespawn", 
                 value: "true", 
                 options: enums.booleans
@@ -5466,7 +5466,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "sound: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "sound", 
                 value: "ENTITY_GENERIC_EXPLODE", 
                 options: enums.sound
@@ -5506,7 +5506,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message2: "type: %1", 
         args2: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "type", 
                 options: enums.potion
             }
@@ -5514,7 +5514,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message3: "ambient: %1", 
         args3: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "ambient", 
                 value: "true", 
                 options: enums.booleans
@@ -5523,7 +5523,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message4: "hasParticles: %1", 
         args4: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "hasParticles", 
                 value: "true", 
                 options: enums.booleans
@@ -5546,7 +5546,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "particle: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "particle", 
                 value: "BARRIER", 
                 options: enums.particle
@@ -5570,7 +5570,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "type: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "type", 
                 value: "STONE", 
                 options: enums.material
@@ -5603,7 +5603,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "type: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "type", 
                 value: "STONE", 
                 options: enums.material
@@ -5688,7 +5688,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message1: "type: %1", 
         args1: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "type", 
                 value: "STONE", 
                 options: enums.material
@@ -5907,7 +5907,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message0: "biome: %1", 
         args0: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "VALUE", 
                 options: enums.biome
             }
@@ -5921,7 +5921,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message0: "world: %1", 
         args0: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "VALUE", 
                 options: enums.world
             }
@@ -5935,7 +5935,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message0: "bossBarFlag: %1", 
         args0: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "VALUE", 
                 options: enums.bossBarFlag
             }
@@ -5962,7 +5962,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message0: "material: %1", 
         args0: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "VALUE", 
                 options: enums.material
             }
@@ -5976,7 +5976,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message0: "damageCause: %1", 
         args0: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "VALUE", 
                 options: enums.damageCause
             }
@@ -5990,7 +5990,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message0: "action: %1", 
         args0: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "VALUE", 
                 options: enums.action
             }
@@ -6004,7 +6004,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message0: "potion: %1", 
         args0: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "VALUE", 
                 options: enums.potion
             }
@@ -6018,7 +6018,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message0: "entity: %1", 
         args0: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "VALUE", 
                 options: enums.entity
             }
@@ -6032,7 +6032,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message0: "blockFace: %1", 
         args0: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "VALUE", 
                 options: enums.blockFace
             }
@@ -6062,7 +6062,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
         message0: "lootTable: %1", 
         args0: [
             {
-                type: "field_dropdown", 
+                type: "field_dropdown_default", 
                 name: "VALUE", 
                 options: enums.lootTable
             }

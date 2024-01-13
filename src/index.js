@@ -11,9 +11,13 @@ import {toolbox} from './toolbox';
 import {theme} from './theme';
 import { superheroesGenerator } from './generators/superheroes';
 import './index.css';
+import { DropdownDefaultField } from './fields/dropdown-default';
 
 Blockly.HSV_SATURATION = 0.7;
 Blockly.HSV_VALUE = 0.85;
+
+// Register custom fields
+Blockly.fieldRegistry.register('field_dropdown_default', DropdownDefaultField)
 
 // Register the blocks and generator with Blockly
 Blockly.common.defineBlocks(blocks);
