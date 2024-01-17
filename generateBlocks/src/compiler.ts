@@ -33,6 +33,7 @@ class Compiler {
     objectTypes: string[] = []
     recordTypes: StringRecord<Type> = {}
     listTypes: StringRecord<Block> = {}
+    pairTypes: StringRecord<Block> = {}
 
     compile(schema: Schema): compilationOutput {
         const blocks = this.generateBlocks(schema)
@@ -113,7 +114,7 @@ class Compiler {
         ]
 
         const { types, ...items } = schema
-				
+		
 		forEachValue(items.triggers, x => {
 			if (!x.properties) x.properties = {}
 			x.properties['conditions'] = {
@@ -135,7 +136,7 @@ class Compiler {
                 return
             }
             if (type.enum) {
-				this.enums[name] = type.enum.map(v => [v, v])
+				this.enums[name] = type.enum.sort().map(v => [v, v])
 				delete types[name]
 			}
         })
