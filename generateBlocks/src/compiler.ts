@@ -1,6 +1,6 @@
 import { Argument, dropdownOption, FieldBoolean, FieldDropdown, FieldEnum, FieldInput, FieldInteger, FieldNumber, InputStatement, InputValue } from "./blockly/Arguments.js";
 import { Block, categoryData, DefaultBlock, JSONBlock, ListTypeBlock } from "./blockly/Block.js";
-import { Schema, Item, Type, PropertyMap, Property, PropertyType, PropertyTypes } from "./PreprocessedSchema.js";
+import { Schema, Item, Type, PropertyMap, Property, PropertyType, PropertyTypes, Trigger } from "./PreprocessedSchema.js";
 import { forEachEntry, forEachValue, JSONStringify, objectMap, StringRecord, toArray } from "./utils.js";
 import { hero, boss, item, custom } from "./manual-schema.js"
 
@@ -115,16 +115,41 @@ class Compiler {
 
         const { types, ...items } = schema
 		
-		forEachValue(items.triggers, x => {
-			if (!x.properties) x.properties = {}
-			x.properties['conditions'] = {
-				description: "The conditions to check",
-				required: false,
-				type: "ConditionList",
-				default: {}
-			}
-		})
+		this.addConditionsToTriggers(items.triggers);
 
+        this.seperateTypes(types)
+
+        const typeBlocks = Object.values(objectMap(types, this.generateTypeBlock.bind(this)))
+
+        const itemBlocks = objectMap(items, (type, value) => {
+            const blocks = objectMap(value, (key, val) => this.generateItemBlock(type, key, val))
+            const blocksArray: Block[] = []
+            for (const block of Object.values(blocks)) {
+                if (block) blocksArray.push(block)
+            }
+            return blocksArray
+        })
+		
+		const blockedSchema = { ...itemBlocks, types: typeBlocks }
+		
+		this.handleSpecialItems(schema, blockedSchema)
+
+        return blockedSchema
+    }
+
+    private addConditionsToTriggers(triggers: StringRecord<Trigger>) {
+        forEachValue(triggers, x => {
+            if (!x.properties) x.properties = {};
+            x.properties['conditions'] = {
+                description: "The conditions to check",
+                required: false,
+                type: "ConditionList",
+                default: {}
+            };
+        });
+    }
+
+    seperateTypes(types: StringRecord<Type>) {
         forEachEntry(types, (name, type) => {
             if (type.type === "object") {
                 this.objectTypes.push(name)
@@ -148,23 +173,6 @@ class Compiler {
         forEachEntry(types, (name, type) => {
             if (type.type === "string") console.log(name + " has no enum and is a strings")
         })
-
-        const typeBlocks = Object.values(objectMap(types, this.generateTypeBlock.bind(this)))
-
-        const itemBlocks = objectMap(items, (type, value) => {
-            const blocks = objectMap(value, (key, val) => this.generateItemBlock(type, key, val))
-            const blocksArray: Block[] = []
-            for (const block of Object.values(blocks)) {
-                if (block) blocksArray.push(block)
-            }
-            return blocksArray
-        })
-		
-		const blockedSchema = { ...itemBlocks, types: typeBlocks }
-		
-		this.handleSpecialItems(schema, blockedSchema)
-
-        return blockedSchema
     }
 
     // for adding special items
