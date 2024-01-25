@@ -35,11 +35,9 @@ superheroesGenerator.blockToCode = function(block) {
 }
 
 superheroesGenerator['listtypes'] = function(block) {
-	const field = block.getFieldValue("VALUE")
-	if (field != null) return field
-	const input = getInputBlock(block, "VALUE")
-	if (input != null) return superheroesGenerator.blockToCode(input)
-	return "~"
+	const value = getValueOverride(block)
+    if (value == null) return "~"
+    return value
 }
 superheroesGenerator['types_range'] = function(block) {
 	const min = block.getFieldValue("MIN")
@@ -56,12 +54,40 @@ function getInputBlock(block, name) {
 }
 
 /**
+ * @param {Blockly.Block} block
+ * @returns {string | null}
+ */
+function getValueOverride(block) {
+    const field = block.getFieldValue("VALUE")
+	if (field != null) return field
+	
+	const input = getInputBlock(block, "VALUE")
+	if (input == null) return null
+	
+	const chainedBlocks = getAllChainedBlocks(input)
+	if (chainedBlocks.length == 1) return /** @type {string} */ (superheroesGenerator.blockToCode(input))
+	
+	return chainedBlocks
+		.map(block => /** @type {string} */ (superheroesGenerator.blockToCode(input)))
+		.join("")
+}
+
+/**
  * default yaml serialization
  * @param {Blockly.Block} block
  */
 function blockToYaml(block) {
     const blockFields = getBlockFields(block)
     const sectionName = getBlockSectionName(blockFields)
+
+    const valueOverride = getValueOverride(block)
+    if (valueOverride !== null) {
+        if (sectionName === undefined) {
+            return valueOverride
+        } else {
+            return `\r\n${sectionName}: ${valueOverride}`
+        }
+    }
     
     const fieldEntries = blockFieldsToYaml(blockFields)
     const valueEntries = blockValuesToYaml(getBlockValues(block))
@@ -213,14 +239,20 @@ function getBlockStatements(block) {
         .filter(notUndefined)
         .map(statement => {
             const {key, value} = statement;
-            const blockList = [value]
-            /** @type {Blockly.Block | null} */
-            let currentBlock = value
-            while ((currentBlock = currentBlock?.getNextBlock()) !== null) {
-                blockList.push(currentBlock);
-            }
-            return entry(key, blockList);
+            return entry(key, getAllChainedBlocks(value));
         });
+}
+/**
+ * @param {Blockly.Block} currentBlock
+ * @returns {Blockly.Block[]}
+*/
+function getAllChainedBlocks(currentBlock) {
+	if (currentBlock == null) return []
+	const blockList = [currentBlock]
+	while ((currentBlock = currentBlock?.getNextBlock()) !== null) {
+		blockList.push(currentBlock);
+	}
+	return blockList;
 }
 
 /**

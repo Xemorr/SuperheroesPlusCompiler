@@ -1,6 +1,6 @@
 import { Argument, dropdownOption, FieldBoolean, FieldDropdown, FieldEnum, FieldInput, FieldInteger, FieldNumber, InputStatement, InputValue } from "./blockly/Arguments.js";
 import { Block, categoryData, DefaultBlock, JSONBlock, ListTypeBlock } from "./blockly/Block.js";
-import { Schema, Item, Type, PropertyMap, Property, PropertyType, PropertyTypes, Trigger } from "./PreprocessedSchema.js";
+import { Schema, Item, Type, PropertyMap, Property, PropertyType, PropertyTypes, Trigger, PropertiesMap } from "./PreprocessedSchema.js";
 import { forEachEntry, forEachValue, JSONStringify, objectMap, StringRecord, toArray } from "./utils.js";
 import { hero, boss, item, custom } from "./manual-schema.js"
 
@@ -40,6 +40,7 @@ class Compiler {
         blocks.startpoint = [new JSONBlock("startpoint", "hero", hero), new JSONBlock("startpoint", "boss", boss), new JSONBlock("startpoint", "item", item)]
         blocks.skills.unshift(new JSONBlock("skills", "CUSTOM", custom))
         blocks.listtypes = Object.values(this.listTypes);
+        blocks.pairtypes = Object.values(this.pairTypes);
 
         const toolbox = this.generateToolbox(blocks)
         return {
@@ -179,6 +180,7 @@ class Compiler {
     handleSpecialItems(schema: Schema, blockedSchema: BlockedSchema): void {
         /* RangeData */ {
 			const block = new DefaultBlock("types", "range", false)
+			block.output = block.type
 			block.addCustomArg(`range: %1 - %2`, 
 				new FieldNumber(`MIN`, Number.NEGATIVE_INFINITY),
 				new FieldNumber(`MAX`, Number.POSITIVE_INFINITY)
@@ -204,14 +206,57 @@ class Compiler {
 
     generateTypeBlock(name: string, type: Type): Block {
         const block = new DefaultBlock("types", name)
+        block.output = block.type
         this.compileProperties(block, type.properties)
+        this.compilePropetiesMap(name, block, type.propertiesMap)
         return block
     }
 
-    compileProperties(block: Block, properties: PropertyMap | undefined) {
-        if (!properties) return
+    compilePropetiesMap(name: string, block: DefaultBlock, propertiesMap: PropertiesMap | undefined) {
+        if (!propertiesMap) return
+        const mapKey = propertiesMap.key
+        const mapValue = propertiesMap.value
 
-        forEachEntry(properties, (name, property) => this.compileProperty(block, name, property))
+        if (Array.isArray(mapKey.type)) {
+            block.unimplemented.push(`mapKey is multiple type`)
+            return
+        }
+        if (!(mapKey.type in this.enums)) {
+            block.unimplemented.push(`mapKey is not an enum type`)
+            return
+        }
+
+        const keyField = new FieldEnum("SECTION_NAME", undefined, mapKey.type)
+
+        if (Array.isArray(mapValue.type)) {
+            block.unimplemented.push(`mapValue is multiple type`)
+            return
+        }
+        let valueField;
+        if (mapValue.type in this.enums) {
+            valueField = new FieldEnum("VALUE", mapValue.default, mapValue.type)
+        } else if (valueTypes.includes(mapValue.type as any)) {
+            valueField = this.createValueField(mapValue.type as valueTypes, "VALUE", mapValue.default)
+        } else {
+            block.unimplemented.push(`mapValue is not an enum or value type`)
+            return
+        }
+
+        const blockName = `pairtypes_${name}` as const
+        const pairBlock = new Block(blockName);
+        pairBlock.previousStatement = blockName
+        pairBlock.nextStatement = blockName
+        pairBlock.addCustomArg(`${name} %1: %2`, 
+            keyField,
+            valueField
+        )
+		this.pairTypes[name] = pairBlock
+
+        block.addArg(name, new InputStatement("VALUE", blockName))
+    }
+
+    compileProperties(block: Block, properties: PropertyMap | undefined) {
+        forEachEntry(properties, this.compileProperty.bind(this, block))
     }
 
     compileProperty(block: Block, name: string, property: Property): void {
@@ -226,7 +271,7 @@ class Compiler {
             return
         }
         if (this.objectTypes.includes(type)) {
-            block.addArg(name, new InputValue(name, [type]))
+            block.addArg(name, new InputValue(name, [`types_${type}`]))
             return
         }
 		
@@ -249,7 +294,7 @@ class Compiler {
             block.addArg(name, arg)
             return
         }
-        
+
 		block.unimplemented.push(`${name}: ?`)
     }
 
@@ -258,7 +303,7 @@ class Compiler {
         if (recordItem == undefined) {
             console.error("I fucked up docs")
             return
-        }        
+        }
         
         if (recordItem === "conditions" || recordItem === "effects") {
 			block.addArg(name, new InputStatement(name, recordItem))

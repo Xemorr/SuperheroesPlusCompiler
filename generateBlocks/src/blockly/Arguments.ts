@@ -31,15 +31,15 @@ class InputValue implements Argument {
     precedence: number = 2
     type: ArgumentType = "input_value"
     name: string
-    types?: string[]
+    check?: string[]
 
-    constructor(name: string, types: string[]) {
+    constructor(name: string, check: string[]) {
         this.name = name
-        this.types = types
+        this.check = check
     }
 
-    setType(types: string[]) {
-        this.types = types
+    setType(check: string[]) {
+        this.check = check
     }
 
     toJSON(quoteKeys?: boolean): string {

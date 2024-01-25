@@ -630,8 +630,8 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
             {
                 type: "input_value", 
                 name: "healthPercentange", 
-                types: [
-                    "range"
+                check: [
+                    "types_range"
                 ]
             }
         ]
@@ -814,8 +814,8 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
             {
                 type: "input_value", 
                 name: "condition", 
-                types: [
-                    "condition"
+                check: [
+                    "types_condition"
                 ]
             }
         ]
@@ -897,8 +897,8 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
             {
                 type: "input_value", 
                 name: "time", 
-                types: [
-                    "range"
+                check: [
+                    "types_range"
                 ]
             }
         ]
@@ -1302,8 +1302,8 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
             {
                 type: "input_value", 
                 name: "height", 
-                types: [
-                    "range"
+                check: [
+                    "types_range"
                 ]
             }
         ]
@@ -1375,8 +1375,8 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
             {
                 type: "input_value", 
                 name: "item", 
-                types: [
-                    "ItemComparisonData"
+                check: [
+                    "types_ItemComparisonData"
                 ]
             }
         ], 
@@ -1485,8 +1485,8 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
             {
                 type: "input_value", 
                 name: "temperature", 
-                types: [
-                    "range"
+                check: [
+                    "types_range"
                 ]
             }
         ]
@@ -1516,8 +1516,8 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
             {
                 type: "input_value", 
                 name: "distance", 
-                types: [
-                    "range"
+                check: [
+                    "types_range"
                 ]
             }
         ]
@@ -1634,8 +1634,8 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
             {
                 type: "input_value", 
                 name: "speed", 
-                types: [
-                    "range"
+                check: [
+                    "types_range"
                 ]
             }
         ]
@@ -1792,8 +1792,8 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
             {
                 type: "input_value", 
                 name: "itemLevel", 
-                types: [
-                    "range"
+                check: [
+                    "types_range"
                 ]
             }
         ]
@@ -2082,8 +2082,8 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
             {
                 type: "input_value", 
                 name: "potion", 
-                types: [
-                    "PotionEffectData"
+                check: [
+                    "types_PotionEffectData"
                 ]
             }
         ]
@@ -2662,8 +2662,8 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
             {
                 type: "input_value", 
                 name: "item", 
-                types: [
-                    "ItemStackData"
+                check: [
+                    "types_ItemStackData"
                 ]
             }
         ]
@@ -2775,8 +2775,8 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
             {
                 type: "input_value", 
                 name: "entity", 
-                types: [
-                    "EntityData"
+                check: [
+                    "types_EntityData"
                 ]
             }
         ]
@@ -2814,8 +2814,8 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
             {
                 type: "input_value", 
                 name: "sound", 
-                types: [
-                    "SoundData"
+                check: [
+                    "types_SoundData"
                 ]
             }
         ]
@@ -3211,8 +3211,8 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
             {
                 type: "input_value", 
                 name: "offset", 
-                types: [
-                    "VectorData"
+                check: [
+                    "types_VectorData"
                 ]
             }
         ], 
@@ -3284,8 +3284,8 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
             {
                 type: "input_value", 
                 name: "block", 
-                types: [
-                    "BlockDataData"
+                check: [
+                    "types_BlockDataData"
                 ]
             }
         ]
@@ -3323,8 +3323,8 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
             {
                 type: "input_value", 
                 name: "entity", 
-                types: [
-                    "EntityData"
+                check: [
+                    "types_EntityData"
                 ]
             }
         ]
@@ -3725,8 +3725,8 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
             {
                 type: "input_value", 
                 name: "offset", 
-                types: [
-                    "VectorData"
+                check: [
+                    "types_VectorData"
                 ]
             }
         ], 
@@ -4301,8 +4301,8 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
             {
                 type: "input_value", 
                 name: "inputItem", 
-                types: [
-                    "ItemStackData"
+                check: [
+                    "types_ItemStackData"
                 ]
             }
         ], 
@@ -4311,8 +4311,8 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
             {
                 type: "input_value", 
                 name: "outputItem", 
-                types: [
-                    "ItemStackData"
+                check: [
+                    "types_ItemStackData"
                 ]
             }
         ]
@@ -4572,8 +4572,8 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
             {
                 type: "input_value", 
                 name: "item", 
-                types: [
-                    "ItemStackData"
+                check: [
+                    "types_ItemStackData"
                 ]
             }
         ]
@@ -4637,8 +4637,8 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
             {
                 type: "input_value", 
                 name: "shootSound", 
-                types: [
-                    "SoundData"
+                check: [
+                    "types_SoundData"
                 ]
             }
         ], 
@@ -4647,8 +4647,8 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
             {
                 type: "input_value", 
                 name: "trailParticle", 
-                types: [
-                    "ParticleData"
+                check: [
+                    "types_ParticleData"
                 ]
             }
         ], 
@@ -4657,8 +4657,8 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
             {
                 type: "input_value", 
                 name: "hitParticle", 
-                types: [
-                    "ParticleData"
+                check: [
+                    "types_ParticleData"
                 ]
             }
         ]
@@ -4857,8 +4857,8 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
             {
                 type: "input_value", 
                 name: "item", 
-                types: [
-                    "ItemStackData"
+                check: [
+                    "types_ItemStackData"
                 ]
             }
         ], 
@@ -4959,8 +4959,8 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
             {
                 type: "input_value", 
                 name: "result", 
-                types: [
-                    "ItemStackData"
+                check: [
+                    "types_ItemStackData"
                 ]
             }
         ], 
@@ -5111,19 +5111,19 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     {
         type: "types_condition", 
         colour: 10, 
-        output: "types", 
+        output: "types_condition", 
         message0: "condition"
     }, 
     {
         type: "types_effect", 
         colour: 10, 
-        output: "types", 
+        output: "types_effect", 
         message0: "effect"
     }, 
     {
         type: "types_SpawnData", 
         colour: 10, 
-        output: "types", 
+        output: "types_SpawnData", 
         message0: "SpawnData", 
         message1: "enabled: %1", 
         args1: [
@@ -5202,7 +5202,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     {
         type: "types_BossBarData", 
         colour: 10, 
-        output: "types", 
+        output: "types_BossBarData", 
         message0: "BossBarData", 
         message1: "enabled: %1", 
         args1: [
@@ -5245,19 +5245,31 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     {
         type: "types_ItemAttributeData", 
         colour: 10, 
-        output: "types", 
-        message0: "ItemAttributeData"
+        output: "types_ItemAttributeData", 
+        unimplemented: [
+            "mapValue is not an enum or value type"
+        ], 
+        message0: "ItemAttributeData", 
+        message1: "Incomplete"
     }, 
     {
         type: "types_EnchantmentData", 
         colour: 10, 
-        output: "types", 
-        message0: "EnchantmentData"
+        output: "types_EnchantmentData", 
+        message0: "EnchantmentData", 
+        message1: "EnchantmentData: %1", 
+        args1: [
+            {
+                type: "input_statement", 
+                name: "VALUE", 
+                check: "pairtypes_EnchantmentData"
+            }
+        ]
     }, 
     {
         type: "types_ItemMetaData", 
         colour: 10, 
-        output: "types", 
+        output: "types_ItemMetaData", 
         unimplemented: [
             "trim: ?", 
             "color: ?", 
@@ -5305,8 +5317,8 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
             {
                 type: "input_value", 
                 name: "attributes", 
-                types: [
-                    "ItemAttributeData"
+                check: [
+                    "types_ItemAttributeData"
                 ]
             }
         ], 
@@ -5315,8 +5327,8 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
             {
                 type: "input_value", 
                 name: "enchants", 
-                types: [
-                    "EnchantmentData"
+                check: [
+                    "types_EnchantmentData"
                 ]
             }
         ], 
@@ -5335,7 +5347,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     {
         type: "types_ItemStackData", 
         colour: 10, 
-        output: "types", 
+        output: "types_ItemStackData", 
         message0: "ItemStackData", 
         message1: "type: %1", 
         args1: [
@@ -5360,8 +5372,8 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
             {
                 type: "input_value", 
                 name: "metadata", 
-                types: [
-                    "ItemMetaData"
+                check: [
+                    "types_ItemMetaData"
                 ]
             }
         ]
@@ -5369,13 +5381,21 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     {
         type: "types_AttributeData", 
         colour: 10, 
-        output: "types", 
-        message0: "AttributeData"
+        output: "types_AttributeData", 
+        message0: "AttributeData", 
+        message1: "AttributeData: %1", 
+        args1: [
+            {
+                type: "input_statement", 
+                name: "VALUE", 
+                check: "pairtypes_AttributeData"
+            }
+        ]
     }, 
     {
         type: "types_EntityData", 
         colour: 10, 
-        output: "types", 
+        output: "types_EntityData", 
         unimplemented: [
             "extra: ?"
         ], 
@@ -5411,8 +5431,8 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
             {
                 type: "input_value", 
                 name: "passenger", 
-                types: [
-                    "EntityData"
+                check: [
+                    "types_EntityData"
                 ]
             }
         ], 
@@ -5421,8 +5441,8 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
             {
                 type: "input_value", 
                 name: "attributes", 
-                types: [
-                    "AttributeData"
+                check: [
+                    "types_AttributeData"
                 ]
             }
         ], 
@@ -5431,7 +5451,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     {
         type: "types_VectorData", 
         colour: 10, 
-        output: "types", 
+        output: "types_VectorData", 
         message0: "VectorData", 
         message1: "x: %1", 
         args1: [
@@ -5461,7 +5481,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     {
         type: "types_SoundData", 
         colour: 10, 
-        output: "types", 
+        output: "types_SoundData", 
         message0: "SoundData", 
         message1: "sound: %1", 
         args1: [
@@ -5492,7 +5512,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     {
         type: "types_PotionEffectData", 
         colour: 10, 
-        output: "types", 
+        output: "types_PotionEffectData", 
         message0: "PotionEffectData", 
         message1: "potency: %1", 
         args1: [
@@ -5541,7 +5561,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     {
         type: "types_ParticleData", 
         colour: 10, 
-        output: "types", 
+        output: "types_ParticleData", 
         message0: "ParticleData", 
         message1: "particle: %1", 
         args1: [
@@ -5565,7 +5585,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     {
         type: "types_BlockDataData", 
         colour: 10, 
-        output: "types", 
+        output: "types_BlockDataData", 
         message0: "BlockDataData", 
         message1: "type: %1", 
         args1: [
@@ -5598,7 +5618,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     {
         type: "types_BlockDataComparison", 
         colour: 10, 
-        output: "types", 
+        output: "types_BlockDataComparison", 
         message0: "BlockDataComparison", 
         message1: "type: %1", 
         args1: [
@@ -5614,8 +5634,8 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
             {
                 type: "input_value", 
                 name: "level", 
-                types: [
-                    "range"
+                check: [
+                    "types_range"
                 ]
             }
         ], 
@@ -5624,8 +5644,8 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
             {
                 type: "input_value", 
                 name: "age", 
-                types: [
-                    "range"
+                check: [
+                    "types_range"
                 ]
             }
         ], 
@@ -5643,19 +5663,23 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     {
         type: "types_LoreData", 
         colour: 10, 
-        output: "types", 
+        output: "types_LoreData", 
         message0: "LoreData"
     }, 
     {
         type: "types_EnchantComparisonData", 
         colour: 10, 
-        output: "types", 
-        message0: "EnchantComparisonData"
+        output: "types_EnchantComparisonData", 
+        unimplemented: [
+            "mapValue is not an enum or value type"
+        ], 
+        message0: "EnchantComparisonData", 
+        message1: "Incomplete"
     }, 
     {
         type: "types_ItemMetaComparisonData", 
         colour: 10, 
-        output: "types", 
+        output: "types_ItemMetaComparisonData", 
         unimplemented: [
             "lore: ?"
         ], 
@@ -5673,8 +5697,8 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
             {
                 type: "input_value", 
                 name: "enchants", 
-                types: [
-                    "EnchantComparisonData"
+                check: [
+                    "types_EnchantComparisonData"
                 ]
             }
         ], 
@@ -5683,7 +5707,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     {
         type: "types_ItemComparisonData", 
         colour: 10, 
-        output: "types", 
+        output: "types_ItemComparisonData", 
         message0: "ItemComparisonData", 
         message1: "type: %1", 
         args1: [
@@ -5699,8 +5723,8 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
             {
                 type: "input_value", 
                 name: "amount", 
-                types: [
-                    "range"
+                check: [
+                    "types_range"
                 ]
             }
         ], 
@@ -5709,8 +5733,8 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
             {
                 type: "input_value", 
                 name: "metadata", 
-                types: [
-                    "ItemMetaComparisonData"
+                check: [
+                    "types_ItemMetaComparisonData"
                 ]
             }
         ], 
@@ -5728,7 +5752,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     {
         type: "types_range", 
         colour: 10, 
-        output: "types", 
+        output: "types_range", 
         message0: "range: %1 - %2", 
         args0: [
             {
@@ -5818,9 +5842,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
             {
                 type: "input_value", 
                 name: "entity", 
-                types: [
-                    "EntityData"
-                ]
+                check: "types_EntityData"
             }
         ], 
         message5: "skills: %1", 
@@ -5836,9 +5858,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
             {
                 type: "input_value", 
                 name: "reward", 
-                types: [
-                    "rewards"
-                ]
+                check: "rewards"
             }
         ], 
         message7: "bossbar: %1", 
@@ -5846,9 +5866,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
             {
                 type: "input_value", 
                 name: "bossbar", 
-                types: [
-                    "BossBarData"
-                ]
+                check: "types_BossBarData"
             }
         ], 
         colour: 0
@@ -5868,9 +5886,7 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
             {
                 type: "input_value", 
                 name: "item", 
-                types: [
-                    "ItemStackData"
-                ]
+                check: "types_ItemStackData"
             }
         ], 
         message2: "distribution: %1", 
@@ -6048,8 +6064,8 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
             {
                 type: "input_value", 
                 name: "VALUE", 
-                types: [
-                    "ItemStackData"
+                check: [
+                    "types_ItemStackData"
                 ]
             }
         ]
@@ -6065,6 +6081,44 @@ export const blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
                 type: "field_dropdown_default", 
                 name: "VALUE", 
                 options: enums.lootTable
+            }
+        ]
+    }, 
+    {
+        type: "pairtypes_EnchantmentData", 
+        colour: 0, 
+        previousStatement: "pairtypes_EnchantmentData", 
+        nextStatement: "pairtypes_EnchantmentData", 
+        message0: "EnchantmentData %1: %2", 
+        args0: [
+            {
+                type: "field_dropdown_default", 
+                name: "SECTION_NAME", 
+                options: enums.enchantment
+            }, 
+            {
+                type: "field_number", 
+                name: "VALUE", 
+                precision: 1
+            }
+        ]
+    }, 
+    {
+        type: "pairtypes_AttributeData", 
+        colour: 0, 
+        previousStatement: "pairtypes_AttributeData", 
+        nextStatement: "pairtypes_AttributeData", 
+        message0: "AttributeData %1: %2", 
+        args0: [
+            {
+                type: "field_dropdown_default", 
+                name: "SECTION_NAME", 
+                options: enums.attribute
+            }, 
+            {
+                type: "field_number", 
+                name: "VALUE", 
+                value: -1
             }
         ]
     }

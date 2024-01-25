@@ -32,6 +32,8 @@ interface Schema {
 	//extras
 	startpoint: StringRecord<any>
 	listtypes: StringRecord<any>
+	pairtypes: StringRecord<any>
+
 }
 
 interface Descriptable {

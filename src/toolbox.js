@@ -830,6 +830,21 @@ export const toolbox = {
                     type: "listtypes_lootTable"
                 }
             ]
+        }, 
+        {
+            kind: "category", 
+            name: "pairtypes", 
+            colour: 0, 
+            contents: [
+                {
+                    kind: "block", 
+                    type: "pairtypes_EnchantmentData"
+                }, 
+                {
+                    kind: "block", 
+                    type: "pairtypes_AttributeData"
+                }
+            ]
         }
     ]
 }

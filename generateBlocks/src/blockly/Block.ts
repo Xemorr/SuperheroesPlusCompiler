@@ -18,6 +18,10 @@ export const categoryData: Record<keyof Schema, CategoryData> = {
         colour: 0,
         chaining: true
     },
+    pairtypes: {
+        colour: 0,
+        chaining: true
+    },
     triggers: {
         colour: 120,
         chaining: false

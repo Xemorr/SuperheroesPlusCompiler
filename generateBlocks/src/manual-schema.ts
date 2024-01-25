@@ -76,7 +76,7 @@ const boss = {
     {
         "type": "input_value",
         "name": "entity",
-        "types": ["EntityData"]
+        "check": "types_EntityData"
     }
   ],
   "message5": "skills: %1",
@@ -92,7 +92,7 @@ const boss = {
     {
         "type": "input_value",
         "name": "reward",
-        "types": ["rewards"]
+        "check": "rewards"
     }
   ],
   "message7": "bossbar: %1",
@@ -100,7 +100,7 @@ const boss = {
     {
         "type": "input_value",
         "name": "bossbar",
-        "types": ["BossBarData"]
+        "check": "types_BossBarData"
     }
   ],
   "colour": 0
@@ -121,7 +121,7 @@ const item = {
     {
         "type": "input_value",
         "name": "item",
-        "types": ["ItemStackData"],
+        "check": "types_ItemStackData",
     }
   ],
   "message2": "distribution: %1",
